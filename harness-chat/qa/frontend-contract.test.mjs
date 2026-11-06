@@ -102,6 +102,13 @@ test('skills próprias do Harness podem ser criadas, editadas, selecionadas e re
  assert.match(js,/Remover \$\{skill\.name\} desta conversa/);
  assert.doesNotMatch(js,/skillIds:\[\.\.\.\(chat\.skillIds[\s\S]{0,120}instructions:/);
 });
+
+test('modelo inicial segue o padrão do servidor e migra o default legado para GLM 5.3',()=>{
+  assert.match(js,/const MODEL = 'z-ai\/glm-5\.3-flash'/);
+  assert.match(js,/const LEGACY_DEFAULT_MODEL = 'nvidia\/nemotron-3-super-120b-a12b'/);
+  assert.match(js,/if\(!state\.modelIsSaved&&typeof d\.model==='string'&&d\.model\.trim\(\)\)state\.model=d\.model\.trim\(\)/);
+  assert.match(js,/\.\.\.\(state\.modelIsSaved\?\{model:state\.model\}:\{\}\)/);
+});
 test('botão de criar skill fica destacado e / abre menu acessível com criar como ação padrão',()=>{
  assert.match(html,/id="create-skill-button" class="skills-toolbar-button create-skill-toolbar-button"/);
  assert.match(css,/\.create-skill-toolbar-button\s*\{/);

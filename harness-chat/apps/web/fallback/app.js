@@ -10,6 +10,7 @@ const create = (tag, className, text) => {
 };
 const STORE = 'harness-chat-v1';
 const MODEL = 'z-ai/glm-5.3-flash';
+const LEGACY_DEFAULT_MODEL = 'nvidia/nemotron-3-super-120b-a12b';
 const newId = () => crypto.randomUUID();
 const restoreState = () => {
   try {
@@ -23,12 +24,14 @@ const restoreState = () => {
         status:m.status||'',verification:m.verification||'',calls:Number(m.calls)||0,pending:Boolean(m.pending),artifacts:Array.isArray(m.artifacts)?m.artifacts:[],attachments:Array.isArray(m.attachments)?m.attachments.map(a=>({name:String(a.name||''),mimeType:String(a.mimeType||''),size:Number(a.size)||0,sha256:String(a.sha256||'')})):[]
       }))
     }));
-    return {chats,activeId:raw.activeId,model:typeof raw.model==='string'?raw.model:MODEL,mode:raw.mode==='chat'?'chat':'agent'};
+    const savedModel=typeof raw.model==='string'?raw.model.trim():'';
+    const modelIsSaved=!!savedModel&&savedModel!==LEGACY_DEFAULT_MODEL;
+    return {chats,activeId:raw.activeId,model:modelIsSaved?savedModel:MODEL,modelIsSaved,mode:raw.mode==='chat'?'chat':'agent'};
   }catch{return {chats:[],activeId:null,model:MODEL,mode:'agent'};}
 };
 const state = {...restoreState(),key:'',activeRun:null,stream:null,openPanel:'',health:null,events:[],focusedRun:null,traceTimer:null,skills:[],skillsLoaded:false,pendingAttachments:[]};
 function persist(){
-  try {localStorage.setItem(STORE,JSON.stringify({chats:state.chats.slice(0,10).map(c=>({...c,messages:c.messages.map(({events,attachments,...m})=>({...m,...(attachments?.length?{attachments:attachments.map(({name,mimeType,size,sha256})=>({name,mimeType,size,sha256}))}:{})}))})),activeId:state.activeId,model:state.model,mode:state.mode}));}
+  try {localStorage.setItem(STORE,JSON.stringify({chats:state.chats.slice(0,10).map(c=>({...c,messages:c.messages.map(({events,attachments,...m})=>({...m,...(attachments?.length?{attachments:attachments.map(({name,mimeType,size,sha256})=>({name,mimeType,size,sha256}))}:{})}))})),activeId:state.activeId,...(state.modelIsSaved?{model:state.model}:{}),mode:state.mode}));}
   catch { /* Storage can be disabled; chat still works in this page. */ }
 }
 function activeChat(){return state.chats.find(c=>c.id===state.activeId);}
@@ -340,7 +343,7 @@ function openSettings(){
  const result=statusBox('Diagnóstico ainda não executado.');
  const save=button('Salvar configurações',()=>{
   const name=model.input.value.trim();if(!/^[-\w./]{1,140}$/.test(name)){result.textContent='ID de modelo inválido';return;}
-  state.model=name;state.key=key.input.value.trim();persist();result.textContent='Configurações aplicadas nesta sessão. A chave não foi persistida.';
+  state.model=name;state.modelIsSaved=true;state.key=key.input.value.trim();persist();result.textContent='Configurações aplicadas nesta sessão. A chave não foi persistida.';
  },true);
  const probe=button('Testar NVIDIA',async()=>{
   result.textContent='Testando conexão...';try{const v=await post('/api/nvidia/probe',{model:model.input.value.trim(),key:key.input.value.trim()});result.textContent=JSON.stringify(v,null,2);}catch(e){result.textContent=e.message;}
@@ -413,7 +416,7 @@ async function openActivity(runId){
  };
  state.traceTimer=setInterval(()=>void refresh(),runId&&state.activeRun?.id===id?700:1500);await refresh();
 }
-async function refreshHealth(){try{const d=await request('/api/health');state.health=d;const ready=d.runner?.available===true;$('#health-dot').className='status-dot '+(ready?'ok':'bad');$('#health-text').textContent=ready?'Executor conectado':'Executor indisponível';}catch{$('#health-dot').className='status-dot bad';$('#health-text').textContent='Servidor indisponível';}}
+async function refreshHealth(){try{const d=await request('/api/health');state.health=d;if(!state.modelIsSaved&&typeof d.model==='string'&&d.model.trim())state.model=d.model.trim();const ready=d.runner?.available===true;$('#health-dot').className='status-dot '+(ready?'ok':'bad');$('#health-text').textContent=ready?'Executor conectado':'Executor indisponível';}catch{$('#health-dot').className='status-dot bad';$('#health-text').textContent='Servidor indisponível';}}
 async function restorePending(){
  const chat=activeChat();const m=chat?.messages.slice().reverse().find(m=>m.pending&&m.runId);
  if(!m)return;
