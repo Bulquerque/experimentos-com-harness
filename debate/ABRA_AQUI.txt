@@ -1,0 +1,10 @@
+CONTRAPONTO v24 — INÍCIO RÁPIDO
+
+1. Extraia a pasta inteira; não execute arquivos dentro do ZIP.
+2. Abra index.html para a demonstração offline. Ela usa roteiro fictício e não chama IA.
+3. Para debates com NVIDIA NIM, instale Node.js 20+, configure .env a partir de
+   .env.example e siga docs/guias/ATIVAR_IA_NVIDIA.txt.
+4. Mantenha app/ e offline/ ao lado do index.html.
+
+Arquitetura: docs/ARCHITECTURE.md. Histórico: docs/releases/.
+Recorte público do Harness: https://github.com/Bulquerque/experimentos-com-harness

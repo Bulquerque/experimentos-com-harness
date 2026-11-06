@@ -1,0 +1,24 @@
+{
+  "name": "nvidia-harness-chat",
+  "version": "1.0.0",
+  "private": true,
+  "type": "module",
+  "workspaces": [
+    "apps/server"
+  ],
+  "scripts": {
+    "start": "npm run start -w @nhs/server",
+    "dev": "npm run dev -w @nhs/server",
+    "typecheck": "npm run typecheck -w @nhs/server",
+    "build": "npm run build -w @nhs/server",
+    "test": "npm run test -w @nhs/server",
+    "test:frontend": "node --test qa/frontend-contract.test.mjs",
+    "test:all": "npm test && npm run test:frontend"
+  },
+  "devDependencies": {
+    "typescript": "^5.8.3"
+  },
+  "engines": {
+    "node": ">=22.16.0"
+  }
+}

@@ -1,0 +1,1332 @@
+{
+  "project": "Debate Arena",
+  "version": "5.0-packaging",
+  "schema": "relative paths from DEBATE_ARENA_ASSETS directory; PNG/GIF must be loaded as files",
+  "layout": [
+    {
+      "character_id": "lia",
+      "name": "Lia",
+      "role": "debatedora",
+      "position": "left",
+      "side": "blue",
+      "order": 0,
+      "primary_sprite": "personagens/01_lia_azul/sprites_principais_512x384/personagens/expressoes/neutro.png",
+      "sprite_display_hint": "512x384 base canvas, anchor bottom center"
+    },
+    {
+      "character_id": "elias",
+      "name": "Juiz Elias",
+      "role": "judge",
+      "position": "center",
+      "side": "neutral",
+      "order": 1,
+      "primary_sprite": "personagens/02_elias_juiz_centro/sprites_principais/idle/idle_01.png",
+      "sprite_display_hint": "256x256 base canvas, anchor bottom center; scale independently from 512x384 debaters"
+    },
+    {
+      "character_id": "dante",
+      "name": "Dante",
+      "role": "debatedor",
+      "position": "right",
+      "side": "red",
+      "order": 2,
+      "primary_sprite": "personagens/03_dante_vermelho/sprites_principais_512x384/personagens/expressoes/neutro.png",
+      "sprite_display_hint": "512x384 base canvas, anchor bottom center"
+    }
+  ],
+  "animation_groups": {
+    "lia/objection/olhos": [
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/objection/olhos/01.png",
+        "duration_ms": 85
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/objection/olhos/02.png",
+        "duration_ms": 100
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/objection/olhos/03.png",
+        "duration_ms": 115
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/objection/olhos/04.png",
+        "duration_ms": 90
+      }
+    ],
+    "lia/objection/corpo": [
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/objection/corpo/05.png",
+        "duration_ms": 145
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/objection/corpo/06.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/objection/corpo/07.png",
+        "duration_ms": 105
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/objection/corpo/08.png",
+        "duration_ms": 160
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/objection/corpo/09.png",
+        "duration_ms": 550
+      }
+    ],
+    "dante/objection/olhos": [
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/objection/olhos/01.png",
+        "duration_ms": 85
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/objection/olhos/02.png",
+        "duration_ms": 100
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/objection/olhos/03.png",
+        "duration_ms": 115
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/objection/olhos/04.png",
+        "duration_ms": 90
+      }
+    ],
+    "dante/objection/corpo": [
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/objection/corpo/05.png",
+        "duration_ms": 145
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/objection/corpo/06.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/objection/corpo/07.png",
+        "duration_ms": 105
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/objection/corpo/08.png",
+        "duration_ms": 160
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/objection/corpo/09.png",
+        "duration_ms": 550
+      }
+    ],
+    "lia/negacao/corpo": [
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/negacao/corpo/01.png",
+        "duration_ms": 170
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/negacao/corpo/02.png",
+        "duration_ms": 110
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/negacao/corpo/03.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/negacao/corpo/04.png",
+        "duration_ms": 105
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/negacao/corpo/05.png",
+        "duration_ms": 150
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/negacao/corpo/06.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/negacao/corpo/07.png",
+        "duration_ms": 240
+      }
+    ],
+    "lia/negacao/rosto_olhos": [
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/negacao/rosto_olhos/01.png",
+        "duration_ms": 135
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/negacao/rosto_olhos/02.png",
+        "duration_ms": 135
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/negacao/rosto_olhos/03.png",
+        "duration_ms": 135
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/negacao/rosto_olhos/04.png",
+        "duration_ms": 135
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/negacao/rosto_olhos/05.png",
+        "duration_ms": 135
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/negacao/rosto_olhos/06.png",
+        "duration_ms": 135
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/negacao/rosto_olhos/07.png",
+        "duration_ms": 135
+      }
+    ],
+    "dante/negacao/corpo": [
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/negacao/corpo/01.png",
+        "duration_ms": 170
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/negacao/corpo/02.png",
+        "duration_ms": 110
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/negacao/corpo/03.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/negacao/corpo/04.png",
+        "duration_ms": 105
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/negacao/corpo/05.png",
+        "duration_ms": 150
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/negacao/corpo/06.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/negacao/corpo/07.png",
+        "duration_ms": 240
+      }
+    ],
+    "dante/negacao/rosto_olhos": [
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/negacao/rosto_olhos/01.png",
+        "duration_ms": 135
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/negacao/rosto_olhos/02.png",
+        "duration_ms": 135
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/negacao/rosto_olhos/03.png",
+        "duration_ms": 135
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/negacao/rosto_olhos/04.png",
+        "duration_ms": 135
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/negacao/rosto_olhos/05.png",
+        "duration_ms": 135
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/negacao/rosto_olhos/06.png",
+        "duration_ms": 135
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/negacao/rosto_olhos/07.png",
+        "duration_ms": 135
+      }
+    ],
+    "lia/argumento_forte/corpo": [
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/argumento_forte/corpo/01.png",
+        "duration_ms": 180
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/argumento_forte/corpo/02.png",
+        "duration_ms": 115
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/argumento_forte/corpo/03.png",
+        "duration_ms": 180
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/argumento_forte/corpo/04.png",
+        "duration_ms": 165
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/argumento_forte/corpo/05.png",
+        "duration_ms": 210
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/argumento_forte/corpo/06.png",
+        "duration_ms": 250
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/argumento_forte/corpo/07.png",
+        "duration_ms": 340
+      }
+    ],
+    "lia/argumento_forte/rosto_olhos": [
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/argumento_forte/rosto_olhos/01.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/argumento_forte/rosto_olhos/02.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/argumento_forte/rosto_olhos/03.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/argumento_forte/rosto_olhos/04.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/argumento_forte/rosto_olhos/05.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/argumento_forte/rosto_olhos/06.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/argumento_forte/rosto_olhos/07.png",
+        "duration_ms": 140
+      }
+    ],
+    "dante/argumento_forte/corpo": [
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/argumento_forte/corpo/01.png",
+        "duration_ms": 180
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/argumento_forte/corpo/02.png",
+        "duration_ms": 115
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/argumento_forte/corpo/03.png",
+        "duration_ms": 180
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/argumento_forte/corpo/04.png",
+        "duration_ms": 165
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/argumento_forte/corpo/05.png",
+        "duration_ms": 210
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/argumento_forte/corpo/06.png",
+        "duration_ms": 250
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/argumento_forte/corpo/07.png",
+        "duration_ms": 340
+      }
+    ],
+    "dante/argumento_forte/rosto_olhos": [
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/argumento_forte/rosto_olhos/01.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/argumento_forte/rosto_olhos/02.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/argumento_forte/rosto_olhos/03.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/argumento_forte/rosto_olhos/04.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/argumento_forte/rosto_olhos/05.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/argumento_forte/rosto_olhos/06.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/argumento_forte/rosto_olhos/07.png",
+        "duration_ms": 140
+      }
+    ],
+    "lia/conversa_loop/fala": [
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/fala/01.png",
+        "duration_ms": 220
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/fala/02.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/fala/03.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/fala/04.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/fala/05.png",
+        "duration_ms": 150
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/fala/06.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/fala/07.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/fala/08.png",
+        "duration_ms": 260
+      }
+    ],
+    "lia/conversa_loop/escuta": [
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/escuta/01.png",
+        "duration_ms": 700
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/escuta/02.png",
+        "duration_ms": 100
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/escuta/03.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/escuta/04.png",
+        "duration_ms": 850
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/escuta/05.png",
+        "duration_ms": 650
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_loop/escuta/06.png",
+        "duration_ms": 750
+      }
+    ],
+    "lia/conversa_loop/rosto": [
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_loop/rosto/01.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_loop/rosto/02.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_loop/rosto/03.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_loop/rosto/04.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_loop/rosto/05.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_loop/rosto/06.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_loop/rosto/07.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_loop/rosto/08.png",
+        "duration_ms": 140
+      }
+    ],
+    "dante/conversa_loop/fala": [
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/fala/01.png",
+        "duration_ms": 220
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/fala/02.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/fala/03.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/fala/04.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/fala/05.png",
+        "duration_ms": 150
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/fala/06.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/fala/07.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/fala/08.png",
+        "duration_ms": 260
+      }
+    ],
+    "dante/conversa_loop/escuta": [
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/escuta/01.png",
+        "duration_ms": 700
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/escuta/02.png",
+        "duration_ms": 100
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/escuta/03.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/escuta/04.png",
+        "duration_ms": 850
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/escuta/05.png",
+        "duration_ms": 650
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_loop/escuta/06.png",
+        "duration_ms": 750
+      }
+    ],
+    "dante/conversa_loop/rosto": [
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_loop/rosto/01.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_loop/rosto/02.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_loop/rosto/03.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_loop/rosto/04.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_loop/rosto/05.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_loop/rosto/06.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_loop/rosto/07.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_loop/rosto/08.png",
+        "duration_ms": 140
+      }
+    ],
+    "lia/conversa_gestos/corpo": [
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_gestos/corpo/01.png",
+        "duration_ms": 220
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_gestos/corpo/02.png",
+        "duration_ms": 220
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_gestos/corpo/03.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_gestos/corpo/04.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_gestos/corpo/05.png",
+        "duration_ms": 220
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_gestos/corpo/06.png",
+        "duration_ms": 125
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_gestos/corpo/07.png",
+        "duration_ms": 110
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_gestos/corpo/08.png",
+        "duration_ms": 175
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_gestos/corpo/09.png",
+        "duration_ms": 115
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_gestos/corpo/10.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/conversa_gestos/corpo/11.png",
+        "duration_ms": 260
+      }
+    ],
+    "lia/conversa_gestos/rosto": [
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_gestos/rosto/01.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_gestos/rosto/02.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_gestos/rosto/03.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_gestos/rosto/04.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_gestos/rosto/05.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_gestos/rosto/06.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_gestos/rosto/07.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_gestos/rosto/08.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_gestos/rosto/09.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_gestos/rosto/10.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/conversa_gestos/rosto/11.png",
+        "duration_ms": 140
+      }
+    ],
+    "dante/conversa_gestos/corpo": [
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_gestos/corpo/01.png",
+        "duration_ms": 220
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_gestos/corpo/02.png",
+        "duration_ms": 220
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_gestos/corpo/03.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_gestos/corpo/04.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_gestos/corpo/05.png",
+        "duration_ms": 220
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_gestos/corpo/06.png",
+        "duration_ms": 125
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_gestos/corpo/07.png",
+        "duration_ms": 110
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_gestos/corpo/08.png",
+        "duration_ms": 175
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_gestos/corpo/09.png",
+        "duration_ms": 115
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_gestos/corpo/10.png",
+        "duration_ms": 130
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/conversa_gestos/corpo/11.png",
+        "duration_ms": 260
+      }
+    ],
+    "dante/conversa_gestos/rosto": [
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_gestos/rosto/01.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_gestos/rosto/02.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_gestos/rosto/03.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_gestos/rosto/04.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_gestos/rosto/05.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_gestos/rosto/06.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_gestos/rosto/07.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_gestos/rosto/08.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_gestos/rosto/09.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_gestos/rosto/10.png",
+        "duration_ms": 140
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/conversa_gestos/rosto/11.png",
+        "duration_ms": 140
+      }
+    ],
+    "lia/objection/completa": [
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/objection/olhos/01.png",
+        "duration_ms": 85
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/objection/olhos/02.png",
+        "duration_ms": 100
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/objection/olhos/03.png",
+        "duration_ms": 115
+      },
+      {
+        "file": "personagens/01_lia_azul/cinematicas_e_rostos/objection/olhos/04.png",
+        "duration_ms": 90
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/objection/corpo/05.png",
+        "duration_ms": 145
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/objection/corpo/06.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/objection/corpo/07.png",
+        "duration_ms": 105
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/objection/corpo/08.png",
+        "duration_ms": 160
+      },
+      {
+        "file": "personagens/01_lia_azul/sprites_principais_512x384/animacoes/objection/corpo/09.png",
+        "duration_ms": 550
+      }
+    ],
+    "dante/objection/completa": [
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/objection/olhos/01.png",
+        "duration_ms": 85
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/objection/olhos/02.png",
+        "duration_ms": 100
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/objection/olhos/03.png",
+        "duration_ms": 115
+      },
+      {
+        "file": "personagens/03_dante_vermelho/cinematicas_e_rostos/objection/olhos/04.png",
+        "duration_ms": 90
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/objection/corpo/05.png",
+        "duration_ms": 145
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/objection/corpo/06.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/objection/corpo/07.png",
+        "duration_ms": 105
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/objection/corpo/08.png",
+        "duration_ms": 160
+      },
+      {
+        "file": "personagens/03_dante_vermelho/sprites_principais_512x384/animacoes/objection/corpo/09.png",
+        "duration_ms": 550
+      }
+    ],
+    "elias/idle": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/idle/idle_01.png",
+        "duration_ms": 650
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/idle/idle_02.png",
+        "duration_ms": 650
+      }
+    ],
+    "elias/observacao": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/observacao/look_left.png",
+        "duration_ms": 1150
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/observacao/look_center.png",
+        "duration_ms": 1150
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/observacao/look_right.png",
+        "duration_ms": 1150
+      }
+    ],
+    "elias/expressoes": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/expressoes/neutral.png",
+        "duration_ms": 450
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/expressoes/serious.png",
+        "duration_ms": 450
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/expressoes/surprised.png",
+        "duration_ms": 450
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/expressoes/disappointed.png",
+        "duration_ms": 450
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/expressoes/firm.png",
+        "duration_ms": 450
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/expressoes/closed_eyes.png",
+        "duration_ms": 450
+      }
+    ],
+    "elias/pensando": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/pensando/think_01.png",
+        "duration_ms": 380
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/pensando/think_02.png",
+        "duration_ms": 380
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/pensando/think_03.png",
+        "duration_ms": 380
+      }
+    ],
+    "elias/ordem": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/ordem/order_01.png",
+        "duration_ms": 200
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/ordem/order_02.png",
+        "duration_ms": 200
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/ordem/order_03.png",
+        "duration_ms": 200
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/ordem/order_04.png",
+        "duration_ms": 500
+      }
+    ],
+    "elias/anuncio": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/anuncio/announce_01.png",
+        "duration_ms": 260
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/anuncio/announce_02.png",
+        "duration_ms": 260
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/anuncio/announce_03.png",
+        "duration_ms": 260
+      }
+    ],
+    "elias/martelo": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/martelo/gavel_01_prepare.png",
+        "duration_ms": 190
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/martelo/gavel_02_raise.png",
+        "duration_ms": 190
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/martelo/gavel_03_hold.png",
+        "duration_ms": 190
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/martelo/gavel_04_down.png",
+        "duration_ms": 190
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/martelo/gavel_05_impact.png",
+        "duration_ms": 440
+      }
+    ],
+    "elias/veredito": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/veredito/verdict_01.png",
+        "duration_ms": 360
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/veredito/verdict_02.png",
+        "duration_ms": 360
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/veredito/verdict_03.png",
+        "duration_ms": 360
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/veredito/verdict_04.png",
+        "duration_ms": 700
+      }
+    ],
+    "elias/faixas_olhos": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/faixas_olhos/judgment.png",
+        "duration_ms": 400
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/faixas_olhos/verdict.png",
+        "duration_ms": 400
+      }
+    ],
+    "elias/efeitos": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/efeitos/impact_flash_01.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/efeitos/impact_flash_02.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/efeitos/impact_flash_03.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/efeitos/impact_lines.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/efeitos/impact_dust.png",
+        "duration_ms": 120
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/efeitos/impact_ring.png",
+        "duration_ms": 120
+      }
+    ],
+    "elias/pulpito": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/pulpito/bench_empty.png",
+        "duration_ms": 800
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/pulpito/bench_with_gavel.png",
+        "duration_ms": 800
+      }
+    ],
+    "elias/props_martelo": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/props_martelo/gavel_idle.png",
+        "duration_ms": 230
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/props_martelo/gavel_raise.png",
+        "duration_ms": 230
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/props_martelo/gavel_strike.png",
+        "duration_ms": 230
+      }
+    ],
+    "elias/props_maos": [
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/props_maos/hand_point.png",
+        "duration_ms": 260
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/props_maos/hand_open.png",
+        "duration_ms": 260
+      },
+      {
+        "file": "personagens/02_elias_juiz_centro/sprites_principais/props_maos/hand_rest.png",
+        "duration_ms": 260
+      }
+    ]
+  },
+  "judge_assets": [
+    {
+      "id": "idle.idle_01",
+      "category": "idle",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/idle/idle_01.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/idle/idle_01.png"
+    },
+    {
+      "id": "idle.idle_02",
+      "category": "idle",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/idle/idle_02.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/idle/idle_02.png"
+    },
+    {
+      "id": "observacao.look_left",
+      "category": "observacao",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/observacao/look_left.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/observacao/look_left.png"
+    },
+    {
+      "id": "observacao.look_center",
+      "category": "observacao",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/observacao/look_center.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/observacao/look_center.png"
+    },
+    {
+      "id": "observacao.look_right",
+      "category": "observacao",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/observacao/look_right.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/observacao/look_right.png"
+    },
+    {
+      "id": "expressoes.neutral",
+      "category": "expressoes",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/expressoes/neutral.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/expressoes/neutral.png"
+    },
+    {
+      "id": "expressoes.serious",
+      "category": "expressoes",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/expressoes/serious.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/expressoes/serious.png"
+    },
+    {
+      "id": "expressoes.surprised",
+      "category": "expressoes",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/expressoes/surprised.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/expressoes/surprised.png"
+    },
+    {
+      "id": "expressoes.disappointed",
+      "category": "expressoes",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/expressoes/disappointed.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/expressoes/disappointed.png"
+    },
+    {
+      "id": "expressoes.firm",
+      "category": "expressoes",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/expressoes/firm.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/expressoes/firm.png"
+    },
+    {
+      "id": "expressoes.closed_eyes",
+      "category": "expressoes",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/expressoes/closed_eyes.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/expressoes/closed_eyes.png"
+    },
+    {
+      "id": "pensando.think_01",
+      "category": "pensando",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/pensando/think_01.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/pensando/think_01.png"
+    },
+    {
+      "id": "pensando.think_02",
+      "category": "pensando",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/pensando/think_02.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/pensando/think_02.png"
+    },
+    {
+      "id": "pensando.think_03",
+      "category": "pensando",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/pensando/think_03.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/pensando/think_03.png"
+    },
+    {
+      "id": "ordem.order_01",
+      "category": "ordem",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/ordem/order_01.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/ordem/order_01.png"
+    },
+    {
+      "id": "ordem.order_02",
+      "category": "ordem",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/ordem/order_02.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/ordem/order_02.png"
+    },
+    {
+      "id": "ordem.order_03",
+      "category": "ordem",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/ordem/order_03.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/ordem/order_03.png"
+    },
+    {
+      "id": "ordem.order_04",
+      "category": "ordem",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/ordem/order_04.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/ordem/order_04.png"
+    },
+    {
+      "id": "anuncio.announce_01",
+      "category": "anuncio",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/anuncio/announce_01.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/anuncio/announce_01.png"
+    },
+    {
+      "id": "anuncio.announce_02",
+      "category": "anuncio",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/anuncio/announce_02.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/anuncio/announce_02.png"
+    },
+    {
+      "id": "anuncio.announce_03",
+      "category": "anuncio",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/anuncio/announce_03.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/anuncio/announce_03.png"
+    },
+    {
+      "id": "martelo.gavel_01_prepare",
+      "category": "martelo",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/martelo/gavel_01_prepare.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/martelo/gavel_01_prepare.png"
+    },
+    {
+      "id": "martelo.gavel_02_raise",
+      "category": "martelo",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/martelo/gavel_02_raise.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/martelo/gavel_02_raise.png"
+    },
+    {
+      "id": "martelo.gavel_03_hold",
+      "category": "martelo",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/martelo/gavel_03_hold.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/martelo/gavel_03_hold.png"
+    },
+    {
+      "id": "martelo.gavel_04_down",
+      "category": "martelo",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/martelo/gavel_04_down.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/martelo/gavel_04_down.png"
+    },
+    {
+      "id": "martelo.gavel_05_impact",
+      "category": "martelo",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/martelo/gavel_05_impact.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/martelo/gavel_05_impact.png"
+    },
+    {
+      "id": "veredito.verdict_01",
+      "category": "veredito",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/veredito/verdict_01.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/veredito/verdict_01.png"
+    },
+    {
+      "id": "veredito.verdict_02",
+      "category": "veredito",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/veredito/verdict_02.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/veredito/verdict_02.png"
+    },
+    {
+      "id": "veredito.verdict_03",
+      "category": "veredito",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/veredito/verdict_03.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/veredito/verdict_03.png"
+    },
+    {
+      "id": "veredito.verdict_04",
+      "category": "veredito",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/veredito/verdict_04.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/veredito/verdict_04.png"
+    },
+    {
+      "id": "faixas_olhos.judgment",
+      "category": "faixas_olhos",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/faixas_olhos/judgment.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/faixas_olhos/judgment.png"
+    },
+    {
+      "id": "faixas_olhos.verdict",
+      "category": "faixas_olhos",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/faixas_olhos/verdict.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/faixas_olhos/verdict.png"
+    },
+    {
+      "id": "efeitos.impact_flash_01",
+      "category": "efeitos",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/efeitos/impact_flash_01.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/efeitos/impact_flash_01.png"
+    },
+    {
+      "id": "efeitos.impact_flash_02",
+      "category": "efeitos",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/efeitos/impact_flash_02.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/efeitos/impact_flash_02.png"
+    },
+    {
+      "id": "efeitos.impact_flash_03",
+      "category": "efeitos",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/efeitos/impact_flash_03.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/efeitos/impact_flash_03.png"
+    },
+    {
+      "id": "efeitos.impact_lines",
+      "category": "efeitos",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/efeitos/impact_lines.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/efeitos/impact_lines.png"
+    },
+    {
+      "id": "efeitos.impact_dust",
+      "category": "efeitos",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/efeitos/impact_dust.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/efeitos/impact_dust.png"
+    },
+    {
+      "id": "efeitos.impact_ring",
+      "category": "efeitos",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/efeitos/impact_ring.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/efeitos/impact_ring.png"
+    },
+    {
+      "id": "pulpito.bench_empty",
+      "category": "pulpito",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/pulpito/bench_empty.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/pulpito/bench_empty.png"
+    },
+    {
+      "id": "pulpito.bench_with_gavel",
+      "category": "pulpito",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/pulpito/bench_with_gavel.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/pulpito/bench_with_gavel.png"
+    },
+    {
+      "id": "props_martelo.gavel_idle",
+      "category": "props_martelo",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/props_martelo/gavel_idle.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/props_martelo/gavel_idle.png"
+    },
+    {
+      "id": "props_martelo.gavel_raise",
+      "category": "props_martelo",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/props_martelo/gavel_raise.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/props_martelo/gavel_raise.png"
+    },
+    {
+      "id": "props_martelo.gavel_strike",
+      "category": "props_martelo",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/props_martelo/gavel_strike.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/props_martelo/gavel_strike.png"
+    },
+    {
+      "id": "props_maos.hand_point",
+      "category": "props_maos",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/props_maos/hand_point.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/props_maos/hand_point.png"
+    },
+    {
+      "id": "props_maos.hand_open",
+      "category": "props_maos",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/props_maos/hand_open.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/props_maos/hand_open.png"
+    },
+    {
+      "id": "props_maos.hand_rest",
+      "category": "props_maos",
+      "standard": "personagens/02_elias_juiz_centro/sprites_principais/props_maos/hand_rest.png",
+      "original": "personagens/02_elias_juiz_centro/variantes/recortes_originais/props_maos/hand_rest.png"
+    }
+  ],
+  "images": {
+    "lia": {
+      "base": "personagens/01_lia_azul",
+      "aligned": "personagens/01_lia_azul/sprites_principais_512x384",
+      "native": "personagens/01_lia_azul/variantes/rgba_nativo",
+      "4bit": "personagens/01_lia_azul/variantes/4bit_16_cores",
+      "cutins": "personagens/01_lia_azul/faixas_dos_olhos",
+      "cinematicas_e_rostos": "personagens/01_lia_azul/cinematicas_e_rostos"
+    },
+    "dante": {
+      "base": "personagens/03_dante_vermelho",
+      "aligned": "personagens/03_dante_vermelho/sprites_principais_512x384",
+      "native": "personagens/03_dante_vermelho/variantes/rgba_nativo",
+      "4bit": "personagens/03_dante_vermelho/variantes/4bit_16_cores",
+      "cutins": "personagens/03_dante_vermelho/faixas_dos_olhos",
+      "cinematicas_e_rostos": "personagens/03_dante_vermelho/cinematicas_e_rostos"
+    }
+  },
+  "rendering": {
+    "image_rendering": "pixelated",
+    "alpha": "PNG transparency where available; cinematics may have opaque artistic backgrounds",
+    "sprite_anchor": "bottom center",
+    "z_order": [
+      "background",
+      "left debater",
+      "judge center",
+      "right debater",
+      "effects",
+      "eye cutins"
+    ]
+  },
+  "notes": [
+    "All paths are relative to root DEBATE_ARENA_ASSETS/.",
+    "The judge assets were not arbitrarily upscaled to 512x384; use a separate scale in the renderer.",
+    "The 4-bit palette variants apply to Lia and Dante, not automatically to Elias.",
+    "Some artistic source frames still need manual pixel-level touchups; this ZIP organizes them without claiming they are perfect."
+  ]
+}

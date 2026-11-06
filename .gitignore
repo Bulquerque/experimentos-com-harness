@@ -1,3 +1,28 @@
+# Credentials
 .env
+.env.*
+!.env.example
+**/.env
+**/.env.*
+!**/.env.example
+
+# Dependencies and generated output
 node_modules/
-data/*.json
+**/node_modules/
+**/dist/
+coverage/
+**/__pycache__/
+*.py[cod]
+.DS_Store
+
+# Runtime/local user data
+harness-chat/workspace/*
+!harness-chat/workspace/.gitkeep
+debate/data/*.json
+!harness-chat/workspace/README.md
+!harness-chat/workspace/proofs/
+harness-chat/workspace/proofs/*
+!harness-chat/workspace/proofs/Examples.lean
+!harness-chat/workspace/tests/
+harness-chat/workspace/tests/*
+!harness-chat/workspace/tests/test_example.py

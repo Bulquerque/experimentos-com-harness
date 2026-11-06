@@ -1,0 +1,15 @@
+**/node_modules
+**/dist
+**/.next
+**/.git
+**/.cache
+**/__pycache__
+**/.pytest_cache
+**/.venv
+**/.env
+**/.env.*
+.git
+.env
+workspace
+data
+*.zip

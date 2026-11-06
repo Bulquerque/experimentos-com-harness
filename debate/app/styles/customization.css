@@ -1,0 +1,30 @@
+/* Personalização v4: mantém a arena original e amplia o configurador. */
+.identity-custom{margin:12px 0 4px;padding:12px;border:1px solid #ffffff19;border-radius:9px;background:linear-gradient(120deg,#ffffff06,#11131c18);display:grid;gap:8px}
+.identity-custom label,.round-topic-label{display:flex;flex-direction:column;gap:5px;color:#b8b7c6;font-size:10px;font-weight:650;letter-spacing:.35px}
+.identity-custom input,.identity-custom textarea,.round-topic-label input{width:100%;box-sizing:border-box;background:#171b2a;color:#f1e8e6;border:1px solid #4a4c5c;border-radius:6px;font:inherit;font-size:12px;letter-spacing:0;line-height:1.45;padding:9px;resize:vertical}
+.identity-custom input:focus,.identity-custom textarea:focus,.round-topic-label input:focus{outline:2px solid #97c7ff88;outline-offset:1px}
+.round-topics{padding:12px;background:linear-gradient(130deg,#25334b58,#1b1d292a);border:1px solid #ffffff18;border-radius:9px;margin:13px 0}
+.round-topics .field-title{margin:0 0 6px;display:flex;justify-content:space-between;gap:5px;font-size:10px}
+.round-hint{font-size:11px;line-height:1.5;color:#a5a5bc;margin:0 0 10px}
+.round-topic-fields{display:grid;gap:9px}
+.round-topic-label{flex-direction:row;align-items:center;gap:9px}
+.round-topic-label span{white-space:nowrap;min-width:60px;font-size:9px;color:#c7b7db}
+.round-topic-label input{min-width:0;flex:1}
+.config-actions{display:flex;gap:8px;margin-top:14px;margin-bottom:9px}
+.config-action{flex:1;border:1px solid #57596c!important;background:#222735!important;color:#e2ddea!important;text-align:center;border-radius:7px!important;padding:10px 6px!important;font-size:10px!important;font-weight:850!important;cursor:pointer}
+.config-action:hover{border-color:#b1a6c5!important}
+.scripted-btn{width:100%;border:1px solid #d7aa68!important;background:linear-gradient(125deg,#5c442e,#302638)!important;color:#fff0d4!important;border-radius:9px!important;padding:12px 10px!important;font-weight:950!important;cursor:pointer;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;gap:7px;font-size:12px;letter-spacing:.3px}
+.scripted-btn span{color:#e5c393;font-size:9px}
+.scripted-btn:hover{filter:brightness(1.16)}
+.scripted-btn:disabled,.config-action:disabled{opacity:.4;cursor:not-allowed}
+.round-subtopic{position:absolute;z-index:7;top:130px;left:50%;transform:translateX(-50%);max-width:86%;pointer-events:none;color:#f0d9bb;background:#1a1b30b3;border:1px solid #ffffff25;border-radius:16px;padding:5px 12px;font-size:9px;letter-spacing:1px;text-align:center;line-height:1.4;white-space:normal}
+@media (max-width:1100px){.round-subtopic{top:118px}}
+@media (max-width:640px){.round-subtopic{top:110px;font-size:8px;max-width:94%}.scripted-btn{flex-wrap:wrap}}
+
+.identity-drawer{margin:11px 0 3px;border:1px solid #51556b;border-radius:8px;overflow:hidden;background:#202333}
+.identity-drawer summary{padding:10px 11px;color:#e5d6bd;font-size:10px;letter-spacing:.7px;font-weight:900;cursor:pointer;list-style-position:inside}
+.identity-drawer summary:hover{background:#ffffff0c}
+.identity-drawer[open] summary{border-bottom:1px solid #ffffff25}
+.identity-drawer .identity-custom{margin:0;border:0;border-radius:0;background:transparent}
+.round-subtopic{position:relative;top:auto;left:auto;transform:none;z-index:2;max-width:100%;padding:5px 12px;margin-top:-3px;background:#171c2ab9;border:1px solid #ddbd9d55;border-radius:30px;font-size:9px;color:#ead8c2;white-space:normal}
+@media(max-width:640px){.round-subtopic{top:auto;max-width:100%;font-size:8px}}

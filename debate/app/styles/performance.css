@@ -1,0 +1,94 @@
+/* V14 — Visual acting layer. Só anima luz, cenário e envoltórios;
+   nunca força transform no PNG quadro-a-quadro nem cobre o diálogo. */
+.arena { --presence-speed:2.9s; }
+.arena .duelist .portrait::after {
+  content:""; position:absolute; z-index:0; inset:1% 4% 1%; border-radius:48% 48% 17% 17%;
+  background:radial-gradient(ellipse at 50% 43%,color-mix(in srgb,var(--tone),transparent 71%),transparent 66%);
+  opacity:.36; pointer-events:none;filter:blur(10px);transform:scale(.97);
+  animation:living-presence var(--presence-speed) ease-in-out infinite alternate;
+}
+.arena .duelist.speaking .portrait::after{opacity:.64;--presence-speed:1.8s}
+@keyframes living-presence{from{transform:translateY(4px) scale(.94);opacity:.22}to{transform:translateY(-4px) scale(1.045);opacity:.65}}
+
+/* Um palco que responde ao falante, em vez de ficar estático entre os cortes. */
+.arena[data-performance=live] .scene-backdrop{transition:filter 460ms ease,transform 1.5s cubic-bezier(.22,.67,.23,1)}
+.arena[data-performance-side=a][data-performance-phase=emphasis] .scene-backdrop{
+  filter:saturate(1.13) brightness(1.025);transform:scale(1.018) translateX(-.7%)}
+.arena[data-performance-side=b][data-performance-phase=emphasis] .scene-backdrop{
+  filter:saturate(1.13) brightness(1.025);transform:scale(1.018) translateX(.7%)}
+
+/* Ouvinte fica presente com micro-reação no ritmo do argumento. */
+.arena[data-performance-phase=listener] .duelist[data-performance-cue=reply] .portrait::before{
+  box-shadow:0 12px 38px #03040aaf,0 0 25px color-mix(in srgb,var(--tone),transparent 58%);
+  animation:listener-response 600ms cubic-bezier(.25,.8,.22,1) both;
+}
+@keyframes listener-response{
+  0%{filter:brightness(.9);transform:skewY(-1deg) scale(.99)}
+  47%{filter:brightness(1.2);transform:skewY(-1deg) scale(1.027)}
+  100%{filter:brightness(1);transform:skewY(-1deg) scale(1)}
+}
+
+/* Sinal de ênfase atrás do debatedor, não sobre seu corpo nem sobre o texto. */
+.arena .duelist .portrait-rings{pointer-events:none;transition:opacity .4s ease,filter .4s ease}
+.arena[data-performance-phase=emphasis] .duelist[data-performance-cue=emphasis] .portrait-rings{
+  filter:drop-shadow(0 0 18px var(--tone));animation:emphasis-halo 800ms cubic-bezier(.2,.8,.28,1) both;
+}
+@keyframes emphasis-halo{
+  0%{transform:scale(.93);opacity:.18}
+  45%{transform:scale(1.045);opacity:.9}
+  100%{transform:scale(1);opacity:.4}
+}
+
+/* Entrada de objeto de cena nas objeções: contorno reativo da bancada. */
+.arena[data-performance-action=objection][data-performance-phase=delivery] .duelist.speaking .nameplate{
+  animation:nameplate-hit 650ms cubic-bezier(.18,.76,.21,1) both;
+}
+@keyframes nameplate-hit{
+  0%{filter:brightness(.8);transform:translateY(6px)}
+  38%{filter:brightness(1.45);transform:translateY(-3px)}
+  100%{filter:brightness(1);transform:translateY(0)}
+}
+
+/* Vivacidade é presença com sutileza; no celular menor intensidade. */
+@media(max-width:600px){
+ .arena .duelist .portrait::after{filter:blur(6px)}
+ .arena[data-performance-side] .scene-backdrop{transform:none!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .arena .duelist .portrait::after,.arena .duelist .portrait-rings,
+ .arena .duelist .portrait::before,.arena .duelist .nameplate,
+ .arena .scene-backdrop {animation:none!important;transition:none!important;transform:none!important}
+}
+
+/* Debate Singular: animações de personagem vêm exclusivamente das sequências
+   canceláveis do SpriteDirector. Desativa loops/gestos CSS que competiriam
+   com o gesto do locutor e a reação serial do ouvinte em cada bloco. */
+.arena[data-singular-block=true] .duelist .portrait,
+.arena[data-singular-block=true] .duelist .portrait::before,
+.arena[data-singular-block=true] .duelist .portrait::after,
+.arena[data-singular-block=true] .duelist .portrait-rings,
+.arena[data-singular-block=true] .duelist .nameplate,
+.arena[data-singular-block=true] .duelist .mouth,
+.arena[data-singular-block=true] .duelist .gesture-arm,
+.arena[data-singular-block=true] .duelist .pack-avatar,
+.arena[data-singular-block=true] .scene-backdrop {
+ animation:none!important;transition:none!important;transform:none!important;
+}
+.arena[data-singular-block=true] .duelist.speaking .mouth,
+.arena[data-singular-block=true] .duelist.listening .pack-avatar,
+.arena[data-singular-block=true] .duelist.speaking .pack-avatar {
+ animation:none!important;
+}
+.arena[data-singular-block=true] .duelist.speaking .portrait img[id^="custom-avatar-"]{
+ animation:singular-custom-delivery var(--singular-delivery-duration,700ms) cubic-bezier(.2,.78,.25,1) both!important;
+}
+.arena[data-singular-block=true] .duelist.reacting .portrait img[id^="custom-avatar-"]{
+ animation:singular-custom-reaction var(--singular-reaction-duration,620ms) cubic-bezier(.2,.78,.25,1) both!important;
+}
+.arena[data-animation-paused=true] *, .arena[data-animation-paused=true] *::before, .arena[data-animation-paused=true] *::after {animation-play-state:paused!important;}
+@keyframes singular-custom-delivery{
+ 0%{transform:translateY(0) scale(1)}35%{transform:translateY(-7px) scale(1.025)}100%{transform:translateY(0) scale(1)}
+}
+@keyframes singular-custom-reaction{
+ 0%{transform:translateY(0) scale(1)}38%{transform:translateY(-5px) scale(1.018)}100%{transform:translateY(0) scale(1)}
+}

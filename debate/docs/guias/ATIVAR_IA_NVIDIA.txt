@@ -1,0 +1,14 @@
+CONTRAPONTO — ATIVAÇÃO NVIDIA NIM
+
+1. Instale Node.js 20 ou superior.
+2. Copie .env.example para .env (na mesma pasta de package.json).
+3. Edite .env: NVIDIA_API_KEY=nvapi-SUA-CHAVE
+4. Abra um terminal nesta pasta e execute: npm run doctor:nim
+   (Testa 3 chamadas reais; pode gastar créditos de API.)
+5. Quando o diagnóstico aprovar os 3 modelos, execute: npm start
+6. Acesse http://localhost:3000
+7. Configure Execução = NVIDIA NIM real e inicie o debate.
+
+IMPORTANTE: abrir index.html diretamente mostra apenas demonstração pré-escrita.
+A chave NUNCA deve ser colada no HTML ou enviada a terceiros.
+O diagnóstico com a sua conta é indispensável; testes com mock não garantem autorização.

@@ -1,0 +1,193 @@
+/* CONTRAPONTO — direção teatral original, desacoplada do Harness. */
+.arena{--camera-time:480ms}
+.camera-hud{position:absolute;top:16px;right:17px;z-index:13;display:flex;align-items:center;gap:9px;font-size:8px;font-weight:900;letter-spacing:1.4px;color:#d6cde0;padding:7px 10px;border:1px solid #ffffff26;border-radius:5px;background:#13131b99;pointer-events:none}
+.camera-rec{color:#fd787b;letter-spacing:1px}
+.cinema-letterbox{position:absolute;z-index:11;left:0;right:0;height:0;background:#0b0c16;pointer-events:none;transition:height 240ms ease}
+.cinema-top{top:0}.cinema-bottom{bottom:0}
+.arena[data-camera=a] .cinema-letterbox,.arena[data-camera=b] .cinema-letterbox,.arena[data-camera=judge] .cinema-letterbox{height:12px}
+.arena .duelist .portrait{transition:transform var(--camera-time) cubic-bezier(.22,.8,.18,1),filter .28s ease}
+.arena .duelist .nameplate{transition:transform var(--camera-time) ease,opacity .3s ease}
+.arena .duelist{transition:transform var(--camera-time) cubic-bezier(.22,.8,.18,1),filter .3s ease,opacity .3s ease}
+.arena[data-camera=a] .duelist.left{transform:translate(7%, -5%) scale(1.14);z-index:3}
+.arena[data-camera=a] .duelist.right{transform:translate(12%,4%) scale(.90);filter:brightness(.72);z-index:2}
+.arena[data-camera=b] .duelist.right{transform:translate(-7%,-5%) scale(1.14);z-index:3}
+.arena[data-camera=b] .duelist.left{transform:translate(-12%,4%) scale(.90);filter:brightness(.72);z-index:2}
+.arena[data-camera=judge] .duelist{transform:translateY(2%) scale(.94);filter:brightness(.48)}
+.arena[data-camera=judge] .marquee{opacity:.44}
+.arena .marquee{transition:opacity .4s ease}
+.judge-cutaway{position:absolute;z-index:7;left:50%;top:48%;transform:translate(-50%,-48%) scale(.88);opacity:0;transition:opacity .27s ease,transform .4s cubic-bezier(.19,1,.22,1);pointer-events:none;display:flex;align-items:center;flex-direction:column;gap:8px;color:#ffe4b5;text-align:center;text-shadow:0 7px 18px #000b}
+.judge-medallion{width:94px;height:94px;border:2px solid #ffdda9;border-radius:100%;display:grid;place-items:center;font-size:43px;background:radial-gradient(circle,#59456d,#26243f);box-shadow:0 0 0 12px #ffd4a311,0 10px 80px #f6bc8d33}
+.judge-cutaway b{font-weight:900;font-size:clamp(15px,2vw,24px);letter-spacing:2px}.judge-cutaway span{font-size:9px;letter-spacing:2px;color:#ffe6c2}
+.arena[data-camera=judge] .judge-cutaway{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.impact-lines{position:absolute;inset:-30%;z-index:7;background:repeating-conic-gradient(from 5deg at 50% 44%,transparent 0deg 12deg,#fff5ba21 12.3deg 13.8deg,transparent 14deg 23deg);opacity:0;transform:rotate(5deg) scale(1.3);pointer-events:none}
+.impact-light{position:absolute;z-index:28;inset:0;background:#fff5e4;opacity:0;pointer-events:none}
+.arena.impact .impact-lines{animation:cinema-speedlines 680ms ease-out both}
+.arena.impact .impact-light{animation:cinema-flash 580ms ease-out both}
+.arena.impact .duelists{animation:cinema-shake-strong 460ms both}
+.arena.slam-impact .duelists{animation:cinema-shake-small 330ms both}
+.arena.scene-enter .stage-number{animation:cinema-round-enter .6s cubic-bezier(.2,.8,.2,1)}
+.arena.scene-judged .judge-medallion{animation:cinema-judge-hit .65s ease-out}
+.duelist.perform[data-gesture=point] .portrait,.duelist.perform[data-gesture=slam-desk] .portrait{animation:cinema-thrust .4s cubic-bezier(.12,.85,.25,1) 1}
+.duelist.perform[data-gesture=open-hand] .portrait{animation:cinema-persuade .7s ease-out 1}
+.duelist.perform[data-gesture=arms-crossed] .portrait{animation:cinema-lean .8s ease-out 1}
+.duelist.react-now[data-reacting=shocked] .portrait{animation:cinema-flinch .43s ease-out 1}
+.duelist.react-now[data-reacting=tense] .portrait{animation:cinema-lean-back .6s ease-out 1}
+.duelist.react-now[data-reacting=thinking] .portrait{animation:cinema-think .8s ease-out 1}
+.duelist.speaking .mouth{transform-origin:center;animation:cinema-talk .22s steps(2,end) 5}
+.duelist.speaking .nameplate{box-shadow:0 0 0 2px color-mix(in srgb,var(--tone),transparent 72%),0 15px 35px #0009}
+.duelist.listening .nameplate{opacity:.83}
+.duelist .reaction.show{animation:cinema-reaction-pop .4s cubic-bezier(.2,1.35,.2,1) both}
+.arena .dialogue{transition:border-color .35s,box-shadow .35s}
+.arena[data-camera=a] .dialogue{border-left:4px solid #55c9ee}
+.arena[data-camera=b] .dialogue{border-left:4px solid #f47d86}
+.arena[data-camera=judge] .dialogue{border-left:4px solid #f4c78d}
+.dialogue p.speech-reveal{animation:cinema-dialogue-reveal .32s ease-out}
+.cinema-controls{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap}
+.cinema-controls button{border:1px solid #505369;background:#242838;color:#e9dfe7;border-radius:7px;padding:8px 9px;font-size:9px;font-weight:800;letter-spacing:.8px;white-space:nowrap;cursor:pointer}
+.cinema-controls button:hover{background:#37394b;border-color:#a19aa8}
+.play-left #advance-turn{border:1px solid #f4c78d;background:#f4c78d;color:#241e29;border-radius:8px;padding:9px 13px;font-size:10px;font-weight:900;letter-spacing:.7px;box-shadow:0 4px 18px #f4c78d22}
+.play-left #advance-turn:hover{background:#ffe0b0}
+.play-left #advance-turn[hidden]{display:none}
+.cinema-controls button[aria-pressed=false]{opacity:.57;background:#171925}
+.volume-control{display:flex;align-items:center;gap:4px;font-size:9px;color:#b9b7cc;font-weight:900;letter-spacing:.9px;padding-left:5px}
+.volume-control input{width:67px;padding:0;accent-color:#f4c78d;cursor:pointer}
+@keyframes cinema-shake-strong{0%,100%{transform:translate(0,0)}18%{transform:translate(10px,-3px)}38%{transform:translate(-9px,4px)}58%{transform:translate(7px,-3px)}78%{transform:translate(-4px,2px)}}
+@keyframes cinema-shake-small{0%,100%{transform:translate(0,0)}25%{transform:translate(5px,2px)}50%{transform:translate(-5px,-2px)}75%{transform:translate(2px,1px)}}
+@keyframes cinema-speedlines{0%{opacity:0;transform:rotate(5deg) scale(1.35)}18%{opacity:.85}100%{opacity:0;transform:rotate(-6deg) scale(1)}}
+@keyframes cinema-flash{0%,14%{opacity:0}16%{opacity:.73}28%,100%{opacity:0}}
+@keyframes cinema-round-enter{from{transform:translateY(-16px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes cinema-judge-hit{0%,100%{transform:scale(1)}25%{transform:scale(1.25)}55%{transform:scale(.92)}}
+@keyframes cinema-thrust{0%,100%{transform:translateX(0) rotate(0)}40%{transform:translateX(15px) rotate(-3deg)}65%{transform:translateX(4px)}}
+@keyframes cinema-persuade{0%,100%{transform:translateY(0)}38%{transform:translateY(-9px) rotate(-1deg)}70%{transform:translateY(-2px)}}
+@keyframes cinema-lean{0%,100%{transform:rotate(0)}50%{transform:rotate(-4deg)}}
+@keyframes cinema-flinch{0%,100%{transform:translateX(0) rotate(0)}32%{transform:translateX(14px) rotate(4deg)}65%{transform:translateX(-3px)}}
+@keyframes cinema-lean-back{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(7px) rotate(3deg)}}
+@keyframes cinema-think{0%,100%{transform:rotate(0)}45%{transform:rotate(-5deg)}}
+@keyframes cinema-talk{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.6)}}
+@keyframes cinema-reaction-pop{from{opacity:0;transform:translateY(14px) scale(.68) rotate(7deg)}to{opacity:1;transform:translateY(0) scale(1) rotate(-4deg)}}
+@keyframes cinema-dialogue-reveal{from{opacity:.15;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1100px){.play-controls{flex-wrap:wrap;gap:10px}.cinema-controls{order:3;width:100%;justify-content:space-between}.volume-control input{width:78px}}
+@media(max-width:450px){.camera-hud{top:7px;right:7px;font-size:7px;padding:5px}.judge-medallion{width:68px;height:68px;font-size:32px}.judge-cutaway b{font-size:13px}.cinema-controls button{font-size:8px;padding:7px 5px}.volume-control input{width:45px}}
+@media(prefers-reduced-motion:reduce){.arena .duelist,.arena .duelist .portrait,.arena .duelist .nameplate,.judge-cutaway,.cinema-letterbox{transition:none!important}.impact-lines,.impact-light{display:none!important}}
+.arena.cinema-off .duelist,.arena.cinema-off .duelist .portrait{transition:none!important;animation:none!important}
+.arena.cinema-off .cinema-letterbox,.arena.cinema-off .impact-lines,.arena.cinema-off .impact-light{display:none!important}
+
+/* ── DIREÇÃO 2.0 / CENÁRIO, MONTAGEM E ATORES ───────────────────────── */
+.arena{background:
+ radial-gradient(ellipse 70% 65% at 51% 70%,#5e36539a 0%,transparent 70%),
+ radial-gradient(ellipse 120% 95% at 50% -20%,#44345e 0%,transparent 67%),
+ linear-gradient(155deg,#12182b,#222039 56%,#171727)}
+.arena-glow{transition:filter .45s,opacity .45s;filter:blur(35px)}
+.arena[data-camera=a] .glow-a,.arena[data-camera=b] .glow-b{opacity:.86;filter:blur(14px)}
+.arena[data-camera=a] .glow-b,.arena[data-camera=b] .glow-a{opacity:.22}
+.cinema-scanlines{position:absolute;z-index:5;inset:0;pointer-events:none;opacity:.26;background:repeating-linear-gradient(0deg,transparent 0 3px,#00000028 4px 4.7px)}
+.cinema-architecture{position:absolute;inset:58px 18px 145px;display:flex;justify-content:space-around;align-items:stretch;pointer-events:none;z-index:0;perspective:600px;opacity:.42}
+.cinema-architecture span{width:14%;border-left:1px solid #ffd5cb2b;border-right:1px solid #ffd5cb29;box-shadow:inset 12px 0 22px #fff2,16px 0 35px #0003;
+ background:linear-gradient(90deg,#060d1830 0%,#a6b1dc0c 42%,#e9b2ad15 73%,#080b1524 100%);transform:skewY(-3deg)}
+.cinema-architecture:before{content:'';position:absolute;left:-4%;right:-4%;bottom:10px;height:2px;background:linear-gradient(90deg,transparent,#e9c4af55,transparent);box-shadow:0 8px 32px #f7ad992f}
+.camera-corners{position:absolute;z-index:12;inset:20px;pointer-events:none;opacity:0;transition:opacity .25s}
+.arena[data-camera=a] .camera-corners,.arena[data-camera=b] .camera-corners{opacity:.48}
+.camera-corners i{position:absolute;width:17px;height:17px;border-color:#e9dbc5aa;border-style:solid}
+.camera-corners i:nth-child(1){top:0;left:0;border-width:1px 0 0 1px}
+.camera-corners i:nth-child(2){top:0;right:0;border-width:1px 1px 0 0}
+.camera-corners i:nth-child(3){bottom:0;left:0;border-width:0 0 1px 1px}
+.camera-corners i:nth-child(4){bottom:0;right:0;border-width:0 1px 1px 0}
+.arena .duelists{transform-origin:50% 56%;transition:filter .34s ease}
+.arena[data-camera=a] .duelist.left{transform:translate(18%,-5%) scale(1.24) rotate(-1deg);filter:brightness(1.09) contrast(1.05)}
+.arena[data-camera=b] .duelist.right{transform:translate(-18%,-5%) scale(1.24) rotate(1deg);filter:brightness(1.09) contrast(1.05)}
+.arena[data-camera=a] .duelist.right{transform:translate(11%,5%) scale(.86);filter:brightness(.56) saturate(.65)}
+.arena[data-camera=b] .duelist.left{transform:translate(-11%,5%) scale(.86);filter:brightness(.56) saturate(.65)}
+.arena[data-camera=judge] .duelist{filter:brightness(.25) blur(1px);opacity:.64}
+.duelist{transform-origin:50% 85%}
+.duelist .portrait{transform-origin:50% 86%}
+.duelist:not(.perform):not(.react-now):not(.anticipation) .portrait{animation:cinema-breathe 3.4s ease-in-out infinite alternate}
+.duelist.speaking .portrait-rings{animation:cinema-energy 1.7s ease-in-out infinite alternate}
+.duelist.anticipation .portrait{animation:cinema-anticipation 1.3s ease-in-out infinite alternate}
+.duelist[data-emotion=surprised] .eyebrows{transform:translateY(-6px)}
+.duelist[data-emotion=frustrated] .mouth{transform:translateY(2px) scaleY(.6)}
+.duelist[data-emotion=excited] .mouth{transform:scaleY(1.7)}
+.duelist[data-emotion=thinking] .portrait{filter:contrast(.9) saturate(.83)}
+.duelist.perform[data-gesture=point] .gesture-arm{animation:cinema-point-arm .43s cubic-bezier(.18,1.8,.3,1) both}
+.duelist.perform[data-gesture=slam-desk] .gesture-arm{animation:cinema-slam-arm .4s ease-out both}
+.duelist.perform[data-gesture=open-hand] .gesture-arm{animation:cinema-point-arm .66s ease-out both}
+.duelist.react-now[data-reacting=respect] .portrait{animation:cinema-nod .8s ease-in-out}
+.duelist.react-now[data-reacting=shocked] .portrait{animation:cinema-flinch-xl .67s cubic-bezier(.22,.8,.23,1) both}
+.duelist.react-now[data-reacting=tense] .portrait{animation:cinema-push-back .65s ease-out both}
+.duelist.react-now[data-reacting=thinking] .portrait{animation:cinema-pause-think .9s ease-out both}
+.duelist.react-now[data-reacting=shocked] .portrait-rings{border-color:#fff5c1;box-shadow:0 0 38px #fff1c164}
+.duelist.speaking .portrait svg .mouth{animation:cinema-mouth .26s steps(2,end) 9;transform-origin:50% 58%}
+/* Splashes only communicate the action. Dialogue remains readable above all of them. */
+.cinema-announcement{position:absolute;z-index:24;top:39%;left:50%;width:min(91%,620px);transform:translate(-50%,-50%) scale(.9) rotate(-3deg);opacity:0;pointer-events:none;text-align:center;
+ display:flex;flex-direction:column;align-items:center;gap:3px;filter:drop-shadow(0 12px 18px #020312c9)}
+.cinema-announcement:before{content:'';position:absolute;z-index:-1;left:-8%;right:-8%;top:26%;bottom:20%;transform:skew(-12deg);background:linear-gradient(90deg,#331c3fe0,#88617cbe 45%,#281b39ee);border-top:2px solid #ffe9c6aa;border-bottom:2px solid #f7c1d078}
+.cinema-announcement.warning:before{background:linear-gradient(90deg,#761f38,#b9344be8 48%,#5f1732);border-color:#ffdaaa}
+.cinema-announcement span{font-weight:900;letter-spacing:3px;font-size:10px;color:#f6dba3;text-shadow:0 2px #212032}
+.cinema-announcement strong{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:900;color:#fff2e0;font-style:italic;white-space:nowrap;font-size:clamp(32px,6.7vw,82px);line-height:1.05;letter-spacing:-2px;text-shadow:-4px 4px #3b2849,0 10px 30px #1113}
+.cinema-announcement.warning strong{text-shadow:-5px 6px #761f38,0 0 32px #ff6c78}
+.cinema-announcement small{font-weight:800;letter-spacing:2.4px;font-size:9px;color:#f4d7c7}
+.cinema-announcement.visible{animation:cinema-announcement-enter .95s cubic-bezier(.18,.95,.35,1) both}
+.arena .objection{display:none}
+.arena .dialogue{z-index:32;border-radius:12px;box-shadow:0 15px 70px #080917e8,0 0 0 1px #fff2;backdrop-filter:blur(22px);background:linear-gradient(130deg,#1b1c2bf9,#131523ec 70%,#17192ef2)}
+.arena .dialogue:before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#fee6c075,transparent)}
+.arena[data-camera=a] .dialogue{box-shadow:0 15px 70px #080917e8,-6px 0 30px #55c9ee16}
+.arena[data-camera=b] .dialogue{box-shadow:0 15px 70px #080917e8,-6px 0 30px #f47d861a}
+.arena.scene-enter .marquee{animation:cinema-headline-float .65s ease-out}
+.arena.scene-suspense .judge-medallion{animation:cinema-judge-breath 1.8s ease-in-out infinite alternate}
+.arena.scene-question .camera-corners,.arena.scene-judged .camera-corners{opacity:1}
+.arena.scene-celebrate .arena-glow{animation:cinema-glow-final .8s ease-in-out 2}
+.arena.scene-concession .duelists{filter:saturate(.7)}
+.arena.impact .cinema-architecture{animation:cinema-shock-lines .5s ease-out}
+.arena.impact .impact-light{animation:cinema-double-flash .75s both}
+.arena.impact .duelists{animation:cinema-shake-strong .35s both}
+.arena.impact .camera-hud{animation:cinema-hud-blink .55s}
+.arena[data-director=soft] .cinema-announcement strong{font-size:clamp(28px,5vw,56px)}
+.arena[data-director=soft] .cinema-announcement.visible{animation-duration:.58s}
+.arena[data-director=soft].impact .impact-light{animation:none}
+.arena[data-director=soft].impact .duelists{animation:cinema-shake-small .28s}
+.arena[data-director=soft][data-camera=a] .duelist.left{transform:translate(8%,-2%) scale(1.11)}
+.arena[data-director=soft][data-camera=b] .duelist.right{transform:translate(-8%,-2%) scale(1.11)}
+.play-controls{height:auto;min-height:64px;padding:10px 0;flex-wrap:wrap}
+.play-left{display:flex;gap:6px;align-items:center}
+.play-left #preview-fx{border-color:#b28c6778;color:#efc795}
+.play-left #preview-fx:hover:not(:disabled){background:#403044}
+.director-select{display:flex;align-items:center;gap:5px;font-size:9px;font-weight:850;color:#b9b6c3;letter-spacing:.7px}
+.director-select select{width:87px;font-size:9px;letter-spacing:.5px;padding:6px;background:#292a3c;color:#f4e0c6;border:1px solid #62566e;border-radius:6px}
+.sound-track-label{display:flex;align-items:center;gap:6px;color:#acb1bf;font-size:8px;letter-spacing:.9px;font-weight:850;white-space:nowrap}
+.audio-wave{height:12px;display:inline-flex;align-items:center;gap:2px}.audio-wave i{display:block;height:3px;width:2px;background:#e8c48f;border-radius:3px}
+.audio-wave.playing i{animation:cinema-meter .66s ease-in-out infinite alternate}
+.audio-wave.playing i:nth-child(2){animation-delay:.12s}.audio-wave.playing i:nth-child(3){animation-delay:.26s}.audio-wave.playing i:nth-child(4){animation-delay:.08s}
+@keyframes cinema-breathe{0%{transform:translateY(3px) scale(.998)}100%{transform:translateY(-4px) scale(1.009)}}
+@keyframes cinema-energy{0%{opacity:.48;transform:scale(.96)}100%{opacity:.94;transform:scale(1.06)}}
+@keyframes cinema-anticipation{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(3px) rotate(-1deg)}}
+@keyframes cinema-point-arm{0%{opacity:0;transform:translate(-24px,28px) rotate(-15deg)}62%{opacity:1;transform:translate(6px,-4px) rotate(5deg)}100%{opacity:1;transform:translate(0) rotate(0)}}
+@keyframes cinema-slam-arm{0%{opacity:0;transform:translate(5px,-22px)}50%{opacity:1;transform:translate(3px,3px)}100%{opacity:1;transform:translateY(14px)}}
+@keyframes cinema-flinch-xl{0%,100%{transform:translateX(0) rotate(0)}29%{transform:translateX(22px) rotate(7deg) translateY(-5px)}63%{transform:translateX(-6px) rotate(-2deg)}}
+@keyframes cinema-push-back{0%,100%{transform:translateX(0)}40%{transform:translateX(-17px) rotate(-3deg)}}
+@keyframes cinema-pause-think{0%,100%{transform:translateY(0)}50%{transform:translateY(5px) rotate(2deg)}}
+@keyframes cinema-nod{0%,100%{transform:rotate(0)}40%{transform:rotate(4deg)}70%{transform:rotate(-2deg)}}
+@keyframes cinema-mouth{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.7)}}
+@keyframes cinema-announcement-enter{0%{opacity:0;transform:translate(-54%,-48%) scale(1.48) rotate(-10deg)}15%{opacity:1;transform:translate(-48%,-50%) scale(.96) rotate(-4deg)}26%{transform:translate(-50%,-50%) scale(1.07) rotate(-3deg)}47%{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-3deg)}76%{opacity:1}100%{opacity:0;transform:translate(-48%,-52%) scale(1.1) rotate(-2deg)}}
+@keyframes cinema-headline-float{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes cinema-judge-breath{from{box-shadow:0 0 0 12px #ffd4a311,0 10px 70px #f6bc8d11}to{box-shadow:0 0 0 20px #ffd4a322,0 10px 100px #f6bc8d52}}
+@keyframes cinema-glow-final{50%{opacity:1;filter:blur(8px)}}
+@keyframes cinema-shock-lines{0%,100%{transform:translate(0)}25%{transform:translate(8px,-4px)}50%{transform:translate(-8px,3px)}}
+@keyframes cinema-double-flash{0%,10%{opacity:0}12%{opacity:.85}18%{opacity:.05}23%{opacity:.42}35%,100%{opacity:0}}
+@keyframes cinema-hud-blink{0%,100%{opacity:1}30%{opacity:0}}
+@keyframes cinema-meter{0%{height:3px}100%{height:12px}}
+@media(max-width:1430px){.play-controls{gap:7px}.sound-track-label{display:none}}
+@media(max-width:780px){.play-controls{justify-content:space-between}.cinema-controls{justify-content:space-between}.sound-track-label{display:flex;order:4;width:100%;justify-content:center}.cinema-announcement strong{font-size:clamp(32px,10vw,68px)}}
+@media(max-width:450px){.camera-corners{inset:9px}.cinema-architecture{inset:75px 10px 180px}.cinema-announcement{top:42%}.cinema-announcement span{font-size:7px}.cinema-announcement small{font-size:7px;letter-spacing:1px}.play-left{width:100%;justify-content:space-between}.play-left button{padding:7px 8px;font-size:9px}.director-select{font-size:8px}.director-select select{width:68px;font-size:8px;padding:5px}.volume-control{padding:0}.volume-control input{width:49px}}
+@media(prefers-reduced-motion:reduce){.duelist:not(.perform):not(.react-now):not(.anticipation) .portrait,.duelist.speaking .portrait-rings,.duelist.anticipation .portrait,.cinema-announcement.visible,.duelist .gesture-arm,.audio-wave.playing i{animation:none!important}.cinema-announcement{display:none!important}}
+/* Legibilidade: a linha do tema fica acima da ação e a câmera não cobre o título. */
+.arena .duelists{top:222px}
+.arena[data-camera=a] .duelist.left{transform:translate(14%,1%) scale(1.16) rotate(-1deg)}
+.arena[data-camera=b] .duelist.right{transform:translate(-14%,1%) scale(1.16) rotate(1deg)}
+.arena .marquee{position:relative;z-index:6;text-shadow:0 2px 14px #100d18;pointer-events:none}
+.arena .marquee strong{display:block;max-width:100%;padding:3px 9px;background:linear-gradient(90deg,transparent,#111125a9 15%,#161427bc 85%,transparent)}
+.default-avatar .eyes{transform-box:fill-box;transform-origin:center;animation:cinema-blink 5.7s linear infinite}
+.duelist[data-emotion=frustrated] .default-avatar .eyebrows{transform:translateY(2px) rotate(3deg);transform-origin:center}
+.duelist[data-emotion=surprised] .default-avatar .eyebrows{transform:translateY(-5px)}
+.duelist[data-emotion=thinking] .default-avatar .eyebrows{transform:translateY(-2px) rotate(-4deg);transform-origin:center}
+@keyframes cinema-blink{0%,40%,42%,100%{transform:scaleY(1)}40.5%,41.5%{transform:scaleY(.12)}}
+@media(max-width:450px){.arena .duelists{top:208px}.arena[data-camera=a] .duelist.left{transform:translate(8%,4%) scale(1.10)}.arena[data-camera=b] .duelist.right{transform:translate(-8%,4%) scale(1.10)}.arena .marquee{max-width:95%}.arena .marquee strong{font-size:clamp(17px,5vw,22px)}}
+@media(prefers-reduced-motion:reduce){.default-avatar .eyes{animation:none!important}}

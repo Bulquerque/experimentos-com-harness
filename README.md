@@ -1,39 +1,27 @@
-# Experimentos com Harness
+# Contraponto Debate + Harness Chat
 
-Recorte experimental do Harness de debates do Contraponto. O código organiza participantes, rodadas, falas, ferramentas e avaliações. Esta publicação contém o motor de debate e um exemplo textual; não inclui a interface, os sprites, arquivos pessoais ou a base de documentos do projeto original.
+Repositório público com dois projetos independentes que podem usar NVIDIA NIM:
 
-## Requisitos
+- **[Contraponto Debate](debate/README.md)** — arena visual de debates, tribunal didático e harness de agentes. A experiência offline funciona sem chave; chamadas NIM reais exigem configuração local.
+- **[Harness Chat](harness-chat/README.md)** — chat e agente para matemática, Python e Lean 4, com atividade detalhada, ferramentas, skills próprias e runner isolado.
 
-- Node.js 20 ou superior
-- `NVIDIA_API_KEY` apenas para chamar modelos NVIDIA NIM. A demonstração local não precisa de chave.
-
-## Rodar a demonstração
-
-```bash
-npm run demo
-```
-
-A demonstração usa respostas simuladas e não chama serviços externos.
+Cada projeto tem seus próprios comandos de instalação e testes. Leia o README da pasta correspondente antes de executar.
 
 ## Estrutura
 
-- `harness/`: loop de debate, construção de prompts, adaptador NIM, ferramentas e avaliação.
-- `app/ui/breakdown-policy.js`: regra pura usada pelo motor para manter o tratamento de reações consistente.
-- `examples/run-demo.js`: execução local curta, sem credenciais.
-- `tests/`: verificações existentes do motor de debate e dos prompts.
-
-## Uso do motor
-
-Importe `createDebateEngine` de `harness/harness.js` e `validateConfig` de `harness/config.js`. Passe a configuração validada a `runDebate`; seu callback `emit(type, data)` recebe eventos como `turn`, `judgment`, `finished` e `error`.
-
-O modo `demo` é simulado. Para usar NIM, forneça `NVIDIA_API_KEY` no ambiente do processo e selecione `mode: "nim"`; chamadas reais podem consumir créditos e dependem dos modelos habilitados na conta. Nunca coloque a chave em código versionado.
-
-## Verificações
-
-```bash
-npm test
+```text
+.
+├── debate/       # aplicação Contraponto e motor de debate
+└── harness-chat/ # aplicação Harness Chat
 ```
 
-## Escopo e limitações
+As chaves ficam em arquivos `.env` locais, criados a partir de `.env.example`; não as adicione ao Git. Diretórios de dados de usuário e execução também são ignorados pelo repositório.
 
-Este é um recorte para estudo do Harness, não uma cópia completa do Contraponto e nem um serviço hospedado. Não inclui a interface visual, os assets de áudio/animação, a biblioteca de documentos ou as configurações privadas.
+## Verificação rápida
+
+```sh
+(cd debate && npm test && npm run check)
+(cd harness-chat && ./check.sh)
+```
+
+A suíte local não valida credenciais, disponibilidade ou permissões dos serviços externos da NVIDIA. O repositório não inclui os dados locais do usuário nem a chave usada nas instalações locais.

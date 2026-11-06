@@ -1,0 +1,4905 @@
+{
+  "method": "One affine transform per state, skin segmentation of first frame only; all 8 frames share transform. Full artwork preserved as 640x800 masters, cropped stage frame 512x576 with fade only after y508.",
+  "reference": {
+    "lia": {
+      "faceWidth": 96,
+      "center": [
+        281.0,
+        198.0
+      ]
+    },
+    "dante": {
+      "faceWidth": 130,
+      "center": [
+        247.0,
+        199.0
+      ]
+    }
+  },
+  "characters": {
+    "lia": {
+      "idle": {
+        "actor": "lia",
+        "state": "idle",
+        "referenceFaceBBox": [
+          234,
+          136,
+          94,
+          126
+        ],
+        "originalFaceCenter": [
+          281.0,
+          199.0
+        ],
+        "targetFaceCenter": [
+          281.0,
+          198.0
+        ],
+        "scale": 1.021277,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "lia",
+            "state": "idle",
+            "frame": 1,
+            "scale": 1.02128,
+            "oldFaceWidth": 94,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              72,
+              63,
+              477,
+              500
+            ],
+            "masterBBox": [
+              136,
+              127,
+              541,
+              564
+            ],
+            "stageMargins": [
+              72,
+              63,
+              34,
+              75
+            ],
+            "paste": [
+              58,
+              59
+            ],
+            "scaledSize": [
+              523,
+              588
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "idle",
+            "frame": 2,
+            "scale": 1.02128,
+            "oldFaceWidth": 94,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              62,
+              63,
+              441,
+              500
+            ],
+            "masterBBox": [
+              126,
+              127,
+              505,
+              564
+            ],
+            "stageMargins": [
+              62,
+              63,
+              70,
+              75
+            ],
+            "paste": [
+              58,
+              59
+            ],
+            "scaledSize": [
+              523,
+              588
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "idle",
+            "frame": 3,
+            "scale": 1.02128,
+            "oldFaceWidth": 94,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              45,
+              62,
+              459,
+              500
+            ],
+            "masterBBox": [
+              109,
+              126,
+              523,
+              564
+            ],
+            "stageMargins": [
+              45,
+              62,
+              52,
+              75
+            ],
+            "paste": [
+              58,
+              59
+            ],
+            "scaledSize": [
+              523,
+              588
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "idle",
+            "frame": 4,
+            "scale": 1.02128,
+            "oldFaceWidth": 94,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              45,
+              63,
+              442,
+              500
+            ],
+            "masterBBox": [
+              109,
+              127,
+              506,
+              564
+            ],
+            "stageMargins": [
+              45,
+              63,
+              69,
+              75
+            ],
+            "paste": [
+              58,
+              59
+            ],
+            "scaledSize": [
+              523,
+              588
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "idle",
+            "frame": 5,
+            "scale": 1.02128,
+            "oldFaceWidth": 94,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              33,
+              52,
+              478,
+              500
+            ],
+            "masterBBox": [
+              97,
+              116,
+              542,
+              564
+            ],
+            "stageMargins": [
+              33,
+              52,
+              33,
+              75
+            ],
+            "paste": [
+              58,
+              59
+            ],
+            "scaledSize": [
+              523,
+              588
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "idle",
+            "frame": 6,
+            "scale": 1.02128,
+            "oldFaceWidth": 94,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              33,
+              52,
+              447,
+              500
+            ],
+            "masterBBox": [
+              97,
+              116,
+              511,
+              564
+            ],
+            "stageMargins": [
+              33,
+              52,
+              64,
+              75
+            ],
+            "paste": [
+              58,
+              59
+            ],
+            "scaledSize": [
+              523,
+              588
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "idle",
+            "frame": 7,
+            "scale": 1.02128,
+            "oldFaceWidth": 94,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              35,
+              52,
+              446,
+              500
+            ],
+            "masterBBox": [
+              99,
+              116,
+              510,
+              564
+            ],
+            "stageMargins": [
+              35,
+              52,
+              65,
+              75
+            ],
+            "paste": [
+              58,
+              59
+            ],
+            "scaledSize": [
+              523,
+              588
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "idle",
+            "frame": 8,
+            "scale": 1.02128,
+            "oldFaceWidth": 94,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              32,
+              52,
+              476,
+              500
+            ],
+            "masterBBox": [
+              96,
+              116,
+              540,
+              564
+            ],
+            "stageMargins": [
+              32,
+              52,
+              35,
+              75
+            ],
+            "paste": [
+              58,
+              59
+            ],
+            "scaledSize": [
+              523,
+              588
+            ]
+          }
+        ]
+      },
+      "talking": {
+        "actor": "lia",
+        "state": "talking",
+        "referenceFaceBBox": [
+          233,
+          138,
+          93,
+          116
+        ],
+        "originalFaceCenter": [
+          279.5,
+          196.0
+        ],
+        "targetFaceCenter": [
+          281.0,
+          198.0
+        ],
+        "scale": 1.032258,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "lia",
+            "state": "talking",
+            "frame": 1,
+            "scale": 1.03226,
+            "oldFaceWidth": 93,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              31,
+              59,
+              450,
+              507
+            ],
+            "masterBBox": [
+              95,
+              123,
+              514,
+              571
+            ],
+            "stageMargins": [
+              31,
+              59,
+              61,
+              68
+            ],
+            "paste": [
+              56,
+              60
+            ],
+            "scaledSize": [
+              529,
+              595
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "talking",
+            "frame": 2,
+            "scale": 1.03226,
+            "oldFaceWidth": 93,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              32,
+              59,
+              449,
+              507
+            ],
+            "masterBBox": [
+              96,
+              123,
+              513,
+              571
+            ],
+            "stageMargins": [
+              32,
+              59,
+              62,
+              68
+            ],
+            "paste": [
+              56,
+              60
+            ],
+            "scaledSize": [
+              529,
+              595
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "talking",
+            "frame": 3,
+            "scale": 1.03226,
+            "oldFaceWidth": 93,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              33,
+              59,
+              450,
+              507
+            ],
+            "masterBBox": [
+              97,
+              123,
+              514,
+              571
+            ],
+            "stageMargins": [
+              33,
+              59,
+              61,
+              68
+            ],
+            "paste": [
+              56,
+              60
+            ],
+            "scaledSize": [
+              529,
+              595
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "talking",
+            "frame": 4,
+            "scale": 1.03226,
+            "oldFaceWidth": 93,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              33,
+              59,
+              450,
+              507
+            ],
+            "masterBBox": [
+              97,
+              123,
+              514,
+              571
+            ],
+            "stageMargins": [
+              33,
+              59,
+              61,
+              68
+            ],
+            "paste": [
+              56,
+              60
+            ],
+            "scaledSize": [
+              529,
+              595
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "talking",
+            "frame": 5,
+            "scale": 1.03226,
+            "oldFaceWidth": 93,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              31,
+              54,
+              481,
+              507
+            ],
+            "masterBBox": [
+              95,
+              118,
+              545,
+              571
+            ],
+            "stageMargins": [
+              31,
+              54,
+              30,
+              68
+            ],
+            "paste": [
+              56,
+              60
+            ],
+            "scaledSize": [
+              529,
+              595
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "talking",
+            "frame": 6,
+            "scale": 1.03226,
+            "oldFaceWidth": 93,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              32,
+              54,
+              480,
+              507
+            ],
+            "masterBBox": [
+              96,
+              118,
+              544,
+              571
+            ],
+            "stageMargins": [
+              32,
+              54,
+              31,
+              68
+            ],
+            "paste": [
+              56,
+              60
+            ],
+            "scaledSize": [
+              529,
+              595
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "talking",
+            "frame": 7,
+            "scale": 1.03226,
+            "oldFaceWidth": 93,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              33,
+              58,
+              450,
+              507
+            ],
+            "masterBBox": [
+              97,
+              122,
+              514,
+              571
+            ],
+            "stageMargins": [
+              33,
+              58,
+              61,
+              68
+            ],
+            "paste": [
+              56,
+              60
+            ],
+            "scaledSize": [
+              529,
+              595
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "talking",
+            "frame": 8,
+            "scale": 1.03226,
+            "oldFaceWidth": 93,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              33,
+              58,
+              451,
+              507
+            ],
+            "masterBBox": [
+              97,
+              122,
+              515,
+              571
+            ],
+            "stageMargins": [
+              33,
+              58,
+              60,
+              68
+            ],
+            "paste": [
+              56,
+              60
+            ],
+            "scaledSize": [
+              529,
+              595
+            ]
+          }
+        ]
+      },
+      "thinking": {
+        "actor": "lia",
+        "state": "thinking",
+        "referenceFaceBBox": [
+          230,
+          135,
+          95,
+          129
+        ],
+        "originalFaceCenter": [
+          277.5,
+          199.5
+        ],
+        "targetFaceCenter": [
+          281.0,
+          198.0
+        ],
+        "scale": 1.010526,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "lia",
+            "state": "thinking",
+            "frame": 1,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              50,
+              61,
+              441,
+              496
+            ],
+            "masterBBox": [
+              114,
+              125,
+              505,
+              560
+            ],
+            "stageMargins": [
+              50,
+              61,
+              70,
+              79
+            ],
+            "paste": [
+              65,
+              60
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "thinking",
+            "frame": 2,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              41,
+              59,
+              441,
+              496
+            ],
+            "masterBBox": [
+              105,
+              123,
+              505,
+              560
+            ],
+            "stageMargins": [
+              41,
+              59,
+              70,
+              79
+            ],
+            "paste": [
+              65,
+              60
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "thinking",
+            "frame": 3,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              51,
+              61,
+              441,
+              496
+            ],
+            "masterBBox": [
+              115,
+              125,
+              505,
+              560
+            ],
+            "stageMargins": [
+              51,
+              61,
+              70,
+              79
+            ],
+            "paste": [
+              65,
+              60
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "thinking",
+            "frame": 4,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              52,
+              60,
+              441,
+              496
+            ],
+            "masterBBox": [
+              116,
+              124,
+              505,
+              560
+            ],
+            "stageMargins": [
+              52,
+              60,
+              70,
+              79
+            ],
+            "paste": [
+              65,
+              60
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "thinking",
+            "frame": 5,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              51,
+              60,
+              441,
+              496
+            ],
+            "masterBBox": [
+              115,
+              124,
+              505,
+              560
+            ],
+            "stageMargins": [
+              51,
+              60,
+              70,
+              79
+            ],
+            "paste": [
+              65,
+              60
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "thinking",
+            "frame": 6,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              52,
+              59,
+              441,
+              496
+            ],
+            "masterBBox": [
+              116,
+              123,
+              505,
+              560
+            ],
+            "stageMargins": [
+              52,
+              59,
+              70,
+              79
+            ],
+            "paste": [
+              65,
+              60
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "thinking",
+            "frame": 7,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              51,
+              60,
+              441,
+              496
+            ],
+            "masterBBox": [
+              115,
+              124,
+              505,
+              560
+            ],
+            "stageMargins": [
+              51,
+              60,
+              70,
+              79
+            ],
+            "paste": [
+              65,
+              60
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "thinking",
+            "frame": 8,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              52,
+              59,
+              440,
+              496
+            ],
+            "masterBBox": [
+              116,
+              123,
+              504,
+              560
+            ],
+            "stageMargins": [
+              52,
+              59,
+              71,
+              79
+            ],
+            "paste": [
+              65,
+              60
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          }
+        ]
+      },
+      "confident": {
+        "actor": "lia",
+        "state": "confident",
+        "referenceFaceBBox": [
+          230,
+          135,
+          96,
+          129
+        ],
+        "originalFaceCenter": [
+          278.0,
+          199.5
+        ],
+        "targetFaceCenter": [
+          281.0,
+          198.0
+        ],
+        "scale": 1.0,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "lia",
+            "state": "confident",
+            "frame": 1,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              51,
+              59,
+              477,
+              491
+            ],
+            "masterBBox": [
+              115,
+              123,
+              541,
+              555
+            ],
+            "stageMargins": [
+              51,
+              59,
+              34,
+              84
+            ],
+            "paste": [
+              67,
+              62
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "confident",
+            "frame": 2,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              50,
+              60,
+              435,
+              491
+            ],
+            "masterBBox": [
+              114,
+              124,
+              499,
+              555
+            ],
+            "stageMargins": [
+              50,
+              60,
+              76,
+              84
+            ],
+            "paste": [
+              67,
+              62
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "confident",
+            "frame": 3,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              51,
+              59,
+              434,
+              491
+            ],
+            "masterBBox": [
+              115,
+              123,
+              498,
+              555
+            ],
+            "stageMargins": [
+              51,
+              59,
+              77,
+              84
+            ],
+            "paste": [
+              67,
+              62
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "confident",
+            "frame": 4,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              51,
+              60,
+              435,
+              491
+            ],
+            "masterBBox": [
+              115,
+              124,
+              499,
+              555
+            ],
+            "stageMargins": [
+              51,
+              60,
+              76,
+              84
+            ],
+            "paste": [
+              67,
+              62
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "confident",
+            "frame": 5,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              51,
+              56,
+              434,
+              491
+            ],
+            "masterBBox": [
+              115,
+              120,
+              498,
+              555
+            ],
+            "stageMargins": [
+              51,
+              56,
+              77,
+              84
+            ],
+            "paste": [
+              67,
+              62
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "confident",
+            "frame": 6,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              50,
+              56,
+              447,
+              491
+            ],
+            "masterBBox": [
+              114,
+              120,
+              511,
+              555
+            ],
+            "stageMargins": [
+              50,
+              56,
+              64,
+              84
+            ],
+            "paste": [
+              67,
+              62
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "confident",
+            "frame": 7,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              51,
+              56,
+              437,
+              491
+            ],
+            "masterBBox": [
+              115,
+              120,
+              501,
+              555
+            ],
+            "stageMargins": [
+              51,
+              56,
+              74,
+              84
+            ],
+            "paste": [
+              67,
+              62
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "confident",
+            "frame": 8,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              51,
+              56,
+              437,
+              491
+            ],
+            "masterBBox": [
+              115,
+              120,
+              501,
+              555
+            ],
+            "stageMargins": [
+              51,
+              56,
+              74,
+              84
+            ],
+            "paste": [
+              67,
+              62
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          }
+        ]
+      },
+      "objection": {
+        "actor": "lia",
+        "state": "objection",
+        "referenceFaceBBox": [
+          234,
+          128,
+          96,
+          139
+        ],
+        "originalFaceCenter": [
+          282.0,
+          197.5
+        ],
+        "targetFaceCenter": [
+          281.0,
+          198.0
+        ],
+        "scale": 1.0,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "lia",
+            "state": "objection",
+            "frame": 1,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              77,
+              54,
+              431,
+              538
+            ],
+            "masterBBox": [
+              141,
+              118,
+              495,
+              602
+            ],
+            "stageMargins": [
+              77,
+              54,
+              80,
+              37
+            ],
+            "paste": [
+              63,
+              64
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "objection",
+            "frame": 2,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              77,
+              56,
+              430,
+              538
+            ],
+            "masterBBox": [
+              141,
+              120,
+              494,
+              602
+            ],
+            "stageMargins": [
+              77,
+              56,
+              81,
+              37
+            ],
+            "paste": [
+              63,
+              64
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "objection",
+            "frame": 3,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              77,
+              56,
+              425,
+              538
+            ],
+            "masterBBox": [
+              141,
+              120,
+              489,
+              602
+            ],
+            "stageMargins": [
+              77,
+              56,
+              86,
+              37
+            ],
+            "paste": [
+              63,
+              64
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "objection",
+            "frame": 4,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              77,
+              56,
+              422,
+              538
+            ],
+            "masterBBox": [
+              141,
+              120,
+              486,
+              602
+            ],
+            "stageMargins": [
+              77,
+              56,
+              89,
+              37
+            ],
+            "paste": [
+              63,
+              64
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "objection",
+            "frame": 5,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              77,
+              55,
+              432,
+              538
+            ],
+            "masterBBox": [
+              141,
+              119,
+              496,
+              602
+            ],
+            "stageMargins": [
+              77,
+              55,
+              79,
+              37
+            ],
+            "paste": [
+              63,
+              64
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "objection",
+            "frame": 6,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              77,
+              54,
+              426,
+              538
+            ],
+            "masterBBox": [
+              141,
+              118,
+              490,
+              602
+            ],
+            "stageMargins": [
+              77,
+              54,
+              85,
+              37
+            ],
+            "paste": [
+              63,
+              64
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "objection",
+            "frame": 7,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              77,
+              54,
+              423,
+              538
+            ],
+            "masterBBox": [
+              141,
+              118,
+              488,
+              602
+            ],
+            "stageMargins": [
+              77,
+              54,
+              88,
+              37
+            ],
+            "paste": [
+              63,
+              64
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "objection",
+            "frame": 8,
+            "scale": 1.0,
+            "oldFaceWidth": 96,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              77,
+              54,
+              423,
+              538
+            ],
+            "masterBBox": [
+              141,
+              118,
+              488,
+              602
+            ],
+            "stageMargins": [
+              77,
+              54,
+              88,
+              37
+            ],
+            "paste": [
+              63,
+              64
+            ],
+            "scaledSize": [
+              512,
+              576
+            ]
+          }
+        ]
+      },
+      "surprised": {
+        "actor": "lia",
+        "state": "surprised",
+        "referenceFaceBBox": [
+          228,
+          140,
+          95,
+          122
+        ],
+        "originalFaceCenter": [
+          275.5,
+          201.0
+        ],
+        "targetFaceCenter": [
+          281.0,
+          198.0
+        ],
+        "scale": 1.010526,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "lia",
+            "state": "surprised",
+            "frame": 1,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              40,
+              62,
+              481,
+              495
+            ],
+            "masterBBox": [
+              104,
+              126,
+              545,
+              559
+            ],
+            "stageMargins": [
+              40,
+              62,
+              30,
+              80
+            ],
+            "paste": [
+              67,
+              59
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "surprised",
+            "frame": 2,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              40,
+              62,
+              475,
+              495
+            ],
+            "masterBBox": [
+              104,
+              126,
+              539,
+              559
+            ],
+            "stageMargins": [
+              40,
+              62,
+              36,
+              80
+            ],
+            "paste": [
+              67,
+              59
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "surprised",
+            "frame": 3,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              40,
+              63,
+              482,
+              495
+            ],
+            "masterBBox": [
+              104,
+              127,
+              546,
+              559
+            ],
+            "stageMargins": [
+              40,
+              63,
+              29,
+              80
+            ],
+            "paste": [
+              67,
+              59
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "surprised",
+            "frame": 4,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              40,
+              60,
+              462,
+              495
+            ],
+            "masterBBox": [
+              104,
+              124,
+              526,
+              559
+            ],
+            "stageMargins": [
+              40,
+              60,
+              49,
+              80
+            ],
+            "paste": [
+              67,
+              59
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "surprised",
+            "frame": 5,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              40,
+              52,
+              481,
+              495
+            ],
+            "masterBBox": [
+              104,
+              116,
+              545,
+              559
+            ],
+            "stageMargins": [
+              40,
+              52,
+              30,
+              80
+            ],
+            "paste": [
+              67,
+              59
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "surprised",
+            "frame": 6,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              40,
+              52,
+              479,
+              495
+            ],
+            "masterBBox": [
+              104,
+              116,
+              543,
+              559
+            ],
+            "stageMargins": [
+              40,
+              52,
+              32,
+              80
+            ],
+            "paste": [
+              67,
+              59
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "surprised",
+            "frame": 7,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              41,
+              51,
+              478,
+              495
+            ],
+            "masterBBox": [
+              105,
+              115,
+              542,
+              559
+            ],
+            "stageMargins": [
+              41,
+              51,
+              33,
+              80
+            ],
+            "paste": [
+              67,
+              59
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "surprised",
+            "frame": 8,
+            "scale": 1.01053,
+            "oldFaceWidth": 95,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              40,
+              51,
+              479,
+              495
+            ],
+            "masterBBox": [
+              104,
+              115,
+              543,
+              559
+            ],
+            "stageMargins": [
+              40,
+              51,
+              32,
+              80
+            ],
+            "paste": [
+              67,
+              59
+            ],
+            "scaledSize": [
+              517,
+              582
+            ]
+          }
+        ]
+      },
+      "frustrated": {
+        "actor": "lia",
+        "state": "frustrated",
+        "referenceFaceBBox": [
+          220,
+          134,
+          101,
+          142
+        ],
+        "originalFaceCenter": [
+          270.5,
+          205.0
+        ],
+        "targetFaceCenter": [
+          281.0,
+          198.0
+        ],
+        "scale": 0.950495,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "lia",
+            "state": "frustrated",
+            "frame": 1,
+            "scale": 0.9505,
+            "oldFaceWidth": 101,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              61,
+              62,
+              474,
+              473
+            ],
+            "masterBBox": [
+              125,
+              126,
+              538,
+              537
+            ],
+            "stageMargins": [
+              61,
+              62,
+              37,
+              102
+            ],
+            "paste": [
+              88,
+              67
+            ],
+            "scaledSize": [
+              487,
+              547
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "frustrated",
+            "frame": 2,
+            "scale": 0.9505,
+            "oldFaceWidth": 101,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              61,
+              62,
+              473,
+              473
+            ],
+            "masterBBox": [
+              125,
+              126,
+              537,
+              537
+            ],
+            "stageMargins": [
+              61,
+              62,
+              38,
+              102
+            ],
+            "paste": [
+              88,
+              67
+            ],
+            "scaledSize": [
+              487,
+              547
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "frustrated",
+            "frame": 3,
+            "scale": 0.9505,
+            "oldFaceWidth": 101,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              62,
+              62,
+              463,
+              473
+            ],
+            "masterBBox": [
+              126,
+              126,
+              527,
+              537
+            ],
+            "stageMargins": [
+              62,
+              62,
+              48,
+              102
+            ],
+            "paste": [
+              88,
+              67
+            ],
+            "scaledSize": [
+              487,
+              547
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "frustrated",
+            "frame": 4,
+            "scale": 0.9505,
+            "oldFaceWidth": 101,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              63,
+              62,
+              439,
+              473
+            ],
+            "masterBBox": [
+              127,
+              126,
+              503,
+              537
+            ],
+            "stageMargins": [
+              63,
+              62,
+              72,
+              102
+            ],
+            "paste": [
+              88,
+              67
+            ],
+            "scaledSize": [
+              487,
+              547
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "frustrated",
+            "frame": 5,
+            "scale": 0.9505,
+            "oldFaceWidth": 101,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              61,
+              56,
+              474,
+              473
+            ],
+            "masterBBox": [
+              125,
+              120,
+              538,
+              537
+            ],
+            "stageMargins": [
+              61,
+              56,
+              37,
+              102
+            ],
+            "paste": [
+              88,
+              67
+            ],
+            "scaledSize": [
+              487,
+              547
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "frustrated",
+            "frame": 6,
+            "scale": 0.9505,
+            "oldFaceWidth": 101,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              59,
+              56,
+              473,
+              473
+            ],
+            "masterBBox": [
+              123,
+              120,
+              537,
+              537
+            ],
+            "stageMargins": [
+              59,
+              56,
+              38,
+              102
+            ],
+            "paste": [
+              88,
+              67
+            ],
+            "scaledSize": [
+              487,
+              547
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "frustrated",
+            "frame": 7,
+            "scale": 0.9505,
+            "oldFaceWidth": 101,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              60,
+              56,
+              472,
+              473
+            ],
+            "masterBBox": [
+              124,
+              120,
+              536,
+              537
+            ],
+            "stageMargins": [
+              60,
+              56,
+              39,
+              102
+            ],
+            "paste": [
+              88,
+              67
+            ],
+            "scaledSize": [
+              487,
+              547
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "frustrated",
+            "frame": 8,
+            "scale": 0.9505,
+            "oldFaceWidth": 101,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              60,
+              56,
+              468,
+              473
+            ],
+            "masterBBox": [
+              124,
+              120,
+              532,
+              537
+            ],
+            "stageMargins": [
+              60,
+              56,
+              43,
+              102
+            ],
+            "paste": [
+              88,
+              67
+            ],
+            "scaledSize": [
+              487,
+              547
+            ]
+          }
+        ]
+      },
+      "breakdown": {
+        "actor": "lia",
+        "state": "breakdown",
+        "referenceFaceBBox": [
+          217,
+          129,
+          102,
+          110
+        ],
+        "originalFaceCenter": [
+          268.0,
+          184.0
+        ],
+        "targetFaceCenter": [
+          281.0,
+          198.0
+        ],
+        "scale": 0.941176,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "lia",
+            "state": "breakdown",
+            "frame": 1,
+            "scale": 0.94118,
+            "oldFaceWidth": 102,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              96,
+              90,
+              422,
+              490
+            ],
+            "masterBBox": [
+              160,
+              154,
+              486,
+              554
+            ],
+            "stageMargins": [
+              96,
+              90,
+              89,
+              85
+            ],
+            "paste": [
+              93,
+              89
+            ],
+            "scaledSize": [
+              482,
+              542
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "breakdown",
+            "frame": 2,
+            "scale": 0.94118,
+            "oldFaceWidth": 102,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              96,
+              90,
+              423,
+              490
+            ],
+            "masterBBox": [
+              160,
+              154,
+              487,
+              554
+            ],
+            "stageMargins": [
+              96,
+              90,
+              88,
+              85
+            ],
+            "paste": [
+              93,
+              89
+            ],
+            "scaledSize": [
+              482,
+              542
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "breakdown",
+            "frame": 3,
+            "scale": 0.94118,
+            "oldFaceWidth": 102,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              90,
+              90,
+              431,
+              490
+            ],
+            "masterBBox": [
+              154,
+              154,
+              495,
+              554
+            ],
+            "stageMargins": [
+              90,
+              90,
+              80,
+              85
+            ],
+            "paste": [
+              93,
+              89
+            ],
+            "scaledSize": [
+              482,
+              542
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "breakdown",
+            "frame": 4,
+            "scale": 0.94118,
+            "oldFaceWidth": 102,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              81,
+              90,
+              448,
+              490
+            ],
+            "masterBBox": [
+              145,
+              154,
+              512,
+              554
+            ],
+            "stageMargins": [
+              81,
+              90,
+              63,
+              85
+            ],
+            "paste": [
+              93,
+              89
+            ],
+            "scaledSize": [
+              482,
+              542
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "breakdown",
+            "frame": 5,
+            "scale": 0.94118,
+            "oldFaceWidth": 102,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              82,
+              91,
+              455,
+              490
+            ],
+            "masterBBox": [
+              146,
+              155,
+              519,
+              554
+            ],
+            "stageMargins": [
+              82,
+              91,
+              56,
+              85
+            ],
+            "paste": [
+              93,
+              89
+            ],
+            "scaledSize": [
+              482,
+              542
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "breakdown",
+            "frame": 6,
+            "scale": 0.94118,
+            "oldFaceWidth": 102,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              80,
+              86,
+              454,
+              490
+            ],
+            "masterBBox": [
+              144,
+              150,
+              518,
+              554
+            ],
+            "stageMargins": [
+              80,
+              86,
+              57,
+              85
+            ],
+            "paste": [
+              93,
+              89
+            ],
+            "scaledSize": [
+              482,
+              542
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "breakdown",
+            "frame": 7,
+            "scale": 0.94118,
+            "oldFaceWidth": 102,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              75,
+              84,
+              471,
+              490
+            ],
+            "masterBBox": [
+              139,
+              148,
+              535,
+              554
+            ],
+            "stageMargins": [
+              75,
+              84,
+              40,
+              85
+            ],
+            "paste": [
+              93,
+              89
+            ],
+            "scaledSize": [
+              482,
+              542
+            ]
+          },
+          {
+            "actor": "lia",
+            "state": "breakdown",
+            "frame": 8,
+            "scale": 0.94118,
+            "oldFaceWidth": 102,
+            "normalizedFaceWidth": 96.0,
+            "stageBBox": [
+              82,
+              86,
+              441,
+              490
+            ],
+            "masterBBox": [
+              146,
+              150,
+              505,
+              554
+            ],
+            "stageMargins": [
+              82,
+              86,
+              70,
+              85
+            ],
+            "paste": [
+              93,
+              89
+            ],
+            "scaledSize": [
+              482,
+              542
+            ]
+          }
+        ]
+      }
+    },
+    "dante": {
+      "idle": {
+        "actor": "dante",
+        "state": "idle",
+        "referenceFaceBBox": [
+          183,
+          136,
+          128,
+          135
+        ],
+        "originalFaceCenter": [
+          247.0,
+          203.5
+        ],
+        "targetFaceCenter": [
+          247.0,
+          199.0
+        ],
+        "scale": 1.015625,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "dante",
+            "state": "idle",
+            "frame": 1,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              67,
+              48,
+              476,
+              494
+            ],
+            "masterBBox": [
+              131,
+              112,
+              540,
+              558
+            ],
+            "stageMargins": [
+              67,
+              48,
+              35,
+              81
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "idle",
+            "frame": 2,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              66,
+              48,
+              468,
+              494
+            ],
+            "masterBBox": [
+              130,
+              112,
+              532,
+              558
+            ],
+            "stageMargins": [
+              66,
+              48,
+              43,
+              81
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "idle",
+            "frame": 3,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              66,
+              48,
+              476,
+              494
+            ],
+            "masterBBox": [
+              130,
+              112,
+              540,
+              558
+            ],
+            "stageMargins": [
+              66,
+              48,
+              35,
+              81
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "idle",
+            "frame": 4,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              67,
+              48,
+              448,
+              494
+            ],
+            "masterBBox": [
+              131,
+              112,
+              512,
+              558
+            ],
+            "stageMargins": [
+              67,
+              48,
+              63,
+              81
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "idle",
+            "frame": 5,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              35,
+              48,
+              475,
+              494
+            ],
+            "masterBBox": [
+              99,
+              112,
+              539,
+              558
+            ],
+            "stageMargins": [
+              35,
+              48,
+              36,
+              81
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "idle",
+            "frame": 6,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              35,
+              48,
+              450,
+              494
+            ],
+            "masterBBox": [
+              99,
+              112,
+              514,
+              558
+            ],
+            "stageMargins": [
+              35,
+              48,
+              61,
+              81
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "idle",
+            "frame": 7,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              67,
+              48,
+              467,
+              494
+            ],
+            "masterBBox": [
+              131,
+              112,
+              531,
+              558
+            ],
+            "stageMargins": [
+              67,
+              48,
+              44,
+              81
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "idle",
+            "frame": 8,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              36,
+              48,
+              448,
+              494
+            ],
+            "masterBBox": [
+              100,
+              112,
+              512,
+              558
+            ],
+            "stageMargins": [
+              36,
+              48,
+              63,
+              81
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          }
+        ]
+      },
+      "talking": {
+        "actor": "dante",
+        "state": "talking",
+        "referenceFaceBBox": [
+          188,
+          143,
+          132,
+          132
+        ],
+        "originalFaceCenter": [
+          254.0,
+          209.0
+        ],
+        "targetFaceCenter": [
+          247.0,
+          199.0
+        ],
+        "scale": 0.984848,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "dante",
+            "state": "talking",
+            "frame": 1,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              54,
+              48,
+              463,
+              480
+            ],
+            "masterBBox": [
+              118,
+              112,
+              527,
+              544
+            ],
+            "stageMargins": [
+              54,
+              48,
+              48,
+              95
+            ],
+            "paste": [
+              61,
+              57
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "talking",
+            "frame": 2,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              54,
+              48,
+              448,
+              480
+            ],
+            "masterBBox": [
+              118,
+              112,
+              512,
+              544
+            ],
+            "stageMargins": [
+              54,
+              48,
+              63,
+              95
+            ],
+            "paste": [
+              61,
+              57
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "talking",
+            "frame": 3,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              49,
+              48,
+              450,
+              480
+            ],
+            "masterBBox": [
+              113,
+              112,
+              514,
+              544
+            ],
+            "stageMargins": [
+              49,
+              48,
+              61,
+              95
+            ],
+            "paste": [
+              61,
+              57
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "talking",
+            "frame": 4,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              35,
+              48,
+              463,
+              480
+            ],
+            "masterBBox": [
+              99,
+              112,
+              527,
+              544
+            ],
+            "stageMargins": [
+              35,
+              48,
+              48,
+              95
+            ],
+            "paste": [
+              61,
+              57
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "talking",
+            "frame": 5,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              35,
+              48,
+              463,
+              480
+            ],
+            "masterBBox": [
+              99,
+              112,
+              527,
+              544
+            ],
+            "stageMargins": [
+              35,
+              48,
+              48,
+              95
+            ],
+            "paste": [
+              61,
+              57
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "talking",
+            "frame": 6,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              35,
+              48,
+              463,
+              480
+            ],
+            "masterBBox": [
+              99,
+              112,
+              527,
+              544
+            ],
+            "stageMargins": [
+              35,
+              48,
+              48,
+              95
+            ],
+            "paste": [
+              61,
+              57
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "talking",
+            "frame": 7,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              34,
+              48,
+              463,
+              480
+            ],
+            "masterBBox": [
+              98,
+              112,
+              527,
+              544
+            ],
+            "stageMargins": [
+              34,
+              48,
+              48,
+              95
+            ],
+            "paste": [
+              61,
+              57
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "talking",
+            "frame": 8,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              38,
+              48,
+              451,
+              480
+            ],
+            "masterBBox": [
+              102,
+              112,
+              515,
+              544
+            ],
+            "stageMargins": [
+              38,
+              48,
+              60,
+              95
+            ],
+            "paste": [
+              61,
+              57
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          }
+        ]
+      },
+      "thinking": {
+        "actor": "dante",
+        "state": "thinking",
+        "referenceFaceBBox": [
+          183,
+          144,
+          134,
+          138
+        ],
+        "originalFaceCenter": [
+          250.0,
+          213.0
+        ],
+        "targetFaceCenter": [
+          247.0,
+          199.0
+        ],
+        "scale": 0.970149,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "dante",
+            "state": "thinking",
+            "frame": 1,
+            "scale": 0.97015,
+            "oldFaceWidth": 134,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              69,
+              46,
+              462,
+              472
+            ],
+            "masterBBox": [
+              133,
+              110,
+              526,
+              536
+            ],
+            "stageMargins": [
+              69,
+              46,
+              49,
+              103
+            ],
+            "paste": [
+              68,
+              56
+            ],
+            "scaledSize": [
+              497,
+              559
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "thinking",
+            "frame": 2,
+            "scale": 0.97015,
+            "oldFaceWidth": 134,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              67,
+              46,
+              452,
+              472
+            ],
+            "masterBBox": [
+              131,
+              110,
+              516,
+              536
+            ],
+            "stageMargins": [
+              67,
+              46,
+              59,
+              103
+            ],
+            "paste": [
+              68,
+              56
+            ],
+            "scaledSize": [
+              497,
+              559
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "thinking",
+            "frame": 3,
+            "scale": 0.97015,
+            "oldFaceWidth": 134,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              65,
+              46,
+              452,
+              472
+            ],
+            "masterBBox": [
+              129,
+              110,
+              516,
+              536
+            ],
+            "stageMargins": [
+              65,
+              46,
+              59,
+              103
+            ],
+            "paste": [
+              68,
+              56
+            ],
+            "scaledSize": [
+              497,
+              559
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "thinking",
+            "frame": 4,
+            "scale": 0.97015,
+            "oldFaceWidth": 134,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              66,
+              46,
+              453,
+              472
+            ],
+            "masterBBox": [
+              130,
+              110,
+              517,
+              536
+            ],
+            "stageMargins": [
+              66,
+              46,
+              58,
+              103
+            ],
+            "paste": [
+              68,
+              56
+            ],
+            "scaledSize": [
+              497,
+              559
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "thinking",
+            "frame": 5,
+            "scale": 0.97015,
+            "oldFaceWidth": 134,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              42,
+              46,
+              452,
+              472
+            ],
+            "masterBBox": [
+              106,
+              110,
+              516,
+              536
+            ],
+            "stageMargins": [
+              42,
+              46,
+              59,
+              103
+            ],
+            "paste": [
+              68,
+              56
+            ],
+            "scaledSize": [
+              497,
+              559
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "thinking",
+            "frame": 6,
+            "scale": 0.97015,
+            "oldFaceWidth": 134,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              39,
+              46,
+              452,
+              472
+            ],
+            "masterBBox": [
+              103,
+              110,
+              516,
+              536
+            ],
+            "stageMargins": [
+              39,
+              46,
+              59,
+              103
+            ],
+            "paste": [
+              68,
+              56
+            ],
+            "scaledSize": [
+              497,
+              559
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "thinking",
+            "frame": 7,
+            "scale": 0.97015,
+            "oldFaceWidth": 134,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              65,
+              46,
+              452,
+              472
+            ],
+            "masterBBox": [
+              129,
+              110,
+              516,
+              536
+            ],
+            "stageMargins": [
+              65,
+              46,
+              59,
+              103
+            ],
+            "paste": [
+              68,
+              56
+            ],
+            "scaledSize": [
+              497,
+              559
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "thinking",
+            "frame": 8,
+            "scale": 0.97015,
+            "oldFaceWidth": 134,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              40,
+              46,
+              453,
+              472
+            ],
+            "masterBBox": [
+              104,
+              110,
+              517,
+              536
+            ],
+            "stageMargins": [
+              40,
+              46,
+              58,
+              103
+            ],
+            "paste": [
+              68,
+              56
+            ],
+            "scaledSize": [
+              497,
+              559
+            ]
+          }
+        ]
+      },
+      "confident": {
+        "actor": "dante",
+        "state": "confident",
+        "referenceFaceBBox": [
+          185,
+          136,
+          131,
+          142
+        ],
+        "originalFaceCenter": [
+          250.5,
+          207.0
+        ],
+        "targetFaceCenter": [
+          247.0,
+          199.0
+        ],
+        "scale": 0.992366,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "dante",
+            "state": "confident",
+            "frame": 1,
+            "scale": 0.99237,
+            "oldFaceWidth": 131,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              67,
+              49,
+              448,
+              485
+            ],
+            "masterBBox": [
+              131,
+              113,
+              512,
+              549
+            ],
+            "stageMargins": [
+              67,
+              49,
+              63,
+              90
+            ],
+            "paste": [
+              62,
+              58
+            ],
+            "scaledSize": [
+              508,
+              572
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "confident",
+            "frame": 2,
+            "scale": 0.99237,
+            "oldFaceWidth": 131,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              68,
+              49,
+              448,
+              485
+            ],
+            "masterBBox": [
+              132,
+              113,
+              512,
+              549
+            ],
+            "stageMargins": [
+              68,
+              49,
+              63,
+              90
+            ],
+            "paste": [
+              62,
+              58
+            ],
+            "scaledSize": [
+              508,
+              572
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "confident",
+            "frame": 3,
+            "scale": 0.99237,
+            "oldFaceWidth": 131,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              36,
+              49,
+              449,
+              485
+            ],
+            "masterBBox": [
+              100,
+              113,
+              513,
+              549
+            ],
+            "stageMargins": [
+              36,
+              49,
+              62,
+              90
+            ],
+            "paste": [
+              62,
+              58
+            ],
+            "scaledSize": [
+              508,
+              572
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "confident",
+            "frame": 4,
+            "scale": 0.99237,
+            "oldFaceWidth": 131,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              68,
+              49,
+              449,
+              485
+            ],
+            "masterBBox": [
+              132,
+              113,
+              513,
+              549
+            ],
+            "stageMargins": [
+              68,
+              49,
+              62,
+              90
+            ],
+            "paste": [
+              62,
+              58
+            ],
+            "scaledSize": [
+              508,
+              572
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "confident",
+            "frame": 5,
+            "scale": 0.99237,
+            "oldFaceWidth": 131,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              67,
+              49,
+              448,
+              485
+            ],
+            "masterBBox": [
+              131,
+              113,
+              512,
+              549
+            ],
+            "stageMargins": [
+              67,
+              49,
+              63,
+              90
+            ],
+            "paste": [
+              62,
+              58
+            ],
+            "scaledSize": [
+              508,
+              572
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "confident",
+            "frame": 6,
+            "scale": 0.99237,
+            "oldFaceWidth": 131,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              68,
+              49,
+              448,
+              485
+            ],
+            "masterBBox": [
+              132,
+              113,
+              512,
+              549
+            ],
+            "stageMargins": [
+              68,
+              49,
+              63,
+              90
+            ],
+            "paste": [
+              62,
+              58
+            ],
+            "scaledSize": [
+              508,
+              572
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "confident",
+            "frame": 7,
+            "scale": 0.99237,
+            "oldFaceWidth": 131,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              69,
+              49,
+              449,
+              485
+            ],
+            "masterBBox": [
+              133,
+              113,
+              513,
+              549
+            ],
+            "stageMargins": [
+              69,
+              49,
+              62,
+              90
+            ],
+            "paste": [
+              62,
+              58
+            ],
+            "scaledSize": [
+              508,
+              572
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "confident",
+            "frame": 8,
+            "scale": 0.99237,
+            "oldFaceWidth": 131,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              68,
+              49,
+              448,
+              485
+            ],
+            "masterBBox": [
+              132,
+              113,
+              512,
+              549
+            ],
+            "stageMargins": [
+              68,
+              49,
+              63,
+              90
+            ],
+            "paste": [
+              62,
+              58
+            ],
+            "scaledSize": [
+              508,
+              572
+            ]
+          }
+        ]
+      },
+      "objection": {
+        "actor": "dante",
+        "state": "objection",
+        "referenceFaceBBox": [
+          193,
+          150,
+          132,
+          135
+        ],
+        "originalFaceCenter": [
+          259.0,
+          217.5
+        ],
+        "targetFaceCenter": [
+          247.0,
+          199.0
+        ],
+        "scale": 0.984848,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "dante",
+            "state": "objection",
+            "frame": 1,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              72,
+              40,
+              459,
+              472
+            ],
+            "masterBBox": [
+              136,
+              104,
+              523,
+              536
+            ],
+            "stageMargins": [
+              72,
+              40,
+              52,
+              103
+            ],
+            "paste": [
+              56,
+              49
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "objection",
+            "frame": 2,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              68,
+              42,
+              445,
+              472
+            ],
+            "masterBBox": [
+              132,
+              106,
+              509,
+              536
+            ],
+            "stageMargins": [
+              68,
+              42,
+              66,
+              103
+            ],
+            "paste": [
+              56,
+              49
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "objection",
+            "frame": 3,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              28,
+              41,
+              459,
+              472
+            ],
+            "masterBBox": [
+              92,
+              105,
+              523,
+              536
+            ],
+            "stageMargins": [
+              28,
+              41,
+              52,
+              103
+            ],
+            "paste": [
+              56,
+              49
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "objection",
+            "frame": 4,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              28,
+              41,
+              447,
+              472
+            ],
+            "masterBBox": [
+              92,
+              105,
+              511,
+              536
+            ],
+            "stageMargins": [
+              28,
+              41,
+              64,
+              103
+            ],
+            "paste": [
+              56,
+              49
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "objection",
+            "frame": 5,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              28,
+              40,
+              458,
+              472
+            ],
+            "masterBBox": [
+              92,
+              104,
+              522,
+              536
+            ],
+            "stageMargins": [
+              28,
+              40,
+              53,
+              103
+            ],
+            "paste": [
+              56,
+              49
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "objection",
+            "frame": 6,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              28,
+              40,
+              444,
+              472
+            ],
+            "masterBBox": [
+              92,
+              104,
+              508,
+              536
+            ],
+            "stageMargins": [
+              28,
+              40,
+              67,
+              103
+            ],
+            "paste": [
+              56,
+              49
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "objection",
+            "frame": 7,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              28,
+              40,
+              455,
+              472
+            ],
+            "masterBBox": [
+              92,
+              104,
+              519,
+              536
+            ],
+            "stageMargins": [
+              28,
+              40,
+              56,
+              103
+            ],
+            "paste": [
+              56,
+              49
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "objection",
+            "frame": 8,
+            "scale": 0.98485,
+            "oldFaceWidth": 132,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              28,
+              40,
+              456,
+              472
+            ],
+            "masterBBox": [
+              92,
+              104,
+              520,
+              536
+            ],
+            "stageMargins": [
+              28,
+              40,
+              55,
+              103
+            ],
+            "paste": [
+              56,
+              49
+            ],
+            "scaledSize": [
+              504,
+              567
+            ]
+          }
+        ]
+      },
+      "surprised": {
+        "actor": "dante",
+        "state": "surprised",
+        "referenceFaceBBox": [
+          172,
+          136,
+          137,
+          145
+        ],
+        "originalFaceCenter": [
+          240.5,
+          208.5
+        ],
+        "targetFaceCenter": [
+          247.0,
+          199.0
+        ],
+        "scale": 0.948905,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "dante",
+            "state": "surprised",
+            "frame": 1,
+            "scale": 0.94891,
+            "oldFaceWidth": 137,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              71,
+              54,
+              469,
+              471
+            ],
+            "masterBBox": [
+              135,
+              118,
+              533,
+              535
+            ],
+            "stageMargins": [
+              71,
+              54,
+              42,
+              104
+            ],
+            "paste": [
+              83,
+              65
+            ],
+            "scaledSize": [
+              486,
+              547
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "surprised",
+            "frame": 2,
+            "scale": 0.94891,
+            "oldFaceWidth": 137,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              71,
+              54,
+              454,
+              471
+            ],
+            "masterBBox": [
+              135,
+              118,
+              518,
+              535
+            ],
+            "stageMargins": [
+              71,
+              54,
+              57,
+              104
+            ],
+            "paste": [
+              83,
+              65
+            ],
+            "scaledSize": [
+              486,
+              547
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "surprised",
+            "frame": 3,
+            "scale": 0.94891,
+            "oldFaceWidth": 137,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              66,
+              54,
+              468,
+              471
+            ],
+            "masterBBox": [
+              130,
+              118,
+              532,
+              535
+            ],
+            "stageMargins": [
+              66,
+              54,
+              43,
+              104
+            ],
+            "paste": [
+              83,
+              65
+            ],
+            "scaledSize": [
+              486,
+              547
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "surprised",
+            "frame": 4,
+            "scale": 0.94891,
+            "oldFaceWidth": 137,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              53,
+              54,
+              469,
+              471
+            ],
+            "masterBBox": [
+              117,
+              118,
+              533,
+              535
+            ],
+            "stageMargins": [
+              53,
+              54,
+              42,
+              104
+            ],
+            "paste": [
+              83,
+              65
+            ],
+            "scaledSize": [
+              486,
+              547
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "surprised",
+            "frame": 5,
+            "scale": 0.94891,
+            "oldFaceWidth": 137,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              53,
+              54,
+              469,
+              471
+            ],
+            "masterBBox": [
+              117,
+              118,
+              533,
+              535
+            ],
+            "stageMargins": [
+              53,
+              54,
+              42,
+              104
+            ],
+            "paste": [
+              83,
+              65
+            ],
+            "scaledSize": [
+              486,
+              547
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "surprised",
+            "frame": 6,
+            "scale": 0.94891,
+            "oldFaceWidth": 137,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              53,
+              54,
+              469,
+              471
+            ],
+            "masterBBox": [
+              117,
+              118,
+              533,
+              535
+            ],
+            "stageMargins": [
+              53,
+              54,
+              42,
+              104
+            ],
+            "paste": [
+              83,
+              65
+            ],
+            "scaledSize": [
+              486,
+              547
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "surprised",
+            "frame": 7,
+            "scale": 0.94891,
+            "oldFaceWidth": 137,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              53,
+              54,
+              466,
+              471
+            ],
+            "masterBBox": [
+              117,
+              118,
+              530,
+              535
+            ],
+            "stageMargins": [
+              53,
+              54,
+              45,
+              104
+            ],
+            "paste": [
+              83,
+              65
+            ],
+            "scaledSize": [
+              486,
+              547
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "surprised",
+            "frame": 8,
+            "scale": 0.94891,
+            "oldFaceWidth": 137,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              53,
+              54,
+              451,
+              471
+            ],
+            "masterBBox": [
+              117,
+              118,
+              515,
+              535
+            ],
+            "stageMargins": [
+              53,
+              54,
+              60,
+              104
+            ],
+            "paste": [
+              83,
+              65
+            ],
+            "scaledSize": [
+              486,
+              547
+            ]
+          }
+        ]
+      },
+      "frustrated": {
+        "actor": "dante",
+        "state": "frustrated",
+        "referenceFaceBBox": [
+          183,
+          140,
+          128,
+          128
+        ],
+        "originalFaceCenter": [
+          247.0,
+          204.0
+        ],
+        "targetFaceCenter": [
+          247.0,
+          199.0
+        ],
+        "scale": 1.015625,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "dante",
+            "state": "frustrated",
+            "frame": 1,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              61,
+              54,
+              477,
+              492
+            ],
+            "masterBBox": [
+              125,
+              118,
+              541,
+              556
+            ],
+            "stageMargins": [
+              61,
+              54,
+              34,
+              83
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "frustrated",
+            "frame": 2,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              59,
+              53,
+              467,
+              492
+            ],
+            "masterBBox": [
+              123,
+              117,
+              531,
+              556
+            ],
+            "stageMargins": [
+              59,
+              53,
+              44,
+              83
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "frustrated",
+            "frame": 3,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              57,
+              51,
+              468,
+              492
+            ],
+            "masterBBox": [
+              121,
+              115,
+              532,
+              556
+            ],
+            "stageMargins": [
+              57,
+              51,
+              43,
+              83
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "frustrated",
+            "frame": 4,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              48,
+              50,
+              477,
+              492
+            ],
+            "masterBBox": [
+              112,
+              114,
+              541,
+              556
+            ],
+            "stageMargins": [
+              48,
+              50,
+              34,
+              83
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "frustrated",
+            "frame": 5,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              34,
+              49,
+              474,
+              492
+            ],
+            "masterBBox": [
+              98,
+              113,
+              538,
+              556
+            ],
+            "stageMargins": [
+              34,
+              49,
+              37,
+              83
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "frustrated",
+            "frame": 6,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              34,
+              51,
+              464,
+              492
+            ],
+            "masterBBox": [
+              98,
+              115,
+              528,
+              556
+            ],
+            "stageMargins": [
+              34,
+              51,
+              47,
+              83
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "frustrated",
+            "frame": 7,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              35,
+              49,
+              465,
+              492
+            ],
+            "masterBBox": [
+              99,
+              113,
+              529,
+              556
+            ],
+            "stageMargins": [
+              35,
+              49,
+              46,
+              83
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "frustrated",
+            "frame": 8,
+            "scale": 1.01562,
+            "oldFaceWidth": 128,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              33,
+              51,
+              470,
+              492
+            ],
+            "masterBBox": [
+              97,
+              115,
+              534,
+              556
+            ],
+            "stageMargins": [
+              33,
+              51,
+              41,
+              83
+            ],
+            "paste": [
+              60,
+              56
+            ],
+            "scaledSize": [
+              520,
+              585
+            ]
+          }
+        ]
+      },
+      "breakdown": {
+        "actor": "dante",
+        "state": "breakdown",
+        "referenceFaceBBox": [
+          206,
+          95,
+          106,
+          108
+        ],
+        "originalFaceCenter": [
+          259.0,
+          149.0
+        ],
+        "targetFaceCenter": [
+          247.0,
+          199.0
+        ],
+        "scale": 1.226415,
+        "sourceDimensions": [
+          512,
+          576
+        ],
+        "masterDimensions": [
+          640,
+          800
+        ],
+        "stageDimensions": [
+          512,
+          576
+        ],
+        "frames": [
+          {
+            "actor": "dante",
+            "state": "breakdown",
+            "frame": 1,
+            "scale": 1.22642,
+            "oldFaceWidth": 106,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              81,
+              60,
+              419,
+              572
+            ],
+            "masterBBox": [
+              137,
+              124,
+              483,
+              748
+            ],
+            "stageMargins": [
+              81,
+              60,
+              92,
+              3
+            ],
+            "paste": [
+              -7,
+              80
+            ],
+            "scaledSize": [
+              628,
+              706
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "breakdown",
+            "frame": 2,
+            "scale": 1.22642,
+            "oldFaceWidth": 106,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              82,
+              60,
+              417,
+              572
+            ],
+            "masterBBox": [
+              136,
+              124,
+              481,
+              748
+            ],
+            "stageMargins": [
+              82,
+              60,
+              94,
+              3
+            ],
+            "paste": [
+              -7,
+              80
+            ],
+            "scaledSize": [
+              628,
+              706
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "breakdown",
+            "frame": 3,
+            "scale": 1.22642,
+            "oldFaceWidth": 106,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              77,
+              61,
+              421,
+              572
+            ],
+            "masterBBox": [
+              137,
+              125,
+              485,
+              748
+            ],
+            "stageMargins": [
+              77,
+              61,
+              90,
+              3
+            ],
+            "paste": [
+              -7,
+              80
+            ],
+            "scaledSize": [
+              628,
+              706
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "breakdown",
+            "frame": 4,
+            "scale": 1.22642,
+            "oldFaceWidth": 106,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              55,
+              60,
+              433,
+              572
+            ],
+            "masterBBox": [
+              119,
+              124,
+              497,
+              748
+            ],
+            "stageMargins": [
+              55,
+              60,
+              78,
+              3
+            ],
+            "paste": [
+              -7,
+              80
+            ],
+            "scaledSize": [
+              628,
+              706
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "breakdown",
+            "frame": 5,
+            "scale": 1.22642,
+            "oldFaceWidth": 106,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              56,
+              51,
+              432,
+              572
+            ],
+            "masterBBox": [
+              120,
+              115,
+              496,
+              748
+            ],
+            "stageMargins": [
+              56,
+              51,
+              79,
+              3
+            ],
+            "paste": [
+              -7,
+              80
+            ],
+            "scaledSize": [
+              628,
+              706
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "breakdown",
+            "frame": 6,
+            "scale": 1.22642,
+            "oldFaceWidth": 106,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              53,
+              51,
+              433,
+              572
+            ],
+            "masterBBox": [
+              117,
+              115,
+              497,
+              748
+            ],
+            "stageMargins": [
+              53,
+              51,
+              78,
+              3
+            ],
+            "paste": [
+              -7,
+              80
+            ],
+            "scaledSize": [
+              628,
+              706
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "breakdown",
+            "frame": 7,
+            "scale": 1.22642,
+            "oldFaceWidth": 106,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              61,
+              51,
+              433,
+              572
+            ],
+            "masterBBox": [
+              125,
+              115,
+              497,
+              748
+            ],
+            "stageMargins": [
+              61,
+              51,
+              78,
+              3
+            ],
+            "paste": [
+              -7,
+              80
+            ],
+            "scaledSize": [
+              628,
+              706
+            ]
+          },
+          {
+            "actor": "dante",
+            "state": "breakdown",
+            "frame": 8,
+            "scale": 1.22642,
+            "oldFaceWidth": 106,
+            "normalizedFaceWidth": 130.0,
+            "stageBBox": [
+              61,
+              61,
+              433,
+              572
+            ],
+            "masterBBox": [
+              125,
+              125,
+              497,
+              748
+            ],
+            "stageMargins": [
+              61,
+              61,
+              78,
+              3
+            ],
+            "paste": [
+              -7,
+              80
+            ],
+            "scaledSize": [
+              628,
+              706
+            ]
+          }
+        ]
+      }
+    }
+  }
+}

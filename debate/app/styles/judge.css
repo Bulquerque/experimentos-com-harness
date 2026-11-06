@@ -1,0 +1,28 @@
+/* CONTRAPONTO v12 — Elias no centro, sem esconder Lia e Dante.
+   O juiz tem canvas 256×256; não deve ser ampliado como os corpos 512×384. */
+.judge-portrait-stage{position:relative;display:grid;place-items:center;width:clamp(150px,25vw,280px);height:clamp(175px,28vw,295px);border:1px solid #d5aa6a66;border-radius:13px 13px 4px 4px;background:radial-gradient(ellipse at 50% 80%,#6a4c4b77,#201b30ba 75%);box-shadow:inset 0 0 36px #0008,0 18px 48px #000a;overflow:hidden}
+.judge-portrait-stage:before{content:"";position:absolute;inset:4%;border:1px solid #ddae7252;border-radius:inherit;pointer-events:none}
+.judge-portrait-stage img{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 7px 10px #0009)}
+.arena[data-camera=judge] .judge-cutaway{top:38%;gap:2px;z-index:12}
+.arena[data-camera=judge] .judge-cutaway b{padding:4px 9px;border-radius:5px;background:#10111fd9;font-size:clamp(12px,1.8vw,17px)}
+.arena[data-camera=judge] .judge-cutaway>span{background:#10111fd9;border-radius:4px;padding:5px 7px}
+.judge-avatar{display:flex;flex-direction:column;justify-content:end;align-items:center;padding-top:4px}
+.judge-avatar img.judge-sidebar-sprite{z-index:2;position:relative;display:block;width:min(100%,285px);height:185px;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 8px 10px #000a)}
+.judge-avatar .judge-text{width:100%}
+.arena.scene-judged .judge-portrait-stage{animation:elias-gavel-impact 420ms cubic-bezier(.23,.88,.32,1) 1}
+@keyframes elias-gavel-impact{0%,100%{transform:translateY(0)}38%{transform:translateY(5px) scale(1.017)}65%{transform:translateY(-2px)}}
+@media(max-width:450px){.arena[data-camera=judge] .judge-cutaway{top:33%}.judge-portrait-stage{width:168px;height:188px}.judge-avatar img.judge-sidebar-sprite{height:177px}}
+@media(prefers-reduced-motion:reduce){.arena.scene-judged .judge-portrait-stage{animation:none}}
+.judge-talk{position:relative;display:flex;flex-direction:column;align-items:center;width:100%;padding:0;border:0;background:transparent;color:inherit;font:inherit;overflow:hidden}
+.judge-talk .judge-text{display:flex;flex-direction:column;gap:3px;z-index:2}
+.judge-talk:hover .judge-text small{color:#ffe0a3}
+.judge-talk:focus-visible{outline:2px solid #f4c78d;outline-offset:-3px;border-radius:10px}
+.judge-interaction{margin:0 0 18px;padding:12px;border:1px solid #8b73584d;border-radius:10px;background:#171b29}
+.judge-interaction>strong{display:block;color:#f4c78d;letter-spacing:1px;font-size:9px}
+.judge-interaction p{margin:8px 0 10px;color:#d4d0dc;font-size:11px;line-height:1.65;overflow-wrap:anywhere}
+.judge-interaction.has-comment{border-color:#be965e99}
+.judge-questions{display:flex;flex-wrap:wrap;gap:6px}
+.judge-questions button{flex:1;min-height:34px;padding:7px 8px;border:1px solid #756248;border-radius:6px;background:#302b2b;color:#f4d5aa;font-size:10px}
+.judge-questions button:hover{background:#40352d}
+.judge-questions button:focus-visible{outline:2px solid #f4c78d;outline-offset:2px}
+@media(min-width:781px) and (max-width:1150px){.sidebar>.judge-interaction{grid-column:1;grid-row:6;align-self:start}}

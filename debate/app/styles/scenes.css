@@ -1,0 +1,38 @@
+/* CONTRAPONTO v7 — Arte de ambiente. Não contém sprites nem modifica o Harness. */
+.scene-backdrop {
+ position:absolute;inset:0 0 155px;z-index:0;pointer-events:none;
+ background-image:linear-gradient(180deg,rgba(7,9,18,.12) 0%,rgba(6,9,19,.23) 48%,rgba(11,11,24,.90) 100%),url('/assets/scenes/courtroom-grand.webp');
+ background-position: center top, center 43%; background-size:cover,cover;
+ opacity:.96;filter:saturate(.87) brightness(.78);
+ transition:filter .5s ease,opacity .5s ease,background-position .85s cubic-bezier(.2,.8,.2,1);
+ will-change:background-position;
+}
+.arena[data-scene=front] .scene-backdrop{background-image:linear-gradient(180deg,#070a1422,#0c0a20db),url('/assets/scenes/courtroom-front.webp');filter:saturate(.95) brightness(.77)}
+.arena[data-scene=night] .scene-backdrop{background-image:linear-gradient(180deg,#060c1a22,#070e25cf),url('/assets/scenes/courtroom-night.webp');filter:saturate(1.03) brightness(.82)}
+.arena[data-scene=suspense] .scene-backdrop{background-image:linear-gradient(180deg,#11091749,#0a091ed9),url('/assets/scenes/courtroom-night.webp');filter:hue-rotate(-12deg) saturate(1.38) brightness(.62)}
+/* A câmera move o cenário, não apenas os retratos. */
+.arena[data-camera=a] .scene-backdrop,.arena[data-camera=a-close] .scene-backdrop{background-position:center top,42% 40%;filter:saturate(1.02) brightness(.70)}
+.arena[data-camera=b] .scene-backdrop,.arena[data-camera=b-close] .scene-backdrop{background-position:center top,58% 40%;filter:saturate(1.02) brightness(.70)}
+.arena[data-camera=duel] .scene-backdrop{filter:saturate(1.13) brightness(.78)}
+.arena[data-camera=judge] .scene-backdrop{
+ background-image:linear-gradient(180deg,#07091340,#0b0815d9),url('/assets/scenes/judge-bench.webp');
+ background-position:center top,center center;background-size:cover,cover;filter:saturate(.78) brightness(.85);
+}
+/* Mantém a arquitetura CSS antiga desligada enquanto as colunas reais aparecem no fundo. */
+.arena:has(.scene-backdrop) .cinema-architecture{opacity:.055}
+.arena:has(.scene-backdrop) .orbit{opacity:.18}
+.arena:has(.scene-backdrop) .platform{background:linear-gradient(180deg,#282235b8,#110f1cea);border-top-color:#b78b65b8}
+/* Banca do magistrado: a arte gerada pode ser usada antes dos sprites personalizados. */
+.judge-avatar{background:linear-gradient(180deg,#100e1b22,#171324ed),url('/assets/scenes/judge-bench.webp') center 42%/cover;border-color:#80694d}
+.judge-avatar svg{filter:drop-shadow(0 11px 18px #000d)}
+.judge-halo{border-color:#edc58b74;box-shadow:0 0 28px #d59c4740}
+.verdict{background-image:linear-gradient(90deg,#201b2eea,#211b2eee),url('/assets/scenes/verdict-chamber.webp');background-size:cover}
+/* Os recortes de efeitos são complementares aos flashes e cartões CSS existentes. */
+.arena.impact .impact-lines{background-image:url('/assets/fx/speedlines-red.webp');background-position:center;background-size:cover;mix-blend-mode:screen}
+.arena.slam-impact .impact-lines{background-image:url('/assets/fx/speedlines-blue.webp');background-position:center;background-size:cover;mix-blend-mode:screen}
+.arena.impact .scene-action-ribbon[data-kind=objection]{box-shadow:0 12px 48px #1a0415c4,0 0 45px #ce314670}
+.scene-picker{display:flex;align-items:center;gap:5px;color:#d7bec2;font-size:9px;font-weight:900;letter-spacing:1px;padding:3px 5px;border-radius:7px;background:#171b29;border:1px solid #55536c}
+.scene-picker select{max-width:120px;min-width:95px;border:0;background:#23273a;color:#f5e0ca;padding:5px 3px;font-size:9px;cursor:pointer}
+@media(max-width:780px){.scene-backdrop{inset:0 0 155px;background-position:center top,50% center}.scene-picker{flex:1;justify-content:center}}
+@media(max-width:450px){.scene-backdrop{bottom:160px}.scene-picker{width:100%;order:0}.scene-picker select{max-width:none}.arena[data-camera=judge] .scene-backdrop{background-position:center 45%}}
+@media(prefers-reduced-motion:reduce){.scene-backdrop{transition:none!important;will-change:auto}}

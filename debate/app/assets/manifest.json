@@ -1,0 +1,74 @@
+{
+  "version": "v15-active-scenes",
+  "assets": {
+    "config-chamber": {
+      "path": "assets/scenes/config-chamber.webp"
+    },
+    "courtroom-angle-left": {
+      "path": "assets/scenes/courtroom-angle-left.webp"
+    },
+    "courtroom-angle-right": {
+      "path": "assets/scenes/courtroom-angle-right.webp"
+    },
+    "courtroom-front": {
+      "path": "assets/scenes/courtroom-front.webp"
+    },
+    "courtroom-grand": {
+      "path": "assets/scenes/courtroom-grand.webp"
+    },
+    "courtroom-night": {
+      "path": "assets/scenes/courtroom-night.webp"
+    },
+    "judge-bench": {
+      "path": "assets/scenes/judge-bench.webp"
+    },
+    "verdict-chamber": {
+      "path": "assets/scenes/verdict-chamber.webp"
+    },
+    "burst-evidence": {
+      "path": "assets/fx/burst-evidence.webp"
+    },
+    "burst-judgment": {
+      "path": "assets/fx/burst-judgment.webp"
+    },
+    "burst-objection": {
+      "path": "assets/fx/burst-objection.webp"
+    },
+    "burst-rebuttal": {
+      "path": "assets/fx/burst-rebuttal.webp"
+    },
+    "camera-swipe": {
+      "path": "assets/fx/camera-swipe.webp"
+    },
+    "facecard-frame": {
+      "path": "assets/fx/facecard-frame.webp"
+    },
+    "gold-particles": {
+      "path": "assets/fx/gold-particles.webp"
+    },
+    "impact-white": {
+      "path": "assets/fx/impact-white.webp"
+    },
+    "speedlines-blue": {
+      "path": "assets/fx/speedlines-blue.webp"
+    },
+    "speedlines-red": {
+      "path": "assets/fx/speedlines-red.webp"
+    },
+    "tension-vignette": {
+      "path": "assets/fx/tension-vignette.webp"
+    },
+    "dialogue-blue": {
+      "path": "assets/ui/dialogue-blue.webp"
+    },
+    "dialogue-gold": {
+      "path": "assets/ui/dialogue-gold.webp"
+    },
+    "dialogue-red": {
+      "path": "assets/ui/dialogue-red.webp"
+    },
+    "dialogue-shadow": {
+      "path": "assets/ui/dialogue-shadow.webp"
+    }
+  }
+}

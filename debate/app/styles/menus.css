@@ -1,0 +1,25 @@
+/* Menus recolhíveis compartilhados pelo HTML local e pelo frontend NIM.
+   Os IDs dos controles permanecem idênticos: apenas muda a organização visual. */
+.config-drawer,.stage-settings,.transcript-drawer,.rag-drawer{margin:15px 0 0;border:1px solid #43475d;border-radius:11px;background:#181d2c}
+.config-drawer>summary,.stage-settings>summary,.transcript-drawer>summary,.rag-drawer>summary{list-style:none;cursor:pointer;padding:14px 13px;display:flex;align-items:center;justify-content:space-between;gap:10px;font-weight:800;font-size:11px;letter-spacing:.45px;color:#f0dcc2}
+.config-drawer>summary::-webkit-details-marker,.stage-settings>summary::-webkit-details-marker,.transcript-drawer>summary::-webkit-details-marker,.rag-drawer>summary::-webkit-details-marker{display:none}
+.config-drawer>summary small,.stage-settings>summary small,.transcript-drawer>summary small,.rag-drawer>summary small{font-weight:500;font-size:10px;letter-spacing:0;color:#aab1c5;text-align:right}
+.config-drawer>summary:after,.stage-settings>summary:after,.transcript-drawer>summary:after,.rag-drawer>summary:after{content:'⌄';font-size:18px;color:#e6cfa5}
+.config-drawer[open]>summary:after,.stage-settings[open]>summary:after,.transcript-drawer[open]>summary:after,.rag-drawer[open]>summary:after{content:'⌃'}
+.config-drawer-body{padding:5px 12px 14px}
+.config-drawer-body .field-title.section-spacer{margin:0;border:0;padding:0 0 12px}
+.config-drawer-body .editor{padding:12px}
+.config-drawer-body .versus-mini{margin:7px 0}
+.config-drawer-body .config-actions{margin-top:14px}
+.stage-settings{margin:0}
+.stage-settings>summary{padding:11px 15px;white-space:nowrap}
+.stage-settings .cinema-controls{display:flex;flex-wrap:wrap;gap:8px;padding:10px 14px;border-top:1px solid #40465a}
+.stage-settings .cinema-controls select{width:auto;max-width:180px}
+.transcript-drawer{margin-top:12px}
+.transcript-drawer>.transcript-bar{display:none}
+.transcript-drawer>.transcript{margin:0 12px 15px;max-height:315px}
+.rag-drawer{margin-top:15px}
+.rag-drawer .docs-head{margin:0 10px;padding:14px 0 0;border:0}
+.rag-drawer .docs-caption,.rag-drawer .doc-upload,.rag-drawer .docs-list,.rag-drawer .memory-search{margin-left:12px;margin-right:12px}
+.rag-drawer .memory-search{margin-bottom:15px}
+@media(max-width:450px){.config-drawer>summary small,.stage-settings>summary small{display:none}}

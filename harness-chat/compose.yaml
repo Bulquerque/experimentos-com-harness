@@ -1,0 +1,98 @@
+name: nvidia-harness-studio
+services:
+  app:
+    build:
+      context: .
+      dockerfile: docker/app.Dockerfile
+    environment:
+      HOST: 0.0.0.0
+      PORT: 8787
+      NVIDIA_API_KEY: ${NVIDIA_API_KEY:-}
+      NVIDIA_MODEL: ${NVIDIA_MODEL:-z-ai/glm-5.3-flash}
+      NVIDIA_BASE_URL: ${NVIDIA_BASE_URL:-https://integrate.api.nvidia.com/v1}
+      RUNNER_SOCKET: /run/harness/runner.sock
+      RUNNER_TOKEN: ${RUNNER_TOKEN:?Execute start.ps1 ou start.sh para gerar o token interno}
+    ports:
+      - "127.0.0.1:8787:8787"
+    volumes:
+      - ./workspace:/app/workspace:rw,z
+      - runner-socket:/run/harness:rw,z
+    depends_on:
+      runner:
+        condition: service_healthy
+    networks:
+      - external
+    restart: unless-stopped
+    read_only: true
+    tmpfs:
+      - /tmp:size=64m,mode=1777
+    pids_limit: 128
+    mem_limit: 768m
+    cpus: 1.5
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+  runner:
+    build:
+      context: .
+      dockerfile: docker/runner.Dockerfile
+    environment:
+      RUNNER_TOKEN: ${RUNNER_TOKEN:?Execute start.ps1 ou start.sh para gerar o token interno}
+      RUNNER_SOCKET: /run/harness/runner.sock
+      RUNNER_EXEC_UID: "65534"
+      RUNNER_EXEC_GID: "65534"
+    volumes:
+      - ./workspace:/workspace:ro,z
+      - runner-socket:/run/harness:rw,z
+    network_mode: none
+    read_only: true
+    tmpfs:
+      - /tmp:size=256m,mode=1777
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - SETUID
+      - SETGID
+    security_opt:
+      - no-new-privileges:true
+    healthcheck:
+      test: ["CMD-SHELL", "test -S /run/harness/runner.sock"]
+      interval: 2s
+      timeout: 1s
+      retries: 30
+    pids_limit: 96
+    stop_grace_period: 5s
+    mem_limit: 3g
+    cpus: 2.0
+    init: true
+    restart: unless-stopped
+  mathlib-setup:
+    profiles: ["mathlib"]
+    user: "${LOCAL_UID:-1000}:${LOCAL_GID:-1000}"
+    build:
+      context: .
+      dockerfile: docker/runner.Dockerfile
+    command: ["sh", "/opt/setup-mathlib.sh"]
+    environment:
+      HOME: /tmp
+      ELAN_HOME: /opt/elan
+    volumes:
+      - ./workspace:/workspace:rw,z
+    network_mode: bridge
+    init: true
+    security_opt:
+      - no-new-privileges:true
+    cap_drop:
+      - ALL
+    cap_add:
+      - CHOWN
+      - FOWNER
+    mem_limit: 4g
+    cpus: 2.0
+networks:
+  external: {}
+volumes:
+  runner-socket: {}

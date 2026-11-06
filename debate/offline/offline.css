@@ -1,0 +1,820 @@
+:root{color-scheme:dark;--bg:#0e101a;--panel:#171924;--panel2:#1d202d;--stroke:#323544;--text:#f7f4ed;--muted:#999cab;--blue:#55c9ee;--red:#f47d86;--gold:#f4c78d;--radius:13px;font-family:'DM Sans',system-ui,Arial,sans-serif}*{box-sizing:border-box}body{margin:0;background:radial-gradient(ellipse at 50% -30%,#32314a 0,transparent 60%),var(--bg);color:var(--text);font-size:14px}button,input,select,textarea{font:inherit}button{cursor:pointer}button:disabled{cursor:not-allowed;opacity:.42}h1,h2,h3,p{margin:0}h1,h2,.logo,.stage-number,.nameplate strong,.winner{font-family:'Space Grotesk',system-ui,sans-serif}.shell{max-width:1840px;margin:0 auto;padding:0 30px}.topbar{height:88px;border-bottom:1px solid #383848;display:flex;align-items:center;justify-content:space-between;gap:20px}.logo{display:flex;align-items:center;gap:12px;font-size:21px;font-weight:700;letter-spacing:-.9px}.logo small{display:block;letter-spacing:3px;font-family:'DM Sans',sans-serif;font-size:8px;color:#9699a7;font-weight:800;margin-top:3px}.logo-mark{display:grid;place-items:center;height:43px;width:43px;border:1px solid #b6add6;color:var(--gold);border-radius:11px;font-size:27px}.top-center{font-size:10px;letter-spacing:2px;color:#9699a7;font-weight:800}.connection{padding:9px 13px;background:#24283a;border:1px solid #404354;border-radius:20px;font-size:10px;letter-spacing:1px;font-weight:800;color:#b9bfcd}.grid{display:grid;grid-template-columns:minmax(300px,350px) minmax(560px,1fr) minmax(270px,310px);gap:24px;align-items:start;padding:28px 0 36px}.panel{background:linear-gradient(155deg,#1b1e2b,#171925);border:1px solid #343748;border-radius:16px;padding:24px}.eyebrow{display:flex;gap:12px;align-items:center;font-size:10px;color:#a5a6b9;letter-spacing:2.2px;font-weight:800;white-space:nowrap}.eyebrow .line{height:1px;flex:1;background:#3b3f51}.setup h1{font-size:35px;line-height:1.04;letter-spacing:-2px;margin:19px 0 12px}.setup h1 i{font-style:normal;color:var(--gold)}.subheading{color:#9da2b5;font-size:12px;line-height:1.65;margin-bottom:22px}.field-title{display:flex;align-items:center;justify-content:space-between;color:#d5d5e0;font-size:10px;font-weight:800;letter-spacing:1.6px;margin-bottom:10px}.field-title span{color:#8b8f9f}.section-spacer{margin-top:22px;border-top:1px solid #393c4d;padding-top:20px}input,textarea,select{width:100%;background:#11141f;color:#f1f0f6;border:1px solid #3b3f4f;border-radius:8px;outline:0;padding:10px 11px;font-size:12px;transition:border-color .18s}input:focus,textarea:focus,select:focus{border-color:var(--gold);box-shadow:0 0 0 2px #f4c78d18}textarea{resize:vertical;line-height:1.5}.editor{padding:15px;border:1px solid #393d4b;border-radius:12px;background:#151a2a}.fighter-editor#editor-b{background:#211923}.editor-head{display:flex;align-items:center;gap:8px;margin-bottom:12px;font-size:11px;letter-spacing:.8px}.editor-side{margin-left:auto;color:#8f93a7;font-size:9px;font-weight:800;letter-spacing:1px}.dot{height:9px;width:9px;border-radius:100%;display:inline-block}.dot.blue{background:var(--blue)}.dot.red{background:var(--red)}.editor label,.setup>label:not(.field-title){display:block;font-size:10px;letter-spacing:.5px;color:#b8bbcb;font-weight:700;margin-bottom:10px}.editor label:last-child{margin-bottom:0}.editor input,.editor select{display:block;margin-top:6px;max-width:100%}.editor-cols{display:grid;grid-template-columns:1fr 1fr;gap:10px}.editor-cols label{min-width:0}.editor-cols select{width:100%}input[type=color]{height:39px;padding:4px}.upload-btn{display:block;text-align:center;padding:9px;background:#212536;border:1px dashed #575c70;border-radius:7px;margin-top:7px!important;cursor:pointer}.upload-btn:hover{border-color:var(--gold)}.versus-mini{display:flex;gap:13px;align-items:center;justify-content:center;margin:11px 0;font-size:10px;font-weight:900;color:#adadc2;letter-spacing:2px}.versus-mini span{height:1px;width:50px;background:#454352}.setup>.editor-cols{margin-top:9px}.setup>.editor-cols label,.setup>label:has(select){display:block;font-size:10px;color:#bfc1ce;font-weight:700;margin-bottom:11px}.setup>.editor-cols select,.setup>label:has(select) select{margin-top:7px}.toggles{margin-top:12px;display:grid;gap:10px}.toggles label{display:flex;align-items:center;gap:10px;cursor:pointer;color:#e1e1ec;font-weight:700;font-size:12px}.toggles input{width:17px;height:17px;accent-color:var(--gold);flex-shrink:0}.toggles small{display:block;color:#8f95a6;font-size:10px;font-weight:400;margin-top:2px}.primary{margin-top:20px;width:100%;border:0;border-radius:10px;background:#f6ce92;color:#262131;display:flex;justify-content:space-between;align-items:center;padding:15px 16px;font-size:12px;font-weight:900;letter-spacing:1.6px}.primary:hover{background:#ffe3b9}.primary span:last-child{font-size:21px}.fineprint{margin-top:10px;font-size:10px;color:#999eae;line-height:1.5}.stage-head{display:flex;align-items:center;justify-content:space-between;margin:5px 0 16px}.stage-head .eyebrow{width:60%}.stage-status{font-size:9px;letter-spacing:1.4px;color:#b8bfd1;font-weight:800}.status-dot{display:inline-block;width:7px;height:7px;border-radius:50%;background:#a7b5c6;margin-right:6px}.arena{position:relative;overflow:hidden;border:1px solid #55516a;border-radius:17px;min-height:700px;background:radial-gradient(ellipse at 50% 65%,#4c3449 0%,#25213b 45%,#181b31 82%);isolation:isolate}.arena:before{position:absolute;content:'';inset:0;opacity:.30;pointer-events:none;background:repeating-linear-gradient(110deg,transparent 0 45px,#ffffff05 46px 47px,transparent 48px 95px)}.arena:after{content:'';position:absolute;inset:0;pointer-events:none;opacity:.4;background:radial-gradient(circle at 50% 48%,transparent 30%,#070814 100%)}.arena-glow{position:absolute;top:0;width:50%;height:80%;filter:blur(24px);opacity:.5}.glow-a{left:0;background:radial-gradient(ellipse at 52% 48%,#3d80b455,transparent 70%)}.glow-b{right:0;background:radial-gradient(ellipse at 50% 48%,#c35f6855,transparent 70%)}.stage-number{position:relative;z-index:2;text-align:center;font-size:12px;font-weight:700;letter-spacing:3px;color:#afabc4;padding-top:32px}.stage-number b{font-size:21px;color:#f2dfba;letter-spacing:0}.stage-number span{color:#6d6b86}.marquee{position:relative;z-index:2;text-align:center;margin:25px auto 0;max-width:75%;display:flex;flex-direction:column;align-items:center;gap:11px}.marquee small{color:#ebbf8d;font-size:9px;letter-spacing:3px;font-weight:800}.marquee strong{font-family:'Space Grotesk';font-size:clamp(20px,2.3vw,30px);line-height:1.15;letter-spacing:-.8px;text-shadow:0 4px 16px #0008}.orbit{font-size:220px;line-height:1;position:absolute;top:160px;left:50%;transform:translateX(-50%);color:#ecc1ab10;z-index:0}.duelists{position:absolute;left:0;right:0;top:198px;bottom:172px;z-index:2;display:flex;align-items:flex-end;justify-content:space-around}.duelist{position:relative;width:43%;display:flex;flex-direction:column;align-items:center;justify-content:end;--tone:#55c9ee}.duelist.right{--tone:#f47d86}.portrait{position:relative;width:100%;height:290px;display:flex;justify-content:center;align-items:flex-end;filter:drop-shadow(0 16px 24px #08081275)}.portrait-rings{position:absolute;width:210px;height:210px;bottom:40px;border:1px solid color-mix(in srgb,var(--tone),transparent 55%);border-radius:50%;box-shadow:0 0 55px color-mix(in srgb,var(--tone),transparent 88%)}.default-avatar{position:relative;height:100%;max-width:98%;overflow:visible;transform-origin:50% 90%;animation:float 3.5s ease-in-out infinite}.duelist.right .default-avatar{animation-delay:-1.1s}.portrait img{position:relative;width:100%;height:100%;object-fit:contain;filter:drop-shadow(0 12px 12px #0009)}.portrait img[hidden]{display:none}.gesture-arm{opacity:0;transform:translate(-18px,24px);transform-origin:170px 219px;transition:opacity .2s,transform .22s}.duelist[data-gesture=point] .gesture-arm,.duelist[data-gesture=slam-desk] .gesture-arm,.duelist[data-gesture=open-hand] .gesture-arm{opacity:1;transform:translate(0,0)}.duelist[data-gesture=slam-desk] .default-avatar{animation:slam .3s ease-out}.duelist[data-emotion=frustrated] .portrait{filter:drop-shadow(0 10px 17px #f45f7088)}.duelist[data-emotion=thinking] .default-avatar{transform:rotate(-4deg)}.duelist[data-emotion=surprised] .default-avatar{animation:bounce .35s}.duelist.speaking .portrait-rings{box-shadow:0 0 0 7px color-mix(in srgb,var(--tone),transparent 92%),0 0 85px color-mix(in srgb,var(--tone),transparent 55%)}.duelist.listening .portrait{filter:brightness(.75)}.nameplate{text-align:center;width:100%;max-width:210px;padding:12px 14px;background:#0f1527de;border:1px solid color-mix(in srgb,var(--tone),transparent 42%);border-radius:7px;box-shadow:0 10px 20px #0007}.nameplate small{display:block;font-size:9px;letter-spacing:2px;color:var(--tone);font-weight:900}.nameplate strong{display:block;font-size:19px;letter-spacing:-.3px;margin:3px 0}.nameplate span{font-size:10px;letter-spacing:1px;color:#ddd9df}.center-vs{font-family:'Space Grotesk';font-size:38px;font-weight:900;font-style:italic;color:#f4d8b1;text-shadow:0 6px 23px #000;position:absolute;left:50%;top:45%;transform:translate(-50%,-50%) rotate(-8deg)}.reaction{position:absolute;z-index:8;top:12px;background:#f5e1bf;color:#302536;padding:10px 15px;border-radius:8px;font-family:'Space Grotesk';font-weight:900;font-size:13px;box-shadow:5px 6px 0 #0006;opacity:0;transform:translateY(15px) rotate(-4deg);transition:.25s;pointer-events:none}.reaction.show{opacity:1;transform:translateY(0) rotate(-4deg)}.platform{position:absolute;z-index:1;bottom:154px;height:44px;left:-10%;width:120%;transform:perspective(250px) rotateX(33deg);border-top:6px solid #907b83;background:linear-gradient(#222338,#11101d)}.dialogue{position:absolute;z-index:9;bottom:18px;left:18px;right:18px;min-height:150px;border-radius:11px;border:1px solid #74738a;background:linear-gradient(115deg,#191d2de8,#10121ff5);padding:17px 22px;box-shadow:0 16px 60px #000a;backdrop-filter:blur(10px)}.dialogue-head{display:flex;align-items:center;gap:10px}.speaker-led{width:9px;height:9px;border-radius:50%;background:var(--gold)}.dialogue-head strong{font-size:11px;letter-spacing:2px}.dialogue-head span:last-child{margin-left:auto;font-size:9px;color:#a6a7b8;letter-spacing:1px}.dialogue p{font-size:15px;font-weight:600;line-height:1.55;min-height:51px;margin:10px 0;color:#f1edf4;overflow-wrap:anywhere}.dialogue-foot{display:flex;justify-content:space-between;align-items:end}.dialogue-foot span:first-child{font-size:9px;letter-spacing:1.5px;color:#f5ca98}.quote-mark{font-family:Georgia;font-size:30px;line-height:.65;color:#625e78}.objection{position:absolute;left:50%;top:40%;z-index:30;white-space:nowrap;transform:translate(-50%,-50%) scale(.35) rotate(-8deg);opacity:0;pointer-events:none;color:#fff1dc;font-family:'Space Grotesk';font-weight:900;letter-spacing:-3px;font-size:clamp(32px,6vw,78px);text-align:center;text-shadow:-5px 6px #a72f4d,0 0 34px #f26f65}.objection small{display:block;font-family:'DM Sans';font-size:11px;letter-spacing:4px;color:#ffdeaa}.objection.show{animation:objection .9s both}.play-controls{height:62px;display:flex;justify-content:space-between;align-items:center;gap:12px}.play-left{display:flex;gap:7px}.play-controls button{background:#252737;border:1px solid #444557;border-radius:8px;padding:10px 14px;color:#d3d4df;font-size:10px;font-weight:900;letter-spacing:1px}.play-controls button:hover:not(:disabled){border-color:var(--gold)}#playback{font-size:10px;color:#a5a8b7;letter-spacing:1.1px}.transcript-bar{display:flex;justify-content:space-between;letter-spacing:2px;font-weight:900;font-size:10px;color:#b8b9ca;border-top:1px solid #3c3c4a;padding:18px 0}.transcript{display:flex;flex-direction:column;gap:9px;max-height:410px;overflow-y:auto;padding-right:3px;scrollbar-color:#535468 transparent}.empty{display:flex;align-items:center;gap:16px;padding:26px;color:#8b92a7;border:1px dashed #4a4c5d;border-radius:11px}.empty>span{font-size:29px;color:var(--gold)}.empty strong{display:block;color:#c8c6d2;margin-bottom:4px}.empty small{display:block;font-size:11px}.entry{background:#1d202d;border:1px solid #353a4b;border-left:3px solid var(--c,#c8c8d8);padding:13px 15px;border-radius:9px}.entry>div:first-child{display:flex;gap:10px;align-items:center;margin-bottom:6px}.entry strong{font-size:11px;letter-spacing:.5px}.entry .entry-type{margin-left:auto;font-size:9px;letter-spacing:1px;color:#9da3b5}.entry p{line-height:1.48;color:#d0d1dc;font-size:12px}.entry small{display:block;color:#949bac;margin-top:7px}.entry-judge{border-left-color:var(--gold);background:#292536}.entry a{color:#bfeaff}.sidebar h2{font-size:32px;letter-spacing:-1.5px;margin:18px 0 6px}.period{color:var(--gold)}.judge-avatar{position:relative;min-height:219px;margin:18px 0 16px;background:radial-gradient(ellipse at center 42%,#39324a,#222335 75%);border:1px solid #494356;border-radius:13px;overflow:hidden;text-align:center}.judge-avatar svg{position:relative;z-index:2;height:190px;margin:6px auto -7px;display:block}.judge-halo{position:absolute;inset:20px 25%;border:1px solid #9b7e6766;border-radius:50%}.judge-text{position:relative;z-index:3;background:#141726dd;padding:8px}.judge-text small{color:#e5c294;font-size:9px;letter-spacing:2px;display:block}.judge-text strong{font-family:'Space Grotesk';font-size:14px;letter-spacing:1px}.progress-head{display:flex;justify-content:space-between;font-size:10px;letter-spacing:1.5px;color:#c8c5d2;font-weight:800}.progress-track{height:7px;border-radius:20px;background:#343343;overflow:hidden;margin:12px 0}.progress-track div{height:100%;background:linear-gradient(90deg,#f1b77c,#f2d5a5);width:0;transition:width .5s}.pips{display:flex;gap:5px;margin-bottom:19px}.pip{flex:1;border-radius:4px;height:5px;background:#484557}.pip.done{background:var(--gold)}.mini-stats{display:grid;grid-template-columns:1fr 1fr;gap:10px;margin:20px 0}.mini-stats>div{background:#131723;border:1px solid #393a49;border-radius:9px;padding:14px}.mini-stats span{display:block;color:#a7aaba;font-size:9px;letter-spacing:1.2px}.mini-stats strong{font-family:'Space Grotesk';font-size:27px}.judge-messages{display:flex;flex-direction:column;gap:8px}.judge-hint{border:1px solid #58503f;border-radius:9px;padding:13px;color:#d5c5a6;background:#2a2831;font-size:11px;line-height:1.55}.judge-note{padding:12px;border:1px solid #464353;background:#242330;border-radius:9px}.judge-note strong{font-size:11px}.judge-note p{color:#bbb2bf;line-height:1.45;margin-top:5px;font-size:11px}.verdict{background:#272532;border:1px solid #b19160;border-radius:12px;padding:15px;margin-top:13px}.verdict[hidden]{display:none}.verdict-overline{font-size:10px;font-weight:900;letter-spacing:2px;color:#e8bd82}.winner{font-size:22px;margin:12px 0}.verdict p{font-size:11px;line-height:1.5;color:#d0cbd6}.scores{display:flex;align-items:center;justify-content:space-evenly;margin:13px 0}.scores>div{text-align:center}.scores small{display:block;font-size:10px;color:#d8c3a4}.scores strong{font-family:'Space Grotesk';font-size:27px}.scores>span{font-weight:900;color:#a39385}.verdict>small{display:block;color:#9b9dab;font-size:10px;line-height:1.4}.docs-head{display:flex;justify-content:space-between;border-top:1px solid #42414f;margin-top:24px;padding-top:19px;color:#c7c1d1;letter-spacing:1.4px;font-size:10px;font-weight:900}.docs-head span:last-child{color:#999aac}.docs-caption{font-size:11px;color:#a6a8b9;line-height:1.5;margin:10px 0 15px}.doc-upload{display:block;border:1px dashed #737084;border-radius:9px;padding:12px;text-align:center;font-weight:800;letter-spacing:1px;font-size:10px;cursor:pointer;color:#edd2b4}.doc-upload:hover{border-color:var(--gold)}.docs-list{display:flex;flex-direction:column;gap:6px;margin-top:13px}.muted{color:#9b9eaf;font-size:11px}.doc-item{display:flex;align-items:center;gap:7px;background:#222533;border-radius:8px;padding:9px}.doc-item span{font-size:11px;flex:1;overflow-wrap:anywhere}.doc-item button{border:0;background:transparent;color:#ffb3b3;padding:4px}.memory-search{margin-top:18px}.memory-search label{display:block;font-size:10px;letter-spacing:1.3px;color:#b4b4c3;font-weight:800;margin-bottom:9px}.memory-search>div:has(input){display:flex;gap:6px}.memory-search input{min-width:0}.memory-search button{width:40px;background:#f0c48c;border:0;border-radius:8px;font-size:19px}.memory-results{margin-top:11px}.memory-result{padding:9px 0;border-top:1px solid #3e4050;font-size:10px;color:#c7c3d3;line-height:1.45}.memory-result b{display:block;color:#edcca1;margin-bottom:3px}.sidebar-end{margin-top:24px;border-top:1px solid #424451;padding-top:17px;color:#81889a;font-size:9px;letter-spacing:1.5px;line-height:1.9}.footer{border-top:1px solid #333748;padding:22px 0 27px;color:#8c90a2;display:flex;justify-content:space-between;gap:12px;letter-spacing:1.8px;font-size:9px;font-weight:800}.toast{position:fixed;z-index:99;bottom:24px;left:50%;transform:translateX(-50%) translateY(20px);max-width:calc(100vw - 24px);padding:14px 18px;border:1px solid #8f796b;color:#f7e5c7;background:#282431;border-radius:12px;box-shadow:0 10px 50px #0009;opacity:0;pointer-events:none;transition:.25s}.toast.show{opacity:1;transform:translateX(-50%) translateY(0)}@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-7px)}}@keyframes bounce{50%{transform:translateY(-20px) rotate(-3deg)}}@keyframes slam{50%{transform:translateY(14px)}}@keyframes objection{0%{opacity:0;transform:translate(-50%,-50%) scale(.4) rotate(-12deg)}25%,70%{opacity:1;transform:translate(-50%,-50%) scale(1.1) rotate(-7deg)}100%{opacity:0;transform:translate(-50%,-50%) scale(1.25) rotate(-4deg)}}@media(max-width:1430px){.shell{padding:0 20px}.grid{grid-template-columns:300px minmax(460px,1fr) 270px;gap:14px}.panel{padding:18px}.arena{min-height:630px}.duelists{top:178px}.portrait{height:240px}.nameplate strong{font-size:16px}.dialogue p{font-size:13px}}@media(max-width:1150px){.grid{grid-template-columns:minmax(290px,360px) minmax(430px,1fr)}.sidebar{grid-column:1/-1;display:grid;grid-template-columns:1fr 1fr;column-gap:24px}.sidebar>.eyebrow,.sidebar>h2,.sidebar>.subheading,.sidebar>.judge-avatar{grid-column:1}.sidebar>.progress-head,.sidebar>.progress-track,.sidebar>.pips,.sidebar>.mini-stats,.sidebar>.judge-messages,.sidebar>.verdict{grid-column:2}.sidebar>.progress-head{grid-row:1}.sidebar>.progress-track{grid-row:2}.sidebar>.pips{grid-row:3}.sidebar>.mini-stats{grid-row:4}.sidebar>.judge-messages{grid-row:5}.sidebar>.verdict{grid-row:6}.sidebar>.docs-head,.sidebar>.docs-caption,.sidebar>.doc-upload,.sidebar>.docs-list,.sidebar>.memory-search,.sidebar>.sidebar-end{grid-column:1/-1}}@media(max-width:780px){.shell{padding:0 13px}.topbar{height:72px}.top-center{display:none}.grid{display:flex;flex-direction:column;gap:16px;padding-top:16px}.setup,.center,.sidebar{width:100%}.setup{order:1}.center{order:2}.sidebar{order:3;display:block}.arena{min-height:650px}.duelists{top:200px}.portrait{height:240px}.dialogue{min-height:164px}.sidebar .judge-avatar{max-width:340px;margin:18px auto}.footer{flex-wrap:wrap;font-size:8px}}@media(max-width:450px){.logo{font-size:17px}.logo-mark{height:36px;width:36px}.connection{font-size:8px;padding:7px}.arena{min-height:590px}.marquee strong{font-size:20px}.duelists{top:190px;bottom:186px}.portrait{height:180px}.nameplate{padding:8px 5px}.nameplate strong{font-size:12px}.nameplate small{font-size:7px}.center-vs{font-size:23px}.dialogue{left:10px;right:10px;bottom:10px;padding:12px;min-height:163px}.dialogue p{font-size:12px}.dialogue-head span:last-child{font-size:8px}.reaction{padding:7px;font-size:10px}.editor-cols{gap:6px}.panel{padding:15px}}@media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;transition-duration:.01ms!important}}
+/* Esconde inputs de upload nativos, preservando os botões de upload estilizados. */
+[hidden]{display:none!important}
+
+/* CONTRAPONTO — direção teatral original, desacoplada do Harness. */
+.arena{--camera-time:480ms}
+.camera-hud{position:absolute;top:16px;right:17px;z-index:13;display:flex;align-items:center;gap:9px;font-size:8px;font-weight:900;letter-spacing:1.4px;color:#d6cde0;padding:7px 10px;border:1px solid #ffffff26;border-radius:5px;background:#13131b99;pointer-events:none}
+.camera-rec{color:#fd787b;letter-spacing:1px}
+.cinema-letterbox{position:absolute;z-index:11;left:0;right:0;height:0;background:#0b0c16;pointer-events:none;transition:height 240ms ease}
+.cinema-top{top:0}.cinema-bottom{bottom:0}
+.arena[data-camera=a] .cinema-letterbox,.arena[data-camera=b] .cinema-letterbox,.arena[data-camera=judge] .cinema-letterbox{height:12px}
+.arena .duelist .portrait{transition:transform var(--camera-time) cubic-bezier(.22,.8,.18,1),filter .28s ease}
+.arena .duelist .nameplate{transition:transform var(--camera-time) ease,opacity .3s ease}
+.arena .duelist{transition:transform var(--camera-time) cubic-bezier(.22,.8,.18,1),filter .3s ease,opacity .3s ease}
+.arena[data-camera=a] .duelist.left{transform:translate(7%, -5%) scale(1.14);z-index:3}
+.arena[data-camera=a] .duelist.right{transform:translate(12%,4%) scale(.90);filter:brightness(.72);z-index:2}
+.arena[data-camera=b] .duelist.right{transform:translate(-7%,-5%) scale(1.14);z-index:3}
+.arena[data-camera=b] .duelist.left{transform:translate(-12%,4%) scale(.90);filter:brightness(.72);z-index:2}
+.arena[data-camera=judge] .duelist{transform:translateY(2%) scale(.94);filter:brightness(.48)}
+.arena[data-camera=judge] .marquee{opacity:.44}
+.arena .marquee{transition:opacity .4s ease}
+.judge-cutaway{position:absolute;z-index:7;left:50%;top:48%;transform:translate(-50%,-48%) scale(.88);opacity:0;transition:opacity .27s ease,transform .4s cubic-bezier(.19,1,.22,1);pointer-events:none;display:flex;align-items:center;flex-direction:column;gap:8px;color:#ffe4b5;text-align:center;text-shadow:0 7px 18px #000b}
+.judge-medallion{width:94px;height:94px;border:2px solid #ffdda9;border-radius:100%;display:grid;place-items:center;font-size:43px;background:radial-gradient(circle,#59456d,#26243f);box-shadow:0 0 0 12px #ffd4a311,0 10px 80px #f6bc8d33}
+.judge-cutaway b{font-weight:900;font-size:clamp(15px,2vw,24px);letter-spacing:2px}.judge-cutaway span{font-size:9px;letter-spacing:2px;color:#ffe6c2}
+.arena[data-camera=judge] .judge-cutaway{opacity:1;transform:translate(-50%,-50%) scale(1)}
+.impact-lines{position:absolute;inset:-30%;z-index:7;background:repeating-conic-gradient(from 5deg at 50% 44%,transparent 0deg 12deg,#fff5ba21 12.3deg 13.8deg,transparent 14deg 23deg);opacity:0;transform:rotate(5deg) scale(1.3);pointer-events:none}
+.impact-light{position:absolute;z-index:28;inset:0;background:#fff5e4;opacity:0;pointer-events:none}
+.arena.impact .impact-lines{animation:cinema-speedlines 680ms ease-out both}
+.arena.impact .impact-light{animation:cinema-flash 580ms ease-out both}
+.arena.impact .duelists{animation:cinema-shake-strong 460ms both}
+.arena.slam-impact .duelists{animation:cinema-shake-small 330ms both}
+.arena.scene-enter .stage-number{animation:cinema-round-enter .6s cubic-bezier(.2,.8,.2,1)}
+.arena.scene-judged .judge-medallion{animation:cinema-judge-hit .65s ease-out}
+.duelist.perform[data-gesture=point] .portrait,.duelist.perform[data-gesture=slam-desk] .portrait{animation:cinema-thrust .4s cubic-bezier(.12,.85,.25,1) 1}
+.duelist.perform[data-gesture=open-hand] .portrait{animation:cinema-persuade .7s ease-out 1}
+.duelist.perform[data-gesture=arms-crossed] .portrait{animation:cinema-lean .8s ease-out 1}
+.duelist.react-now[data-reacting=shocked] .portrait{animation:cinema-flinch .43s ease-out 1}
+.duelist.react-now[data-reacting=tense] .portrait{animation:cinema-lean-back .6s ease-out 1}
+.duelist.react-now[data-reacting=thinking] .portrait{animation:cinema-think .8s ease-out 1}
+.duelist.speaking .mouth{transform-origin:center;animation:cinema-talk .22s steps(2,end) 5}
+.duelist.speaking .nameplate{box-shadow:0 0 0 2px color-mix(in srgb,var(--tone),transparent 72%),0 15px 35px #0009}
+.duelist.listening .nameplate{opacity:.83}
+.duelist .reaction.show{animation:cinema-reaction-pop .4s cubic-bezier(.2,1.35,.2,1) both}
+.arena .dialogue{transition:border-color .35s,box-shadow .35s}
+.arena[data-camera=a] .dialogue{border-left:4px solid #55c9ee}
+.arena[data-camera=b] .dialogue{border-left:4px solid #f47d86}
+.arena[data-camera=judge] .dialogue{border-left:4px solid #f4c78d}
+.dialogue p.speech-reveal{animation:cinema-dialogue-reveal .32s ease-out}
+.cinema-controls{display:flex;align-items:center;justify-content:center;gap:7px;flex-wrap:wrap}
+.cinema-controls button{border:1px solid #505369;background:#242838;color:#e9dfe7;border-radius:7px;padding:8px 9px;font-size:9px;font-weight:800;letter-spacing:.8px;white-space:nowrap;cursor:pointer}
+.cinema-controls button:hover{background:#37394b;border-color:#a19aa8}
+.play-left #advance-turn{border:1px solid #f4c78d;background:#f4c78d;color:#241e29;border-radius:8px;padding:9px 13px;font-size:10px;font-weight:900;letter-spacing:.7px;box-shadow:0 4px 18px #f4c78d22}
+.play-left #advance-turn:hover{background:#ffe0b0}
+.play-left #advance-turn[hidden]{display:none}
+.cinema-controls button[aria-pressed=false]{opacity:.57;background:#171925}
+.volume-control{display:flex;align-items:center;gap:4px;font-size:9px;color:#b9b7cc;font-weight:900;letter-spacing:.9px;padding-left:5px}
+.volume-control input{width:67px;padding:0;accent-color:#f4c78d;cursor:pointer}
+@keyframes cinema-shake-strong{0%,100%{transform:translate(0,0)}18%{transform:translate(10px,-3px)}38%{transform:translate(-9px,4px)}58%{transform:translate(7px,-3px)}78%{transform:translate(-4px,2px)}}
+@keyframes cinema-shake-small{0%,100%{transform:translate(0,0)}25%{transform:translate(5px,2px)}50%{transform:translate(-5px,-2px)}75%{transform:translate(2px,1px)}}
+@keyframes cinema-speedlines{0%{opacity:0;transform:rotate(5deg) scale(1.35)}18%{opacity:.85}100%{opacity:0;transform:rotate(-6deg) scale(1)}}
+@keyframes cinema-flash{0%,14%{opacity:0}16%{opacity:.73}28%,100%{opacity:0}}
+@keyframes cinema-round-enter{from{transform:translateY(-16px);opacity:0}to{transform:translateY(0);opacity:1}}
+@keyframes cinema-judge-hit{0%,100%{transform:scale(1)}25%{transform:scale(1.25)}55%{transform:scale(.92)}}
+@keyframes cinema-thrust{0%,100%{transform:translateX(0) rotate(0)}40%{transform:translateX(15px) rotate(-3deg)}65%{transform:translateX(4px)}}
+@keyframes cinema-persuade{0%,100%{transform:translateY(0)}38%{transform:translateY(-9px) rotate(-1deg)}70%{transform:translateY(-2px)}}
+@keyframes cinema-lean{0%,100%{transform:rotate(0)}50%{transform:rotate(-4deg)}}
+@keyframes cinema-flinch{0%,100%{transform:translateX(0) rotate(0)}32%{transform:translateX(14px) rotate(4deg)}65%{transform:translateX(-3px)}}
+@keyframes cinema-lean-back{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(7px) rotate(3deg)}}
+@keyframes cinema-think{0%,100%{transform:rotate(0)}45%{transform:rotate(-5deg)}}
+@keyframes cinema-talk{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.6)}}
+@keyframes cinema-reaction-pop{from{opacity:0;transform:translateY(14px) scale(.68) rotate(7deg)}to{opacity:1;transform:translateY(0) scale(1) rotate(-4deg)}}
+@keyframes cinema-dialogue-reveal{from{opacity:.15;transform:translateY(6px)}to{opacity:1;transform:translateY(0)}}
+@media(max-width:1100px){.play-controls{flex-wrap:wrap;gap:10px}.cinema-controls{order:3;width:100%;justify-content:space-between}.volume-control input{width:78px}}
+@media(max-width:450px){.camera-hud{top:7px;right:7px;font-size:7px;padding:5px}.judge-medallion{width:68px;height:68px;font-size:32px}.judge-cutaway b{font-size:13px}.cinema-controls button{font-size:8px;padding:7px 5px}.volume-control input{width:45px}}
+@media(prefers-reduced-motion:reduce){.arena .duelist,.arena .duelist .portrait,.arena .duelist .nameplate,.judge-cutaway,.cinema-letterbox{transition:none!important}.impact-lines,.impact-light{display:none!important}}
+.arena.cinema-off .duelist,.arena.cinema-off .duelist .portrait{transition:none!important;animation:none!important}
+.arena.cinema-off .cinema-letterbox,.arena.cinema-off .impact-lines,.arena.cinema-off .impact-light{display:none!important}
+
+/* ── DIREÇÃO 2.0 / CENÁRIO, MONTAGEM E ATORES ───────────────────────── */
+.arena{background:
+ radial-gradient(ellipse 70% 65% at 51% 70%,#5e36539a 0%,transparent 70%),
+ radial-gradient(ellipse 120% 95% at 50% -20%,#44345e 0%,transparent 67%),
+ linear-gradient(155deg,#12182b,#222039 56%,#171727)}
+.arena-glow{transition:filter .45s,opacity .45s;filter:blur(35px)}
+.arena[data-camera=a] .glow-a,.arena[data-camera=b] .glow-b{opacity:.86;filter:blur(14px)}
+.arena[data-camera=a] .glow-b,.arena[data-camera=b] .glow-a{opacity:.22}
+.cinema-scanlines{position:absolute;z-index:5;inset:0;pointer-events:none;opacity:.26;background:repeating-linear-gradient(0deg,transparent 0 3px,#00000028 4px 4.7px)}
+.cinema-architecture{position:absolute;inset:58px 18px 145px;display:flex;justify-content:space-around;align-items:stretch;pointer-events:none;z-index:0;perspective:600px;opacity:.42}
+.cinema-architecture span{width:14%;border-left:1px solid #ffd5cb2b;border-right:1px solid #ffd5cb29;box-shadow:inset 12px 0 22px #fff2,16px 0 35px #0003;
+ background:linear-gradient(90deg,#060d1830 0%,#a6b1dc0c 42%,#e9b2ad15 73%,#080b1524 100%);transform:skewY(-3deg)}
+.cinema-architecture:before{content:'';position:absolute;left:-4%;right:-4%;bottom:10px;height:2px;background:linear-gradient(90deg,transparent,#e9c4af55,transparent);box-shadow:0 8px 32px #f7ad992f}
+.camera-corners{position:absolute;z-index:12;inset:20px;pointer-events:none;opacity:0;transition:opacity .25s}
+.arena[data-camera=a] .camera-corners,.arena[data-camera=b] .camera-corners{opacity:.48}
+.camera-corners i{position:absolute;width:17px;height:17px;border-color:#e9dbc5aa;border-style:solid}
+.camera-corners i:nth-child(1){top:0;left:0;border-width:1px 0 0 1px}
+.camera-corners i:nth-child(2){top:0;right:0;border-width:1px 1px 0 0}
+.camera-corners i:nth-child(3){bottom:0;left:0;border-width:0 0 1px 1px}
+.camera-corners i:nth-child(4){bottom:0;right:0;border-width:0 1px 1px 0}
+.arena .duelists{transform-origin:50% 56%;transition:filter .34s ease}
+.arena[data-camera=a] .duelist.left{transform:translate(18%,-5%) scale(1.24) rotate(-1deg);filter:brightness(1.09) contrast(1.05)}
+.arena[data-camera=b] .duelist.right{transform:translate(-18%,-5%) scale(1.24) rotate(1deg);filter:brightness(1.09) contrast(1.05)}
+.arena[data-camera=a] .duelist.right{transform:translate(11%,5%) scale(.86);filter:brightness(.56) saturate(.65)}
+.arena[data-camera=b] .duelist.left{transform:translate(-11%,5%) scale(.86);filter:brightness(.56) saturate(.65)}
+.arena[data-camera=judge] .duelist{filter:brightness(.25) blur(1px);opacity:.64}
+.duelist{transform-origin:50% 85%}
+.duelist .portrait{transform-origin:50% 86%}
+.duelist:not(.perform):not(.react-now):not(.anticipation) .portrait{animation:cinema-breathe 3.4s ease-in-out infinite alternate}
+.duelist.speaking .portrait-rings{animation:cinema-energy 1.7s ease-in-out infinite alternate}
+.duelist.anticipation .portrait{animation:cinema-anticipation 1.3s ease-in-out infinite alternate}
+.duelist[data-emotion=surprised] .eyebrows{transform:translateY(-6px)}
+.duelist[data-emotion=frustrated] .mouth{transform:translateY(2px) scaleY(.6)}
+.duelist[data-emotion=excited] .mouth{transform:scaleY(1.7)}
+.duelist[data-emotion=thinking] .portrait{filter:contrast(.9) saturate(.83)}
+.duelist.perform[data-gesture=point] .gesture-arm{animation:cinema-point-arm .43s cubic-bezier(.18,1.8,.3,1) both}
+.duelist.perform[data-gesture=slam-desk] .gesture-arm{animation:cinema-slam-arm .4s ease-out both}
+.duelist.perform[data-gesture=open-hand] .gesture-arm{animation:cinema-point-arm .66s ease-out both}
+.duelist.react-now[data-reacting=respect] .portrait{animation:cinema-nod .8s ease-in-out}
+.duelist.react-now[data-reacting=shocked] .portrait{animation:cinema-flinch-xl .67s cubic-bezier(.22,.8,.23,1) both}
+.duelist.react-now[data-reacting=tense] .portrait{animation:cinema-push-back .65s ease-out both}
+.duelist.react-now[data-reacting=thinking] .portrait{animation:cinema-pause-think .9s ease-out both}
+.duelist.react-now[data-reacting=shocked] .portrait-rings{border-color:#fff5c1;box-shadow:0 0 38px #fff1c164}
+.duelist.speaking .portrait svg .mouth{animation:cinema-mouth .26s steps(2,end) 9;transform-origin:50% 58%}
+/* Splashes only communicate the action. Dialogue remains readable above all of them. */
+.cinema-announcement{position:absolute;z-index:24;top:39%;left:50%;width:min(91%,620px);transform:translate(-50%,-50%) scale(.9) rotate(-3deg);opacity:0;pointer-events:none;text-align:center;
+ display:flex;flex-direction:column;align-items:center;gap:3px;filter:drop-shadow(0 12px 18px #020312c9)}
+.cinema-announcement:before{content:'';position:absolute;z-index:-1;left:-8%;right:-8%;top:26%;bottom:20%;transform:skew(-12deg);background:linear-gradient(90deg,#331c3fe0,#88617cbe 45%,#281b39ee);border-top:2px solid #ffe9c6aa;border-bottom:2px solid #f7c1d078}
+.cinema-announcement.warning:before{background:linear-gradient(90deg,#761f38,#b9344be8 48%,#5f1732);border-color:#ffdaaa}
+.cinema-announcement span{font-weight:900;letter-spacing:3px;font-size:10px;color:#f6dba3;text-shadow:0 2px #212032}
+.cinema-announcement strong{font-family:'Space Grotesk',system-ui,sans-serif;font-weight:900;color:#fff2e0;font-style:italic;white-space:nowrap;font-size:clamp(32px,6.7vw,82px);line-height:1.05;letter-spacing:-2px;text-shadow:-4px 4px #3b2849,0 10px 30px #1113}
+.cinema-announcement.warning strong{text-shadow:-5px 6px #761f38,0 0 32px #ff6c78}
+.cinema-announcement small{font-weight:800;letter-spacing:2.4px;font-size:9px;color:#f4d7c7}
+.cinema-announcement.visible{animation:cinema-announcement-enter .95s cubic-bezier(.18,.95,.35,1) both}
+.arena .objection{display:none}
+.arena .dialogue{z-index:32;border-radius:12px;box-shadow:0 15px 70px #080917e8,0 0 0 1px #fff2;backdrop-filter:blur(22px);background:linear-gradient(130deg,#1b1c2bf9,#131523ec 70%,#17192ef2)}
+.arena .dialogue:before{content:'';position:absolute;top:0;left:0;right:0;height:1px;background:linear-gradient(90deg,transparent,#fee6c075,transparent)}
+.arena[data-camera=a] .dialogue{box-shadow:0 15px 70px #080917e8,-6px 0 30px #55c9ee16}
+.arena[data-camera=b] .dialogue{box-shadow:0 15px 70px #080917e8,-6px 0 30px #f47d861a}
+.arena.scene-enter .marquee{animation:cinema-headline-float .65s ease-out}
+.arena.scene-suspense .judge-medallion{animation:cinema-judge-breath 1.8s ease-in-out infinite alternate}
+.arena.scene-question .camera-corners,.arena.scene-judged .camera-corners{opacity:1}
+.arena.scene-celebrate .arena-glow{animation:cinema-glow-final .8s ease-in-out 2}
+.arena.scene-concession .duelists{filter:saturate(.7)}
+.arena.impact .cinema-architecture{animation:cinema-shock-lines .5s ease-out}
+.arena.impact .impact-light{animation:cinema-double-flash .75s both}
+.arena.impact .duelists{animation:cinema-shake-strong .35s both}
+.arena.impact .camera-hud{animation:cinema-hud-blink .55s}
+.arena[data-director=soft] .cinema-announcement strong{font-size:clamp(28px,5vw,56px)}
+.arena[data-director=soft] .cinema-announcement.visible{animation-duration:.58s}
+.arena[data-director=soft].impact .impact-light{animation:none}
+.arena[data-director=soft].impact .duelists{animation:cinema-shake-small .28s}
+.arena[data-director=soft][data-camera=a] .duelist.left{transform:translate(8%,-2%) scale(1.11)}
+.arena[data-director=soft][data-camera=b] .duelist.right{transform:translate(-8%,-2%) scale(1.11)}
+.play-controls{height:auto;min-height:64px;padding:10px 0;flex-wrap:wrap}
+.play-left{display:flex;gap:6px;align-items:center}
+.play-left #preview-fx{border-color:#b28c6778;color:#efc795}
+.play-left #preview-fx:hover:not(:disabled){background:#403044}
+.director-select{display:flex;align-items:center;gap:5px;font-size:9px;font-weight:850;color:#b9b6c3;letter-spacing:.7px}
+.director-select select{width:87px;font-size:9px;letter-spacing:.5px;padding:6px;background:#292a3c;color:#f4e0c6;border:1px solid #62566e;border-radius:6px}
+.sound-track-label{display:flex;align-items:center;gap:6px;color:#acb1bf;font-size:8px;letter-spacing:.9px;font-weight:850;white-space:nowrap}
+.audio-wave{height:12px;display:inline-flex;align-items:center;gap:2px}.audio-wave i{display:block;height:3px;width:2px;background:#e8c48f;border-radius:3px}
+.audio-wave.playing i{animation:cinema-meter .66s ease-in-out infinite alternate}
+.audio-wave.playing i:nth-child(2){animation-delay:.12s}.audio-wave.playing i:nth-child(3){animation-delay:.26s}.audio-wave.playing i:nth-child(4){animation-delay:.08s}
+@keyframes cinema-breathe{0%{transform:translateY(3px) scale(.998)}100%{transform:translateY(-4px) scale(1.009)}}
+@keyframes cinema-energy{0%{opacity:.48;transform:scale(.96)}100%{opacity:.94;transform:scale(1.06)}}
+@keyframes cinema-anticipation{0%,100%{transform:translateY(0) rotate(0)}50%{transform:translateY(3px) rotate(-1deg)}}
+@keyframes cinema-point-arm{0%{opacity:0;transform:translate(-24px,28px) rotate(-15deg)}62%{opacity:1;transform:translate(6px,-4px) rotate(5deg)}100%{opacity:1;transform:translate(0) rotate(0)}}
+@keyframes cinema-slam-arm{0%{opacity:0;transform:translate(5px,-22px)}50%{opacity:1;transform:translate(3px,3px)}100%{opacity:1;transform:translateY(14px)}}
+@keyframes cinema-flinch-xl{0%,100%{transform:translateX(0) rotate(0)}29%{transform:translateX(22px) rotate(7deg) translateY(-5px)}63%{transform:translateX(-6px) rotate(-2deg)}}
+@keyframes cinema-push-back{0%,100%{transform:translateX(0)}40%{transform:translateX(-17px) rotate(-3deg)}}
+@keyframes cinema-pause-think{0%,100%{transform:translateY(0)}50%{transform:translateY(5px) rotate(2deg)}}
+@keyframes cinema-nod{0%,100%{transform:rotate(0)}40%{transform:rotate(4deg)}70%{transform:rotate(-2deg)}}
+@keyframes cinema-mouth{0%,100%{transform:scaleY(1)}50%{transform:scaleY(1.7)}}
+@keyframes cinema-announcement-enter{0%{opacity:0;transform:translate(-54%,-48%) scale(1.48) rotate(-10deg)}15%{opacity:1;transform:translate(-48%,-50%) scale(.96) rotate(-4deg)}26%{transform:translate(-50%,-50%) scale(1.07) rotate(-3deg)}47%{opacity:1;transform:translate(-50%,-50%) scale(1) rotate(-3deg)}76%{opacity:1}100%{opacity:0;transform:translate(-48%,-52%) scale(1.1) rotate(-2deg)}}
+@keyframes cinema-headline-float{from{opacity:0;transform:translateY(-20px)}to{opacity:1;transform:translateY(0)}}
+@keyframes cinema-judge-breath{from{box-shadow:0 0 0 12px #ffd4a311,0 10px 70px #f6bc8d11}to{box-shadow:0 0 0 20px #ffd4a322,0 10px 100px #f6bc8d52}}
+@keyframes cinema-glow-final{50%{opacity:1;filter:blur(8px)}}
+@keyframes cinema-shock-lines{0%,100%{transform:translate(0)}25%{transform:translate(8px,-4px)}50%{transform:translate(-8px,3px)}}
+@keyframes cinema-double-flash{0%,10%{opacity:0}12%{opacity:.85}18%{opacity:.05}23%{opacity:.42}35%,100%{opacity:0}}
+@keyframes cinema-hud-blink{0%,100%{opacity:1}30%{opacity:0}}
+@keyframes cinema-meter{0%{height:3px}100%{height:12px}}
+@media(max-width:1430px){.play-controls{gap:7px}.sound-track-label{display:none}}
+@media(max-width:780px){.play-controls{justify-content:space-between}.cinema-controls{justify-content:space-between}.sound-track-label{display:flex;order:4;width:100%;justify-content:center}.cinema-announcement strong{font-size:clamp(32px,10vw,68px)}}
+@media(max-width:450px){.camera-corners{inset:9px}.cinema-architecture{inset:75px 10px 180px}.cinema-announcement{top:42%}.cinema-announcement span{font-size:7px}.cinema-announcement small{font-size:7px;letter-spacing:1px}.play-left{width:100%;justify-content:space-between}.play-left button{padding:7px 8px;font-size:9px}.director-select{font-size:8px}.director-select select{width:68px;font-size:8px;padding:5px}.volume-control{padding:0}.volume-control input{width:49px}}
+@media(prefers-reduced-motion:reduce){.duelist:not(.perform):not(.react-now):not(.anticipation) .portrait,.duelist.speaking .portrait-rings,.duelist.anticipation .portrait,.cinema-announcement.visible,.duelist .gesture-arm,.audio-wave.playing i{animation:none!important}.cinema-announcement{display:none!important}}
+/* Legibilidade: a linha do tema fica acima da ação e a câmera não cobre o título. */
+.arena .duelists{top:222px}
+.arena[data-camera=a] .duelist.left{transform:translate(14%,1%) scale(1.16) rotate(-1deg)}
+.arena[data-camera=b] .duelist.right{transform:translate(-14%,1%) scale(1.16) rotate(1deg)}
+.arena .marquee{position:relative;z-index:6;text-shadow:0 2px 14px #100d18;pointer-events:none}
+.arena .marquee strong{display:block;max-width:100%;padding:3px 9px;background:linear-gradient(90deg,transparent,#111125a9 15%,#161427bc 85%,transparent)}
+.default-avatar .eyes{transform-box:fill-box;transform-origin:center;animation:cinema-blink 5.7s linear infinite}
+.duelist[data-emotion=frustrated] .default-avatar .eyebrows{transform:translateY(2px) rotate(3deg);transform-origin:center}
+.duelist[data-emotion=surprised] .default-avatar .eyebrows{transform:translateY(-5px)}
+.duelist[data-emotion=thinking] .default-avatar .eyebrows{transform:translateY(-2px) rotate(-4deg);transform-origin:center}
+@keyframes cinema-blink{0%,40%,42%,100%{transform:scaleY(1)}40.5%,41.5%{transform:scaleY(.12)}}
+@media(max-width:450px){.arena .duelists{top:208px}.arena[data-camera=a] .duelist.left{transform:translate(8%,4%) scale(1.10)}.arena[data-camera=b] .duelist.right{transform:translate(-8%,4%) scale(1.10)}.arena .marquee{max-width:95%}.arena .marquee strong{font-size:clamp(17px,5vw,22px)}}
+@media(prefers-reduced-motion:reduce){.default-avatar .eyes{animation:none!important}}
+
+/* CONTRAPONTO 3.0 · Direção expressiva, gráficos originais e leitura acessível.
+   Esta camada consome estados locais. Não altera o Harness ou chama modelos. */
+.arena{--dramatic-scale:1;--stage-accent:#f4c78d}
+.arena[data-tension="1"]{--dramatic-scale:1.018}
+.arena[data-tension="2"]{--dramatic-scale:1.035}
+.arena[data-tension="3"]{--dramatic-scale:1.055}
+.arena .cinema-architecture{transition:transform 1.1s cubic-bezier(.2,.8,.2,1),filter .8s,opacity .7s;transform-origin:center 55%}
+.arena[data-camera="a"] .cinema-architecture{transform:translateX(2.5%) scale(1.05)}
+.arena[data-camera="b"] .cinema-architecture{transform:translateX(-2.5%) scale(1.05)}
+.arena[data-camera="judge"] .cinema-architecture{transform:scale(1.12);opacity:.65;filter:blur(1.5px)}
+.arena[data-camera="duel"] .duelist.left{transform:translate(5%,0) scale(1.075) rotate(-1deg);filter:brightness(1.08)}
+.arena[data-camera="duel"] .duelist.right{transform:translate(-5%,0) scale(1.075) rotate(1deg);filter:brightness(1.08)}
+.arena[data-camera="duel"] .center-vs{color:#f5c79d;text-shadow:0 0 26px #f7b36cbb;transform:translate(-50%,-50%) scale(1.15)}
+.arena[data-camera="a-close"] .duelist.left{transform:translate(25%,8%) scale(1.36) rotate(-2deg);z-index:4;filter:brightness(1.12) contrast(1.04)}
+.arena[data-camera="a-close"] .duelist.right{transform:translate(29%,8%) scale(.74);opacity:.58;filter:brightness(.56) blur(1px)}
+.arena[data-camera="b-close"] .duelist.right{transform:translate(-25%,8%) scale(1.36) rotate(2deg);z-index:4;filter:brightness(1.12) contrast(1.04)}
+.arena[data-camera="b-close"] .duelist.left{transform:translate(-29%,8%) scale(.74);opacity:.58;filter:brightness(.56) blur(1px)}
+.arena[data-camera="a-close"] .camera-corners,.arena[data-camera="b-close"] .camera-corners,.arena[data-camera="duel"] .camera-corners{opacity:.62}
+.arena[data-camera="a-close"] .glow-a,.arena[data-camera="b-close"] .glow-b{filter:blur(10px);opacity:1}
+.arena[data-camera="a-close"] .marquee,.arena[data-camera="b-close"] .marquee{opacity:.6}
+.arena[data-camera="a-close"] .cinema-letterbox,.arena[data-camera="b-close"] .cinema-letterbox{height:15px}
+.arena .duelist .portrait{transform-origin:50% 86%;will-change:transform}
+.duelist.speaking .default-avatar .mouth{animation:v3-talk-mouth .29s steps(2,end) infinite;transform-box:fill-box;transform-origin:center}
+.duelist.speaking .portrait{filter:drop-shadow(0 17px 24px #040611a8) drop-shadow(0 0 11px color-mix(in srgb,var(--tone),transparent 72%))}
+.duelist.listening .portrait{filter:brightness(.87) drop-shadow(0 15px 20px #0007)}
+.duelist[data-emotion=confident] .default-avatar .mouth{transform:translateY(0) scaleX(1.1)}
+.duelist[data-emotion=frustrated] .default-avatar .mouth{transform:translateY(2px) rotate(-5deg);transform-origin:center}
+.duelist[data-emotion=thinking] .default-avatar .mouth{transform:translateX(-3px) scaleX(.8)}
+.duelist[data-emotion=surprised] .default-avatar .mouth{transform:scale(.7,1.5);transform-origin:center}
+.duelist[data-emotion=excited] .default-avatar .mouth{transform:scale(1.22,1.18);transform-origin:center}
+.duelist[data-gesture=point].perform .gesture-arm{animation:v3-point-arm .75s cubic-bezier(.16,.83,.28,1) both;transform-origin:75% 75%;transform-box:fill-box}
+.duelist[data-gesture=slam-desk].perform .gesture-arm{animation:v3-slam-arm .55s cubic-bezier(.12,.94,.32,1) both;transform-origin:60% 55%;transform-box:fill-box}
+.duelist[data-gesture=open-hand].perform .gesture-arm{animation:v3-open-arm 1.1s cubic-bezier(.2,.8,.2,1) both;transform-origin:60% 60%;transform-box:fill-box}
+.duelist.react-now[data-reacting=shocked] .default-avatar .eyes{animation:none;transform:scaleY(1.45)}
+.duelist.react-now[data-reacting=tense] .default-avatar .eyebrows{transform:translateY(3px)}
+.duelist.react-now[data-reacting=thinking] .default-avatar .eyes{animation:none;transform:scaleY(.66)}
+.duelist.react-now[data-reacting=respect] .default-avatar{animation:v3-respect 1.1s ease-in-out 1}
+.duelist.anticipation .portrait-rings{animation:v3-ring-pulse 1.7s ease-in-out infinite}
+.duelist.perform .portrait-rings{border-color:color-mix(in srgb,var(--tone),white 20%);box-shadow:0 0 38px color-mix(in srgb,var(--tone),transparent 72%)}
+/* Faixa de intensidade. Puramente teatral, não é pontuação nem emoção inferida. */
+.scene-tempo{position:absolute;inset:auto 18px 181px;z-index:9;display:flex;justify-content:space-between;gap:12px;pointer-events:none;color:#f8e9d3;opacity:.92}
+.scene-tempo .tempo-side{display:flex;align-items:center;gap:7px;max-width:48%;padding:6px 9px;background:#0d1022b0;border:1px solid #ffe6c22b;border-radius:3px;font-size:8px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;backdrop-filter:blur(9px)}
+.scene-tempo .tempo-side b{font-size:11px;color:#f3cb9d}
+.scene-tempo .tempo-bars{display:flex;align-items:center;gap:3px;height:12px}
+.scene-tempo .tempo-bars i{display:block;width:3px;height:4px;background:#6d718e;border-radius:2px;transition:height .25s,background .25s}
+.arena[data-tension="1"] .tempo-bars i:nth-child(-n+2),.arena[data-tension="2"] .tempo-bars i:nth-child(-n+4),.arena[data-tension="3"] .tempo-bars i{height:11px;background:#f5bf8e}
+.scene-beat{position:absolute;inset:0;z-index:25;pointer-events:none;opacity:0;background:radial-gradient(circle at var(--beat-x,50%) 45%,#ffdfbd50,transparent 38%)}
+.arena.beat-pulse .scene-beat{animation:v3-beat-pulse .7s ease-out}
+.scene-action-ribbon{position:absolute;z-index:19;left:50%;top:34%;min-width:250px;max-width:88%;padding:10px 24px;text-align:center;pointer-events:none;color:#fff9eb;background:linear-gradient(110deg,#902a48,#d75a65 42%,#8e2949);border-top:2px solid #f4b8a1;border-bottom:2px solid #f4b8a1;box-shadow:0 14px 45px #100618cc,0 0 0 5px #5b243b55;transform:translate(-50%,-50%) scale(.72) skewX(-8deg);opacity:0}
+.scene-action-ribbon b{display:block;font-size:clamp(24px,4.8vw,57px);font-family:system-ui,sans-serif;font-weight:1000;font-style:italic;letter-spacing:-1px;line-height:.94;text-shadow:2px 3px #4b1932}
+.scene-action-ribbon small{display:block;font-size:9px;letter-spacing:2px;margin-top:6px;color:#ffe9d9;font-weight:900}
+.scene-action-ribbon.show{animation:v3-action-ribbon .95s both}
+.scene-action-ribbon[data-kind=question]{background:linear-gradient(100deg,#34527f,#387cb9,#334a79);border-color:#b5dfff}
+.scene-action-ribbon[data-kind=concession]{background:linear-gradient(100deg,#5f4b3c,#a77753,#5e4637);border-color:#f9deb4}
+.scene-action-ribbon[data-kind=rebuttal]{background:linear-gradient(100deg,#703264,#ac477f,#623054);border-color:#efb1d9}
+.scene-cut-marker{position:absolute;z-index:10;top:50%;left:50%;transform:translate(-50%,-50%);width:360px;height:360px;max-width:70%;border:1px solid #f4d6a700;border-radius:50%;pointer-events:none;opacity:0}
+.arena.beat-pulse .scene-cut-marker{animation:v3-target-ring .7s ease-out}
+.arena.scene-suspense .judge-cutaway{filter:drop-shadow(0 0 23px #f0ac615e)}
+.arena.scene-judged .scene-beat{background:radial-gradient(circle at 50% 45%,#ffd5ac77,transparent 52%)}
+.arena[data-director=soft]{--camera-time:600ms}
+.arena[data-director=soft] .scene-action-ribbon{filter:saturate(.7)}
+.arena[data-director=soft].impact .duelists,.arena[data-director=soft].slam-impact .duelists{animation:cinema-shake-small 300ms both}
+.duelist .portrait img{image-rendering:auto;transition:filter .27s}
+/* UX: separar direção de controles, melhorar feedback do áudio */
+.scene-audio-options{display:flex;align-items:center;gap:6px;padding:4px 5px;border:1px solid #4b465b;border-radius:7px;background:#181a29}
+.scene-audio-options span{font-size:8px;font-weight:900;letter-spacing:1px;color:#d5c4cb}
+.scene-audio-options select{font-size:9px;padding:5px;background:#24273a;color:#f5e1cb;border:0;width:94px;cursor:pointer}
+#music-toggle[aria-pressed=true]{border-color:#c59670;box-shadow:0 0 0 1px #a8754244}
+.play-controls{min-height:70px;height:auto;padding:8px 0}
+.scene-status-line{display:flex;gap:8px;align-items:center;font-size:9px;letter-spacing:1px;color:#b1afc5}
+@keyframes v3-talk-mouth{0%,100%{transform:scaleY(.86)}50%{transform:scaleY(1.52)}}
+@keyframes v3-point-arm{0%{transform:rotate(0) translateX(0)}36%{transform:rotate(-14deg) translateX(6px)}68%{transform:rotate(-9deg) translateX(4px)}100%{transform:rotate(-4deg)}}
+@keyframes v3-slam-arm{0%{transform:translateY(-28px) rotate(-18deg)}46%{transform:translateY(12px) rotate(5deg)}63%{transform:translateY(5px)}100%{transform:translateY(0)}}
+@keyframes v3-open-arm{0%,100%{transform:rotate(0)}45%{transform:rotate(-8deg) translateY(-6px)}70%{transform:rotate(4deg)}}
+@keyframes v3-respect{0%,100%{transform:translateY(0)}48%{transform:translateY(4px) rotate(2deg)}}
+@keyframes v3-ring-pulse{0%,100%{transform:scale(1);opacity:.44}50%{transform:scale(1.09);opacity:1}}
+@keyframes v3-beat-pulse{0%{opacity:0;transform:scale(.88)}22%{opacity:1}100%{opacity:0;transform:scale(1.15)}}
+@keyframes v3-target-ring{0%{opacity:.9;border-color:#fff6dbcc;transform:translate(-50%,-50%) scale(.55)}100%{opacity:0;border-color:#ffe7c900;transform:translate(-50%,-50%) scale(1.4)}}
+@keyframes v3-action-ribbon{0%{opacity:0;transform:translate(-57%,-53%) scale(1.5) skewX(-11deg)}18%{opacity:1;transform:translate(-48%,-50%) scale(.95) skewX(-8deg)}40%,70%{opacity:1;transform:translate(-50%,-50%) scale(1) skewX(-8deg)}100%{opacity:0;transform:translate(-44%,-51%) scale(1.08) skewX(-8deg)}}
+@media(max-width:1100px){.scene-tempo{bottom:178px}.scene-audio-options select{width:82px}}
+@media(max-width:780px){.scene-tempo{bottom:174px}.scene-audio-options{flex:1;justify-content:center}}
+@media(max-width:450px){.scene-tempo{bottom:175px;left:9px;right:9px}.scene-tempo .tempo-side{font-size:7px;padding:4px}.scene-tempo .tempo-side b{font-size:9px}.scene-action-ribbon{min-width:190px;padding:10px 16px}.scene-action-ribbon small{font-size:7px}.scene-audio-options{width:100%;order:4}.scene-audio-options select{width:auto;min-width:110px}}
+@media(prefers-reduced-motion:reduce){.arena .scene-beat,.arena .scene-cut-marker,.arena .scene-action-ribbon,.arena .gesture-arm,.duelist.speaking .default-avatar .mouth,.duelist.anticipation .portrait-rings{animation:none!important}.scene-action-ribbon.show{opacity:1;transform:translate(-50%,-50%) scale(1)}.arena .duelist{transform:none!important}.arena .cinema-architecture{transform:none!important}}
+.arena.cinema-off .scene-action-ribbon,.arena.cinema-off .scene-beat,.arena.cinema-off .scene-cut-marker{display:none}
+
+/* A cartela v3 substitui a cartela antiga, evitando títulos duplicados. */
+#objection{display:none}
+/* A direção suave é de fato suave também para flashes, não só para zoom. */
+.arena[data-director=soft].impact .impact-light,.arena[data-director=soft].impact .impact-lines{animation:none;opacity:0}
+.arena[data-director=soft].beat-pulse .scene-beat{animation-duration:.4s;opacity:.12}
+@media(prefers-reduced-motion:reduce){.arena .impact-lines,.arena .impact-light{display:none!important}.scene-tempo .tempo-bars i{transition:none!important}}
+
+/* Personalização v4: mantém a arena original e amplia o configurador. */
+.identity-custom{margin:12px 0 4px;padding:12px;border:1px solid #ffffff19;border-radius:9px;background:linear-gradient(120deg,#ffffff06,#11131c18);display:grid;gap:8px}
+.identity-custom label,.round-topic-label{display:flex;flex-direction:column;gap:5px;color:#b8b7c6;font-size:10px;font-weight:650;letter-spacing:.35px}
+.identity-custom input,.identity-custom textarea,.round-topic-label input{width:100%;box-sizing:border-box;background:#171b2a;color:#f1e8e6;border:1px solid #4a4c5c;border-radius:6px;font:inherit;font-size:12px;letter-spacing:0;line-height:1.45;padding:9px;resize:vertical}
+.identity-custom input:focus,.identity-custom textarea:focus,.round-topic-label input:focus{outline:2px solid #97c7ff88;outline-offset:1px}
+.round-topics{padding:12px;background:linear-gradient(130deg,#25334b58,#1b1d292a);border:1px solid #ffffff18;border-radius:9px;margin:13px 0}
+.round-topics .field-title{margin:0 0 6px;display:flex;justify-content:space-between;gap:5px;font-size:10px}
+.round-hint{font-size:11px;line-height:1.5;color:#a5a5bc;margin:0 0 10px}
+.round-topic-fields{display:grid;gap:9px}
+.round-topic-label{flex-direction:row;align-items:center;gap:9px}
+.round-topic-label span{white-space:nowrap;min-width:60px;font-size:9px;color:#c7b7db}
+.round-topic-label input{min-width:0;flex:1}
+.config-actions{display:flex;gap:8px;margin-top:14px;margin-bottom:9px}
+.config-action{flex:1;border:1px solid #57596c!important;background:#222735!important;color:#e2ddea!important;text-align:center;border-radius:7px!important;padding:10px 6px!important;font-size:10px!important;font-weight:850!important;cursor:pointer}
+.config-action:hover{border-color:#b1a6c5!important}
+.scripted-btn{width:100%;border:1px solid #d7aa68!important;background:linear-gradient(125deg,#5c442e,#302638)!important;color:#fff0d4!important;border-radius:9px!important;padding:12px 10px!important;font-weight:950!important;cursor:pointer;margin-bottom:8px;display:flex;align-items:center;justify-content:space-between;gap:7px;font-size:12px;letter-spacing:.3px}
+.scripted-btn span{color:#e5c393;font-size:9px}
+.scripted-btn:hover{filter:brightness(1.16)}
+.scripted-btn:disabled,.config-action:disabled{opacity:.4;cursor:not-allowed}
+.round-subtopic{position:absolute;z-index:7;top:130px;left:50%;transform:translateX(-50%);max-width:86%;pointer-events:none;color:#f0d9bb;background:#1a1b30b3;border:1px solid #ffffff25;border-radius:16px;padding:5px 12px;font-size:9px;letter-spacing:1px;text-align:center;line-height:1.4;white-space:normal}
+@media (max-width:1100px){.round-subtopic{top:118px}}
+@media (max-width:640px){.round-subtopic{top:110px;font-size:8px;max-width:94%}.scripted-btn{flex-wrap:wrap}}
+
+.identity-drawer{margin:11px 0 3px;border:1px solid #51556b;border-radius:8px;overflow:hidden;background:#202333}
+.identity-drawer summary{padding:10px 11px;color:#e5d6bd;font-size:10px;letter-spacing:.7px;font-weight:900;cursor:pointer;list-style-position:inside}
+.identity-drawer summary:hover{background:#ffffff0c}
+.identity-drawer[open] summary{border-bottom:1px solid #ffffff25}
+.identity-drawer .identity-custom{margin:0;border:0;border-radius:0;background:transparent}
+.round-subtopic{position:relative;top:auto;left:auto;transform:none;z-index:2;max-width:100%;padding:5px 12px;margin-top:-3px;background:#171c2ab9;border:1px solid #ddbd9d55;border-radius:30px;font-size:9px;color:#ead8c2;white-space:normal}
+@media(max-width:640px){.round-subtopic{top:auto;max-width:100%;font-size:8px}}
+
+/* Contraponto Audio Studio — expansível, não invade a área principal */
+.audio-studio{background:linear-gradient(115deg,#181d2b,#252237);border:1px solid #46495b;border-radius:12px;margin:7px 0 18px;overflow:hidden;color:#d6d6df}
+.audio-studio summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;list-style:none;padding:13px 15px;user-select:none}
+.audio-studio summary::-webkit-details-marker{display:none}
+.audio-studio summary:hover{background:#ffffff0a}
+.studio-head{display:flex;align-items:center;gap:12px}
+.studio-head>b{color:#111525;background:linear-gradient(120deg,#ffe2ab,#c18c68);border-radius:8px;width:33px;height:33px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.studio-head strong{font-size:11px;letter-spacing:1.4px;display:block;color:#f9e7cb}
+.studio-head small{font-size:8px;color:#a8abba;letter-spacing:1px;display:block;margin-top:4px}
+.studio-expand{font-size:9px;color:#d9bb8e;letter-spacing:1px;font-weight:800;white-space:nowrap}
+.studio-expand span{font-size:15px;display:inline-block;transition:transform .2s}
+.audio-studio[open] .studio-expand span{transform:rotate(180deg)}
+.studio-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;border-top:1px solid #444458;padding:16px}
+.studio-section{padding:12px 13px 14px;border:1px solid #404257;border-radius:9px;background:#1216257d;min-width:0}
+.studio-subhead{font-size:9px;letter-spacing:1.7px;color:#f0c894;font-weight:900;display:flex;justify-content:space-between;margin-bottom:15px}
+.studio-subhead span{color:#798296}
+.studio-slider{display:grid;grid-template-columns:1fr auto;column-gap:12px;align-items:center;font-size:10px;letter-spacing:1px;font-weight:800;color:#c5c8d5;margin-bottom:12px}
+.studio-slider>span{color:#f1d9b4;font-variant-numeric:tabular-nums}
+.studio-slider input{grid-column:1/-1;accent-color:#d5a877;cursor:pointer;width:100%;margin:9px 0 2px;max-width:none}
+.studio-checks{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+.studio-checks label{font-size:11px;line-height:1.35;color:#bfc5d4;display:flex;align-items:center;gap:9px;cursor:pointer}
+.studio-checks input[type="checkbox"]{accent-color:#dbaf7c;width:14px;height:14px;min-width:14px;margin:0;flex:0 0 14px}
+.studio-file{font-size:9px;font-weight:900;letter-spacing:1px;color:#c5c8d5;display:block}
+.studio-file select{display:block;margin-top:9px;width:100%;background:#24283a;color:#e9e7ef;border-radius:8px;border:1px solid #56576c;padding:10px;font:inherit;cursor:pointer}
+.studio-import{display:block;position:relative;margin:10px 0;border:1px dashed #777789;background:#29293b;color:#f0d4b0;padding:12px 9px;border-radius:8px;font-size:10px;letter-spacing:1px;font-weight:800;cursor:pointer;text-align:center}
+.studio-import:hover,.studio-import:focus-within{border-color:#e6c29a;background:#363348}
+.studio-import input{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none}
+.studio-actions{display:flex;gap:8px}.studio-actions button{flex:1;background:#34364a;color:#f5e4d4;border:1px solid #696779;border-radius:7px;padding:9px 7px;font-size:9px;font-weight:800;letter-spacing:.3px;cursor:pointer}
+.studio-actions button:hover{border-color:#d7b684;background:#444050}
+.cue-status{color:#aeb1bf;font-size:10px;line-height:1.5;display:block;min-height:28px;margin-top:12px}
+@media(max-width:650px){.studio-grid{grid-template-columns:1fr;padding:10px;gap:8px}.audio-studio summary{padding:11px 12px}.studio-head small{font-size:7px}.studio-expand{font-size:8px}.studio-section{padding:12px}}
+@media(prefers-reduced-motion:reduce){.audio-studio *{transition:none!important}}
+
+/* CONTRAPONTO v7 — Arte de ambiente. Não contém sprites nem modifica o Harness. */
+.scene-backdrop {
+ position:absolute;inset:0 0 155px;z-index:0;pointer-events:none;
+ background-image:linear-gradient(180deg,rgba(7,9,18,.12) 0%,rgba(6,9,19,.23) 48%,rgba(11,11,24,.90) 100%),url('../app/assets/scenes/courtroom-grand.webp');
+ background-position: center top, center 43%; background-size:cover,cover;
+ opacity:.96;filter:saturate(.87) brightness(.78);
+ transition:filter .5s ease,opacity .5s ease,background-position .85s cubic-bezier(.2,.8,.2,1);
+ will-change:background-position;
+}
+.arena[data-scene=front] .scene-backdrop{background-image:linear-gradient(180deg,#070a1422,#0c0a20db),url('../app/assets/scenes/courtroom-front.webp');filter:saturate(.95) brightness(.77)}
+.arena[data-scene=night] .scene-backdrop{background-image:linear-gradient(180deg,#060c1a22,#070e25cf),url('../app/assets/scenes/courtroom-night.webp');filter:saturate(1.03) brightness(.82)}
+.arena[data-scene=suspense] .scene-backdrop{background-image:linear-gradient(180deg,#11091749,#0a091ed9),url('../app/assets/scenes/courtroom-night.webp');filter:hue-rotate(-12deg) saturate(1.38) brightness(.62)}
+/* A câmera move o cenário, não apenas os retratos. */
+.arena[data-camera=a] .scene-backdrop,.arena[data-camera=a-close] .scene-backdrop{background-position:center top,42% 40%;filter:saturate(1.02) brightness(.70)}
+.arena[data-camera=b] .scene-backdrop,.arena[data-camera=b-close] .scene-backdrop{background-position:center top,58% 40%;filter:saturate(1.02) brightness(.70)}
+.arena[data-camera=duel] .scene-backdrop{filter:saturate(1.13) brightness(.78)}
+.arena[data-camera=judge] .scene-backdrop{
+ background-image:linear-gradient(180deg,#07091340,#0b0815d9),url('../app/assets/scenes/judge-bench.webp');
+ background-position:center top,center center;background-size:cover,cover;filter:saturate(.78) brightness(.85);
+}
+/* Mantém a arquitetura CSS antiga desligada enquanto as colunas reais aparecem no fundo. */
+.arena:has(.scene-backdrop) .cinema-architecture{opacity:.055}
+.arena:has(.scene-backdrop) .orbit{opacity:.18}
+.arena:has(.scene-backdrop) .platform{background:linear-gradient(180deg,#282235b8,#110f1cea);border-top-color:#b78b65b8}
+/* Banca do magistrado: a arte gerada pode ser usada antes dos sprites personalizados. */
+.judge-avatar{background:linear-gradient(180deg,#100e1b22,#171324ed),url('../app/assets/scenes/judge-bench.webp') center 42%/cover;border-color:#80694d}
+.judge-avatar svg{filter:drop-shadow(0 11px 18px #000d)}
+.judge-halo{border-color:#edc58b74;box-shadow:0 0 28px #d59c4740}
+.verdict{background-image:linear-gradient(90deg,#201b2eea,#211b2eee),url('../app/assets/scenes/verdict-chamber.webp');background-size:cover}
+/* Os recortes de efeitos são complementares aos flashes e cartões CSS existentes. */
+.arena.impact .impact-lines{background-image:url('../app/assets/fx/speedlines-red.webp');background-position:center;background-size:cover;mix-blend-mode:screen}
+.arena.slam-impact .impact-lines{background-image:url('../app/assets/fx/speedlines-blue.webp');background-position:center;background-size:cover;mix-blend-mode:screen}
+.arena.impact .scene-action-ribbon[data-kind=objection]{box-shadow:0 12px 48px #1a0415c4,0 0 45px #ce314670}
+.scene-picker{display:flex;align-items:center;gap:5px;color:#d7bec2;font-size:9px;font-weight:900;letter-spacing:1px;padding:3px 5px;border-radius:7px;background:#171b29;border:1px solid #55536c}
+.scene-picker select{max-width:120px;min-width:95px;border:0;background:#23273a;color:#f5e0ca;padding:5px 3px;font-size:9px;cursor:pointer}
+@media(max-width:780px){.scene-backdrop{inset:0 0 155px;background-position:center top,50% center}.scene-picker{flex:1;justify-content:center}}
+@media(max-width:450px){.scene-backdrop{bottom:160px}.scene-picker{width:100%;order:0}.scene-picker select{max-width:none}.arena[data-camera=judge] .scene-backdrop{background-position:center 45%}}
+@media(prefers-reduced-motion:reduce){.scene-backdrop{transition:none!important;will-change:auto}}
+
+/* Pacote de personagens 8.0. A arte de poses possui fundo pintado opaco:
+   enquadramento em cartas evita recortes falsos e mantém a composição intacta. */
+.duelist .portrait{isolation:isolate;overflow:visible}
+.duelist .portrait:before{content:'';position:absolute;inset:4% 11% 1%;border:1px solid color-mix(in srgb,var(--tone),transparent 50%);border-radius:16px 16px 5px 5px;background:linear-gradient(160deg,#151a31eb,#12101aeb);box-shadow:0 12px 36px #03040aaf,0 0 20px color-mix(in srgb,var(--tone),transparent 80%);transform:skewY(-1deg)}
+.duelist .portrait img.pack-avatar{width:auto;max-width:83%;height:92%;object-fit:contain;align-self:flex-end;image-rendering:pixelated;position:relative;border-radius:9px 9px 3px 3px;box-shadow:0 8px 30px #0009;filter:contrast(1.08) saturate(1.11);mask-image:linear-gradient(to bottom,#000 0 89%,transparent 100%)}
+.duelist .portrait img.pack-avatar[hidden]{display:none!important}
+.duelist.speaking .portrait img.pack-avatar{animation:pack-actor 1.75s ease-in-out infinite alternate}
+.duelist.listening .portrait img.pack-avatar{animation:pack-listener 3.3s ease-in-out infinite alternate}
+.duelist[data-gesture=point] img.pack-avatar,.duelist[data-gesture=slam-desk] img.pack-avatar{animation:pack-impact .42s cubic-bezier(.15,.75,.15,1) both}
+.duelist[data-emotion=surprised] img.pack-avatar{animation:pack-shock .65s ease-out both}
+@keyframes pack-actor{from{transform:translateY(0) scale(1)}to{transform:translateY(-5px) scale(1.018)}}
+@keyframes pack-listener{from{transform:translateY(0)}to{transform:translateY(-3px)}}
+@keyframes pack-impact{0%{transform:translateY(10px) scale(.94)}45%{transform:translateY(-11px) scale(1.07)}100%{transform:translateY(0) scale(1)}}
+@keyframes pack-shock{0%{transform:translateY(0)}30%{transform:translateY(-14px) rotate(-2deg)}100%{transform:translateY(0)}}
+/* A faixa dos olhos é uma cena transitória; o texto não fica dentro da arte. */
+.facecard-overlay{position:absolute;z-index:13;left:0;right:0;top:42%;transform:translateY(-50%);pointer-events:none;visibility:hidden;opacity:0;overflow:hidden;filter:drop-shadow(0 16px 24px #000c)}
+.facecard-overlay.visible{visibility:visible;opacity:1;animation:facecard-enter 1.25s cubic-bezier(.24,.73,.27,1) both}
+.facecard-ribbon{position:relative;width:100%;height:clamp(72px,10vw,132px);overflow:hidden;border-block:2px solid var(--face-tone,#65aafa);background:#10172b;box-shadow:0 0 0 2px #0007,0 0 30px var(--face-tone,#65aafa)}
+.facecard-ribbon img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;image-rendering:pixelated}
+.facecard-ribbon:before{content:'';position:absolute;inset:0;z-index:1;box-shadow:inset 0 0 50px #0009;pointer-events:none}
+.facecard-caption{position:absolute;bottom:9px;right:4%;z-index:2;background:#0a0d1ddf;border:1px solid var(--face-tone,#65aafa);padding:5px 15px;color:#fff;font-size:11px;letter-spacing:.16em;font-weight:900;text-shadow:0 2px 8px #000}
+.facecard-overlay[data-side=b] .facecard-caption{right:auto;left:4%}
+@keyframes facecard-enter{0%{opacity:0;transform:translate(110%,-50%)}12%{opacity:1;transform:translate(-3%,-50%)}24%{transform:translate(0,-50%)}76%{opacity:1;transform:translate(0,-50%)}100%{opacity:0;transform:translate(-70%,-50%)}}
+@media(max-width:780px){.facecard-overlay{top:45%}.facecard-ribbon{height:100px}.facecard-caption{font-size:9px}.duelist .portrait img.pack-avatar{height:90%;max-width:86%}}
+@media(max-width:450px){.facecard-overlay{top:47%}.facecard-ribbon{height:76px}.facecard-caption{font-size:8px;bottom:4px;padding:3px 7px}.duelist .portrait:before{inset:5% 3% 1%}.duelist .portrait img.pack-avatar{max-width:96%;height:90%}}
+@media(prefers-reduced-motion:reduce){.facecard-overlay.visible{animation:none;opacity:1}.duelist .portrait img.pack-avatar{animation:none!important}}
+/* Um único letreiro por vez: o Face Card substitui a cartela de impacto temporariamente. */
+.arena:has(.facecard-overlay.visible) .cinema-announcement,
+.arena:has(.facecard-overlay.visible) .scene-action-ribbon{opacity:0!important;visibility:hidden!important}
+.arena:has(.facecard-overlay.visible) .marquee{opacity:.26}
+.arena:has(.facecard-overlay.visible) .duelists{filter:brightness(.68)}
+
+/* v9: sequências PNG reais, mantendo quadros e cores originais. */
+.duelist .portrait img.pack-avatar[data-animation]{
+ max-width:91%;height:94%;object-fit:contain;object-position:center bottom;
+ background:linear-gradient(150deg,#151a2a,#100e1c);
+ border:1px solid color-mix(in srgb,var(--tone),transparent 70%);
+ box-shadow:0 12px 22px #0009,0 0 21px color-mix(in srgb,var(--tone),transparent 80%);
+}
+.duelist .portrait img.pack-avatar[data-animation*=objection],
+.duelist .portrait img.pack-avatar[data-animation*=argumento_forte]{max-width:100%;height:95%}
+/* Reduz duplicidade de movimento CSS durante sequências de quadros ilustrados. */
+.duelist.speaking .portrait img.pack-avatar[data-animation],
+.duelist.listening .portrait img.pack-avatar[data-animation],
+.duelist[data-gesture=point] img.pack-avatar[data-animation],
+.duelist[data-gesture=slam-desk] img.pack-avatar[data-animation]{animation:none}
+.facecard-ribbon{background:linear-gradient(105deg,#030713 0%,color-mix(in srgb,var(--face-tone),#0b1020 80%) 52%,#040510 100%)}
+.facecard-ribbon.facecard-detail img{object-fit:contain;width:100%;height:100%;filter:drop-shadow(0 0 12px #000)}
+.arena[data-camera=a-close] #duelist-a img.pack-avatar[data-animation],
+.arena[data-camera=b-close] #duelist-b img.pack-avatar[data-animation]{filter:saturate(1.16) contrast(1.08)}
+/* Cartelas e partículas da biblioteca v2.1, coordenadas pelo diretor antigo. */
+.arena.impact .impact-lines{background-image:linear-gradient(120deg,#1905113a,#ed344527),url('../app/assets/fx/speedlines-red.webp');background-size:cover;mix-blend-mode:screen}
+.arena.slam-impact .impact-lines{background-image:linear-gradient(120deg,#07122b33,#2878ff22),url('../app/assets/fx/speedlines-blue.webp');background-size:cover;mix-blend-mode:screen}
+.sprite-lab{margin-top:10px;border:1px solid #45506b;border-radius:12px;background:linear-gradient(135deg,#152037,#17131e);color:#f2e7e3;overflow:hidden}
+.sprite-lab summary{display:flex;align-items:center;gap:8px;cursor:pointer;padding:13px 16px;color:#e5ca97;font-size:11px;letter-spacing:1px;font-weight:900}
+.sprite-lab summary small{font-size:9px;letter-spacing:0;color:#aab5ca;font-weight:500}.sprite-lab summary span{margin-left:auto;font-size:9px;color:#acbde0}
+.sprite-lab-inner{padding:0 14px 14px}.sprite-lab-controls{display:flex;flex-wrap:wrap;align-items:end;gap:10px;border-top:1px solid #ffffff16;padding-top:12px}
+.sprite-lab-controls label{min-width:135px;display:flex;flex:1;flex-direction:column;gap:4px;color:#aab5ca;font-size:9px;text-transform:uppercase;letter-spacing:.06em}
+.sprite-lab-controls select,.sprite-lab-controls button,.sprite-catalog-link{border-radius:6px;background:#263047;border:1px solid #59667a;color:#f9eddd;padding:9px 10px;font-size:11px;min-height:35px}
+.sprite-lab-controls button{cursor:pointer;font-weight:800}.sprite-catalog-link{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.sprite-lab-display{margin-top:12px;display:flex;align-items:center;gap:16px;border:1px solid #4b5978;border-radius:10px;background:radial-gradient(ellipse at center,#25354f,#0b1020);padding:12px}
+.sprite-lab-image{width:220px;height:178px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:8px;background:#131b2a}
+.sprite-lab-image img{max-width:100%;max-height:100%;object-fit:contain;image-rendering:pixelated}
+.sprite-lab-info{display:flex;flex-direction:column;gap:7px;min-width:0}.sprite-lab-info strong{font-size:15px}.sprite-lab-info span{font-size:11px;color:#80cfef}.sprite-lab-info p{font-size:11px;color:#9eaabc;line-height:1.5;max-width:320px}
+@media(max-width:620px){.sprite-lab summary{flex-wrap:wrap}.sprite-lab-display{flex-direction:column}.sprite-lab-image{width:100%;height:185px}.sprite-lab-info{text-align:center}.sprite-lab-controls>*{flex:1 1 40%}.sprite-lab-controls label{min-width:0}.sprite-lab-info p{margin:0}}
+@media(prefers-reduced-motion:reduce){.duelist .portrait img.pack-avatar[data-animation]{animation:none!important}}
+
+/* CONTRAPONTO 10 — Direção de movimento.
+   Princípios: antecipação, silhueta legível, overshoot discreto, easing,
+   continuidade e hierarquia visual. Todo evento vem do Harness; aqui só encenamos.
+   Timeline: 0–560 ms cut-in dos olhos; 590 ms início do corpo INTEIRO;
+   após todos os frames → reação → retorno ao plano geral.
+*/
+
+/* O Face Card é um INSERTO LATERAL, não uma faixa que tampa os debatedores.
+   Ocupa apenas a metade superior lateral e some ANTES do gesto corporal. */
+.arena .facecard-overlay {
+  top:26%; left:2%; right:auto; width:min(52%,350px);
+  transform:none; overflow:visible; z-index:21;
+  filter:drop-shadow(0 9px 15px #02040ab8);
+}
+.arena .facecard-overlay[data-side=b]{left:auto;right:2%}
+.arena .facecard-ribbon{
+  width:100%;height:clamp(58px,6.5vw,88px);
+  border:2px solid var(--face-tone,#68baff);
+  border-radius:5px 12px 5px 12px;
+  box-shadow:0 0 0 2px #0b0c19b0,0 12px 24px #030411ac,0 0 24px color-mix(in srgb,var(--face-tone),transparent 60%);
+  transform:skewX(-5deg);transform-origin:50% 50%;
+  background:linear-gradient(135deg,#060c20,#15142a 60%,#030612);
+}
+.arena .facecard-overlay[data-side=b] .facecard-ribbon{transform:skewX(5deg)}
+.arena .facecard-ribbon img {object-fit:cover;object-position:center;filter:contrast(1.12) saturate(1.07)}
+.arena .facecard-ribbon.facecard-detail img{object-fit:cover;width:100%;height:100%}
+.arena .facecard-caption{font-size:10px;letter-spacing:.13em;padding:4px 9px;bottom:3px;right:3%}
+.arena .facecard-overlay.visible{animation:card-straight-left .56s cubic-bezier(.16,.89,.24,1) both}
+.arena .facecard-overlay.visible[data-side=b]{animation-name:card-straight-right}
+.arena .facecard-overlay.visible[data-path=diagonal]{animation-name:card-diagonal-left}
+.arena .facecard-overlay.visible[data-side=b][data-path=diagonal]{animation-name:card-diagonal-right}
+.arena .facecard-overlay.visible.singular-action{animation:singular-card-in .32s ease-out both!important;visibility:visible}
+@keyframes singular-card-in{from{opacity:0;transform:translateX(-65%)}to{opacity:1;transform:translateX(0)}}
+.arena .facecard-overlay.visible.singular-action[data-side=b]{animation-name:singular-card-in-right!important}
+@keyframes singular-card-in-right{from{opacity:0;transform:translateX(65%)}to{opacity:1;transform:translateX(0)}}
+.arena #objection.show{display:block}
+@keyframes card-straight-left{
+  0%{opacity:0;transform:translate3d(-95%,0,0) scale(.92)}
+  22%{opacity:1}42%{transform:translate3d(9px,0,0) scale(1.015)}
+  58%,78%{opacity:1;transform:translate3d(0,0,0) scale(1)}
+  100%{opacity:0;transform:translate3d(-10px,0,0) scale(.99)}
+}
+@keyframes card-straight-right{
+  0%{opacity:0;transform:translate3d(95%,0,0) scale(.92)}
+  22%{opacity:1}42%{transform:translate3d(-9px,0,0) scale(1.015)}
+  58%,78%{opacity:1;transform:translate3d(0,0,0) scale(1)}
+  100%{opacity:0;transform:translate3d(10px,0,0) scale(.99)}
+}
+@keyframes card-diagonal-left{
+  0%{opacity:0;transform:translate3d(-78%,22px,0) rotate(-8deg) scale(.93)}
+  22%{opacity:1}42%{transform:translate3d(8px,-3px,0) rotate(2deg) scale(1.015)}
+  58%,78%{opacity:1;transform:translate3d(0,0,0) rotate(0deg)}
+  100%{opacity:0;transform:translate3d(-11px,-7px,0) rotate(-2deg)}
+}
+@keyframes card-diagonal-right{
+  0%{opacity:0;transform:translate3d(78%,22px,0) rotate(8deg) scale(.93)}
+  22%{opacity:1}42%{transform:translate3d(-8px,-3px,0) rotate(-2deg) scale(1.015)}
+  58%,78%{opacity:1;transform:translate3d(0,0,0) rotate(0deg)}
+  100%{opacity:0;transform:translate3d(11px,-7px,0) rotate(2deg)}
+}
+/* Ao aparecer a faixa, o elenco PERMANECE visível; sem escurecimento abrupto. */
+.arena:has(.facecard-overlay.visible) .duelists{filter:brightness(.96)}
+.arena:has(.facecard-overlay.visible) .marquee{opacity:.88}
+
+/* O momento principal é reservado ao corpo, com margem para mostrar a pose.
+   Um dolly curto evita cortar cabeças/braços nas laterais. */
+.arena[data-shot-phase=performance][data-camera=a] .duelist.left{
+  transform:translate(5%,1%) scale(1.055) rotate(-.5deg);filter:brightness(1.08) contrast(1.04)
+}
+.arena[data-shot-phase=performance][data-camera=b] .duelist.right{
+  transform:translate(-5%,1%) scale(1.055) rotate(.5deg);filter:brightness(1.08) contrast(1.04)
+}
+.arena[data-shot-phase=performance][data-camera=a] .duelist.right,
+.arena[data-shot-phase=performance][data-camera=b] .duelist.left{
+  transform:translate(0,2%) scale(.96);filter:brightness(.78) saturate(.8)
+}
+/* Ação diagonal leve: compressão/antecipação → impulso → overshoot → repouso.
+   Anima o invólucro, sem interromper a sequência PNG frame a frame. */
+.arena[data-shot-phase=performance] .duelist.perform .portrait{
+  transform-origin:50% 90%;animation:actor-diagonal-accent 950ms cubic-bezier(.2,.78,.23,1) both;
+}
+.arena[data-shot-phase=performance] .duelist.perform[data-gesture=slam-desk] .portrait{
+  animation-name:actor-slam-accent;
+}
+@keyframes actor-diagonal-accent{
+  0%{transform:translate3d(-5px,9px,0) scale(.97) rotate(-1.2deg)}
+  22%{transform:translate3d(3px,-7px,0) scale(1.028) rotate(.8deg)}
+  46%{transform:translate3d(0,-3px,0) scale(1.013) rotate(-.3deg)}
+  70%{transform:translate3d(0,1px,0) scale(1.003)}
+  100%{transform:translate3d(0,0,0) scale(1) rotate(0)}
+}
+@keyframes actor-slam-accent{
+  0%{transform:translate3d(-3px,-8px,0) scale(.98)}
+  35%{transform:translate3d(3px,9px,0) scale(1.025)}
+  45%{transform:translate3d(0,6px,0) scale(1.018)}
+  72%{transform:translate3d(0,-2px,0) scale(1.007)}
+  100%{transform:none}
+}
+/* Pausas e reações são menores do que as ações protagonistas. */
+.arena[data-shot-phase=anticipation] .duelist.perform .portrait{
+  animation:actor-anticipate 590ms ease-in both;
+}
+@keyframes actor-anticipate {
+  0%{transform:translateY(0) scale(1)}
+  65%{transform:translateY(4px) scale(.991)}
+  100%{transform:translateY(3px) scale(.993)}
+}
+.arena[data-shot-phase=reaction] .duelist.react-now .portrait{
+  animation:react-quiet 680ms cubic-bezier(.2,.85,.2,1) both;
+}
+@keyframes react-quiet{
+  0%{transform:translateX(0) rotate(0)}
+  30%{transform:translateX(6px) rotate(1.2deg)}
+  65%{transform:translateX(-2px) rotate(-.4deg)}
+  100%{transform:none}
+}
+/* O diálogo mantém prioridade absoluta. As faixas nunca cruzam sua região. */
+.arena .dialogue{z-index:32}
+@media(max-width:780px){
+ .arena .facecard-overlay{top:24%;left:2.5%;width:49%}
+ .arena .facecard-overlay[data-side=b]{right:2.5%}
+ .arena .facecard-ribbon{height:66px}
+ .arena[data-shot-phase=performance][data-camera=a] .duelist.left{transform:translate(2%,1%) scale(1.015)}
+ .arena[data-shot-phase=performance][data-camera=b] .duelist.right{transform:translate(-2%,1%) scale(1.015)}
+}
+@media(max-width:450px){
+ .arena .facecard-overlay{top:23%;width:48%}
+ .arena .facecard-ribbon{height:52px;border-radius:4px 8px 4px 8px}
+ .arena .facecard-caption{font-size:7px;letter-spacing:.08em;padding:2px 5px;bottom:2px}
+ .arena[data-shot-phase=performance][data-camera=a] .duelist.left,
+ .arena[data-shot-phase=performance][data-camera=b] .duelist.right{transform:translate(0,1%) scale(1.005)}
+}
+@media(prefers-reduced-motion:reduce){
+ .arena .facecard-overlay.visible{visibility:hidden;opacity:0;animation:none!important}
+ .arena[data-shot-phase] .duelist .portrait{animation:none!important}
+ .arena[data-shot-phase] .duelist{transform:none!important}
+}
+
+/* Controle visual: não é enviado ao Harness. */
+.cutin-path-control{display:flex;align-items:center;gap:5px;font-size:9px;font-weight:850;color:#b9b6c3;letter-spacing:.7px}
+.cutin-path-control select{width:88px;font-size:9px;padding:6px;background:#292a3c;color:#f4e0c6;border:1px solid #62566e;border-radius:6px}
+@media(max-width:780px){.cutin-path-control{font-size:8px}.cutin-path-control select{width:83px;font-size:8px}}
+/* Arte importada tem proporções mistas; usar um fundo temático evita barras pretas. */
+.duelist .portrait img.pack-avatar[data-animation*=objection],
+.duelist .portrait img.pack-avatar[data-animation*=argumento_forte]{
+ background:radial-gradient(ellipse at 55% 66%,#692c38aa,#21152b 76%,#17182b);
+ border-color:color-mix(in srgb,var(--tone),transparent 80%);
+}
+@media(max-width:450px){.arena.impact .impact-light{opacity:0!important}.arena.impact .duelists{animation:none!important}}
+
+/* Contraponto v22: novas animações RGBA da Arena v7; palco completo preservado. */
+.duelist .portrait.v22-portrait{overflow:visible;isolation:isolate}
+.duelist .portrait.v22-portrait::before{opacity:0;pointer-events:none}
+.duelist .portrait.v22-portrait .portrait-rings{opacity:.3;z-index:0}
+.duelist .portrait.v22-portrait img.pack-avatar[data-motion-set="v22"]{
+ position:relative;z-index:2;display:block;height:117%;max-height:none;max-width:100%;width:auto;
+ object-fit:contain;object-position:center bottom;image-rendering:auto;
+ border:0;border-radius:0;background:none;box-shadow:none;
+ mask-image:none;-webkit-mask-image:none;filter:drop-shadow(0 9px 14px #070918c2);
+ animation:none!important;transform:none!important;
+}
+/* Dante fica voltado para o centro do palco, de frente para Lia. */
+.duelist.right .portrait.v22-portrait img.pack-avatar[data-motion-set="v22"]{
+ transform:scaleX(-1)!important;
+}
+/* O púlpito fica na frente da base do sprite, cobrindo os cortes inferiores sem
+ obstruir mãos que aparecem acima do tampo. */
+.duelist .portrait.v22-portrait::after{
+ content:"";position:absolute;z-index:5;bottom:-1px;left:-5%;width:110%;height:18%;
+ border-top:5px solid #d0ad70;border-inline:2px solid #8c6948;border-radius:9px 9px 2px 2px;
+ background:repeating-linear-gradient(95deg,transparent 0 32px,#e7c88c0a 33px 34px,transparent 35px 56px),
+ linear-gradient(180deg,#5b4439 0%,#3b2c30 23%,#201b25 68%,#12151e 100%);
+ box-shadow:inset 0 3px 0 #f5d99c29,inset 0 -7px 9px #04080d88,0 -11px 24px #08091577;
+ pointer-events:none;
+}
+.duelist.left .portrait.v22-portrait::after{border-top-color:#b8c9ed;box-shadow:inset 0 3px 0 #86affb38,0 -9px 25px #071f3c88}
+.duelist.right .portrait.v22-portrait::after{border-top-color:#d7aa7d;box-shadow:inset 0 3px 0 #c8836435,0 -9px 25px #3011158c}
+/* O zoom antigo de 1,36x cortava dedos no quadro durante objeções. */
+.arena:has(.v22-portrait)[data-camera="a-close"] .duelist.left{transform:translate(12%,7%) scale(1.17) rotate(-1deg)}
+.arena:has(.v22-portrait)[data-camera="b-close"] .duelist.right{transform:translate(-12%,7%) scale(1.17) rotate(1deg)}
+.arena .facecard-ribbon.v22-facecard img[data-motion-set="v22"]{
+ width:100%;height:100%;object-fit:cover;object-position:center 21%;
+ image-rendering:auto;background:transparent;
+}
+.duelist .portrait.v22-portrait img.pack-avatar[hidden]{display:none!important}
+@media(max-width:780px){.duelist .portrait.v22-portrait img.pack-avatar[data-motion-set="v22"]{height:111%}}
+@media(max-width:450px){.duelist .portrait.v22-portrait::after{height:20%}.duelist .portrait.v22-portrait img.pack-avatar[data-motion-set="v22"]{height:105%}}
+@media(prefers-reduced-motion:reduce){.duelist .portrait.v22-portrait img.pack-avatar{animation:none!important;transition:none!important}}
+
+@media(min-width:781px){.arena:has(.v22-portrait) .marquee{transform:translateY(-30px)}}
+
+/* CONTRAPONTO v12 — Elias no centro, sem esconder Lia e Dante.
+   O juiz tem canvas 256×256; não deve ser ampliado como os corpos 512×384. */
+.judge-portrait-stage{position:relative;display:grid;place-items:center;width:clamp(150px,25vw,280px);height:clamp(175px,28vw,295px);border:1px solid #d5aa6a66;border-radius:13px 13px 4px 4px;background:radial-gradient(ellipse at 50% 80%,#6a4c4b77,#201b30ba 75%);box-shadow:inset 0 0 36px #0008,0 18px 48px #000a;overflow:hidden}
+.judge-portrait-stage:before{content:"";position:absolute;inset:4%;border:1px solid #ddae7252;border-radius:inherit;pointer-events:none}
+.judge-portrait-stage img{display:block;width:100%;height:100%;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 7px 10px #0009)}
+.arena[data-camera=judge] .judge-cutaway{top:38%;gap:2px;z-index:12}
+.arena[data-camera=judge] .judge-cutaway b{padding:4px 9px;border-radius:5px;background:#10111fd9;font-size:clamp(12px,1.8vw,17px)}
+.arena[data-camera=judge] .judge-cutaway>span{background:#10111fd9;border-radius:4px;padding:5px 7px}
+.judge-avatar{display:flex;flex-direction:column;justify-content:end;align-items:center;padding-top:4px}
+.judge-avatar img.judge-sidebar-sprite{z-index:2;position:relative;display:block;width:min(100%,285px);height:185px;object-fit:contain;image-rendering:pixelated;filter:drop-shadow(0 8px 10px #000a)}
+.judge-avatar .judge-text{width:100%}
+.arena.scene-judged .judge-portrait-stage{animation:elias-gavel-impact 420ms cubic-bezier(.23,.88,.32,1) 1}
+@keyframes elias-gavel-impact{0%,100%{transform:translateY(0)}38%{transform:translateY(5px) scale(1.017)}65%{transform:translateY(-2px)}}
+@media(max-width:450px){.arena[data-camera=judge] .judge-cutaway{top:33%}.judge-portrait-stage{width:168px;height:188px}.judge-avatar img.judge-sidebar-sprite{height:177px}}
+@media(prefers-reduced-motion:reduce){.arena.scene-judged .judge-portrait-stage{animation:none}}
+.judge-talk{position:relative;display:flex;flex-direction:column;align-items:center;width:100%;padding:0;border:0;background:transparent;color:inherit;font:inherit;overflow:hidden}
+.judge-talk .judge-text{display:flex;flex-direction:column;gap:3px;z-index:2}
+.judge-talk:hover .judge-text small{color:#ffe0a3}
+.judge-talk:focus-visible{outline:2px solid #f4c78d;outline-offset:-3px;border-radius:10px}
+.judge-interaction{margin:0 0 18px;padding:12px;border:1px solid #8b73584d;border-radius:10px;background:#171b29}
+.judge-interaction>strong{display:block;color:#f4c78d;letter-spacing:1px;font-size:9px}
+.judge-interaction p{margin:8px 0 10px;color:#d4d0dc;font-size:11px;line-height:1.65;overflow-wrap:anywhere}
+.judge-interaction.has-comment{border-color:#be965e99}
+.judge-questions{display:flex;flex-wrap:wrap;gap:6px}
+.judge-questions button{flex:1;min-height:34px;padding:7px 8px;border:1px solid #756248;border-radius:6px;background:#302b2b;color:#f4d5aa;font-size:10px}
+.judge-questions button:hover{background:#40352d}
+.judge-questions button:focus-visible{outline:2px solid #f4c78d;outline-offset:2px}
+@media(min-width:781px) and (max-width:1150px){.sidebar>.judge-interaction{grid-column:1;grid-row:6;align-self:start}}
+
+/* Contraponto v13 — pequenos insertos de Elias em camadas do palco.
+ * O sprite corporal continua integralmente exposto: rosto no alto e impacto na base.
+ * Nada bloqueia a caixa de diálogo nem recebe eventos de mouse. */
+.judge-portrait-stage { isolation:isolate; }
+.judge-portrait-stage img.judge-impact-sprite {
+  position:absolute;z-index:4;bottom:0;right:-3%;width:66%;height:45%;
+  object-fit:contain;image-rendering:pixelated;mix-blend-mode:screen;
+  filter:drop-shadow(0 0 18px rgba(255,213,115,.75));
+  pointer-events:none;animation:judge-flash-enter 240ms ease-out both;
+}
+.judge-portrait-stage img.judge-impact-sprite[hidden], .judge-cutaway img.judge-eyes-sprite[hidden] { display:none!important; }
+.judge-cutaway img.judge-eyes-sprite {
+  position:absolute;z-index:5;top:-8%;left:50%;translate:-50% 0;
+  width:min(74vw,370px);height:clamp(34px,6vw,58px);object-fit:cover;
+  object-position:center;image-rendering:pixelated;pointer-events:none;
+  border:1px solid #ffe0a1aa;border-radius:5px;
+  box-shadow:0 0 0 2px #0a101daa,0 11px 24px #000b;
+  animation:judge-eyes-in 510ms cubic-bezier(.13,.83,.26,1) both;
+}
+@keyframes judge-eyes-in {
+  0%{opacity:0;transform:translateY(-13px) scale(.93)}
+  30%,80%{opacity:1;transform:translateY(0) scale(1)}
+  100%{opacity:0;transform:translateY(-3px) scale(.98)}
+}
+@keyframes judge-flash-enter{
+  0%{opacity:0;transform:scale(.80) translateY(10px)}
+  60%{opacity:1;transform:scale(1.06) translateY(-3px)}
+  100%{opacity:.9;transform:scale(1) translateY(0)}
+}
+.arena[data-camera=judge] .judge-portrait-stage {box-shadow:0 15px 38px #000c,0 0 24px #d6aa4f3f,inset 0 0 30px #0008}
+/* Menos tremulação nas imagens: o movimento vem do corpo do personagem e da câmera,
+   não de um segundo movimento infinito sobre o mesmo PNG animado. */
+.duelist.speaking .portrait img.pack-avatar[data-animation],
+.duelist.listening .portrait img.pack-avatar[data-animation],
+.duelist[data-emotion] .portrait img.pack-avatar[data-animation]{animation:none}
+@media(max-width:450px){
+ .judge-cutaway img.judge-eyes-sprite{width:min(70vw,248px);height:37px;top:-6%}
+ .judge-portrait-stage img.judge-impact-sprite{width:62%;height:40%}
+}
+@media(prefers-reduced-motion:reduce){
+ .judge-cutaway img.judge-eyes-sprite,.judge-portrait-stage img.judge-impact-sprite{animation:none!important}
+}
+
+/* V14 — Visual acting layer. Só anima luz, cenário e envoltórios;
+   nunca força transform no PNG quadro-a-quadro nem cobre o diálogo. */
+.arena { --presence-speed:2.9s; }
+.arena .duelist .portrait::after {
+  content:""; position:absolute; z-index:0; inset:1% 4% 1%; border-radius:48% 48% 17% 17%;
+  background:radial-gradient(ellipse at 50% 43%,color-mix(in srgb,var(--tone),transparent 71%),transparent 66%);
+  opacity:.36; pointer-events:none;filter:blur(10px);transform:scale(.97);
+  animation:living-presence var(--presence-speed) ease-in-out infinite alternate;
+}
+.arena .duelist.speaking .portrait::after{opacity:.64;--presence-speed:1.8s}
+@keyframes living-presence{from{transform:translateY(4px) scale(.94);opacity:.22}to{transform:translateY(-4px) scale(1.045);opacity:.65}}
+
+/* Um palco que responde ao falante, em vez de ficar estático entre os cortes. */
+.arena[data-performance=live] .scene-backdrop{transition:filter 460ms ease,transform 1.5s cubic-bezier(.22,.67,.23,1)}
+.arena[data-performance-side=a][data-performance-phase=emphasis] .scene-backdrop{
+  filter:saturate(1.13) brightness(1.025);transform:scale(1.018) translateX(-.7%)}
+.arena[data-performance-side=b][data-performance-phase=emphasis] .scene-backdrop{
+  filter:saturate(1.13) brightness(1.025);transform:scale(1.018) translateX(.7%)}
+
+/* Ouvinte fica presente com micro-reação no ritmo do argumento. */
+.arena[data-performance-phase=listener] .duelist[data-performance-cue=reply] .portrait::before{
+  box-shadow:0 12px 38px #03040aaf,0 0 25px color-mix(in srgb,var(--tone),transparent 58%);
+  animation:listener-response 600ms cubic-bezier(.25,.8,.22,1) both;
+}
+@keyframes listener-response{
+  0%{filter:brightness(.9);transform:skewY(-1deg) scale(.99)}
+  47%{filter:brightness(1.2);transform:skewY(-1deg) scale(1.027)}
+  100%{filter:brightness(1);transform:skewY(-1deg) scale(1)}
+}
+
+/* Sinal de ênfase atrás do debatedor, não sobre seu corpo nem sobre o texto. */
+.arena .duelist .portrait-rings{pointer-events:none;transition:opacity .4s ease,filter .4s ease}
+.arena[data-performance-phase=emphasis] .duelist[data-performance-cue=emphasis] .portrait-rings{
+  filter:drop-shadow(0 0 18px var(--tone));animation:emphasis-halo 800ms cubic-bezier(.2,.8,.28,1) both;
+}
+@keyframes emphasis-halo{
+  0%{transform:scale(.93);opacity:.18}
+  45%{transform:scale(1.045);opacity:.9}
+  100%{transform:scale(1);opacity:.4}
+}
+
+/* Entrada de objeto de cena nas objeções: contorno reativo da bancada. */
+.arena[data-performance-action=objection][data-performance-phase=delivery] .duelist.speaking .nameplate{
+  animation:nameplate-hit 650ms cubic-bezier(.18,.76,.21,1) both;
+}
+@keyframes nameplate-hit{
+  0%{filter:brightness(.8);transform:translateY(6px)}
+  38%{filter:brightness(1.45);transform:translateY(-3px)}
+  100%{filter:brightness(1);transform:translateY(0)}
+}
+
+/* Vivacidade é presença com sutileza; no celular menor intensidade. */
+@media(max-width:600px){
+ .arena .duelist .portrait::after{filter:blur(6px)}
+ .arena[data-performance-side] .scene-backdrop{transform:none!important}
+}
+@media(prefers-reduced-motion:reduce){
+ .arena .duelist .portrait::after,.arena .duelist .portrait-rings,
+ .arena .duelist .portrait::before,.arena .duelist .nameplate,
+ .arena .scene-backdrop {animation:none!important;transition:none!important;transform:none!important}
+}
+
+/* Debate Singular: animações de personagem vêm exclusivamente das sequências
+   canceláveis do SpriteDirector. Desativa loops/gestos CSS que competiriam
+   com o gesto do locutor e a reação serial do ouvinte em cada bloco. */
+.arena[data-singular-block=true] .duelist .portrait,
+.arena[data-singular-block=true] .duelist .portrait::before,
+.arena[data-singular-block=true] .duelist .portrait::after,
+.arena[data-singular-block=true] .duelist .portrait-rings,
+.arena[data-singular-block=true] .duelist .nameplate,
+.arena[data-singular-block=true] .duelist .mouth,
+.arena[data-singular-block=true] .duelist .gesture-arm,
+.arena[data-singular-block=true] .duelist .pack-avatar,
+.arena[data-singular-block=true] .scene-backdrop {
+ animation:none!important;transition:none!important;transform:none!important;
+}
+.arena[data-singular-block=true] .duelist.speaking .mouth,
+.arena[data-singular-block=true] .duelist.listening .pack-avatar,
+.arena[data-singular-block=true] .duelist.speaking .pack-avatar {
+ animation:none!important;
+}
+.arena[data-singular-block=true] .duelist.speaking .portrait img[id^="custom-avatar-"]{
+ animation:singular-custom-delivery var(--singular-delivery-duration,700ms) cubic-bezier(.2,.78,.25,1) both!important;
+}
+.arena[data-singular-block=true] .duelist.reacting .portrait img[id^="custom-avatar-"]{
+ animation:singular-custom-reaction var(--singular-reaction-duration,620ms) cubic-bezier(.2,.78,.25,1) both!important;
+}
+.arena[data-animation-paused=true] *, .arena[data-animation-paused=true] *::before, .arena[data-animation-paused=true] *::after {animation-play-state:paused!important;}
+@keyframes singular-custom-delivery{
+ 0%{transform:translateY(0) scale(1)}35%{transform:translateY(-7px) scale(1.025)}100%{transform:translateY(0) scale(1)}
+}
+@keyframes singular-custom-reaction{
+ 0%{transform:translateY(0) scale(1)}38%{transform:translateY(-5px) scale(1.018)}100%{transform:translateY(0) scale(1)}
+}
+
+/* Entrada local: sem requests de servidor. */
+.offline-banner{padding:12px 18px;background:linear-gradient(90deg,#203653,#33243c);border:1px solid #6885a5;border-radius:12px;margin-bottom:14px;font-size:13px;color:#f6e9d8}.offline-banner strong{color:#f2c27a}.offline-controls{display:flex;align-items:center;flex-wrap:wrap;gap:9px;padding:12px 16px;background:#161c30;border:1px solid #414968;border-radius:12px;margin-bottom:12px}.offline-controls button,.offline-controls select{border:1px solid #6e668d;color:#fff1dc;border-radius:7px;background:#272c45;padding:8px 11px;cursor:pointer}.offline-controls label,.offline-controls small{font-size:12px;color:#d4d3e5}.offline-controls strong{font-size:11px;letter-spacing:.8px;color:#d9dfed}.offline-controls button:hover{background:#3b4568}.offline-status{margin-left:auto;color:#b6d7ef;font-size:11px;font-weight:700}.offline-only-note{font-size:12px;color:#d4d3e5;margin:8px 0 14px}@media(max-width:690px){.offline-controls{gap:6px}.offline-status{margin-left:0;width:100%}}

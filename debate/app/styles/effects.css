@@ -1,0 +1,91 @@
+/* CONTRAPONTO 3.0 · Direção expressiva, gráficos originais e leitura acessível.
+   Esta camada consome estados locais. Não altera o Harness ou chama modelos. */
+.arena{--dramatic-scale:1;--stage-accent:#f4c78d}
+.arena[data-tension="1"]{--dramatic-scale:1.018}
+.arena[data-tension="2"]{--dramatic-scale:1.035}
+.arena[data-tension="3"]{--dramatic-scale:1.055}
+.arena .cinema-architecture{transition:transform 1.1s cubic-bezier(.2,.8,.2,1),filter .8s,opacity .7s;transform-origin:center 55%}
+.arena[data-camera="a"] .cinema-architecture{transform:translateX(2.5%) scale(1.05)}
+.arena[data-camera="b"] .cinema-architecture{transform:translateX(-2.5%) scale(1.05)}
+.arena[data-camera="judge"] .cinema-architecture{transform:scale(1.12);opacity:.65;filter:blur(1.5px)}
+.arena[data-camera="duel"] .duelist.left{transform:translate(5%,0) scale(1.075) rotate(-1deg);filter:brightness(1.08)}
+.arena[data-camera="duel"] .duelist.right{transform:translate(-5%,0) scale(1.075) rotate(1deg);filter:brightness(1.08)}
+.arena[data-camera="duel"] .center-vs{color:#f5c79d;text-shadow:0 0 26px #f7b36cbb;transform:translate(-50%,-50%) scale(1.15)}
+.arena[data-camera="a-close"] .duelist.left{transform:translate(25%,8%) scale(1.36) rotate(-2deg);z-index:4;filter:brightness(1.12) contrast(1.04)}
+.arena[data-camera="a-close"] .duelist.right{transform:translate(29%,8%) scale(.74);opacity:.58;filter:brightness(.56) blur(1px)}
+.arena[data-camera="b-close"] .duelist.right{transform:translate(-25%,8%) scale(1.36) rotate(2deg);z-index:4;filter:brightness(1.12) contrast(1.04)}
+.arena[data-camera="b-close"] .duelist.left{transform:translate(-29%,8%) scale(.74);opacity:.58;filter:brightness(.56) blur(1px)}
+.arena[data-camera="a-close"] .camera-corners,.arena[data-camera="b-close"] .camera-corners,.arena[data-camera="duel"] .camera-corners{opacity:.62}
+.arena[data-camera="a-close"] .glow-a,.arena[data-camera="b-close"] .glow-b{filter:blur(10px);opacity:1}
+.arena[data-camera="a-close"] .marquee,.arena[data-camera="b-close"] .marquee{opacity:.6}
+.arena[data-camera="a-close"] .cinema-letterbox,.arena[data-camera="b-close"] .cinema-letterbox{height:15px}
+.arena .duelist .portrait{transform-origin:50% 86%;will-change:transform}
+.duelist.speaking .default-avatar .mouth{animation:v3-talk-mouth .29s steps(2,end) infinite;transform-box:fill-box;transform-origin:center}
+.duelist.speaking .portrait{filter:drop-shadow(0 17px 24px #040611a8) drop-shadow(0 0 11px color-mix(in srgb,var(--tone),transparent 72%))}
+.duelist.listening .portrait{filter:brightness(.87) drop-shadow(0 15px 20px #0007)}
+.duelist[data-emotion=confident] .default-avatar .mouth{transform:translateY(0) scaleX(1.1)}
+.duelist[data-emotion=frustrated] .default-avatar .mouth{transform:translateY(2px) rotate(-5deg);transform-origin:center}
+.duelist[data-emotion=thinking] .default-avatar .mouth{transform:translateX(-3px) scaleX(.8)}
+.duelist[data-emotion=surprised] .default-avatar .mouth{transform:scale(.7,1.5);transform-origin:center}
+.duelist[data-emotion=excited] .default-avatar .mouth{transform:scale(1.22,1.18);transform-origin:center}
+.duelist[data-gesture=point].perform .gesture-arm{animation:v3-point-arm .75s cubic-bezier(.16,.83,.28,1) both;transform-origin:75% 75%;transform-box:fill-box}
+.duelist[data-gesture=slam-desk].perform .gesture-arm{animation:v3-slam-arm .55s cubic-bezier(.12,.94,.32,1) both;transform-origin:60% 55%;transform-box:fill-box}
+.duelist[data-gesture=open-hand].perform .gesture-arm{animation:v3-open-arm 1.1s cubic-bezier(.2,.8,.2,1) both;transform-origin:60% 60%;transform-box:fill-box}
+.duelist.react-now[data-reacting=shocked] .default-avatar .eyes{animation:none;transform:scaleY(1.45)}
+.duelist.react-now[data-reacting=tense] .default-avatar .eyebrows{transform:translateY(3px)}
+.duelist.react-now[data-reacting=thinking] .default-avatar .eyes{animation:none;transform:scaleY(.66)}
+.duelist.react-now[data-reacting=respect] .default-avatar{animation:v3-respect 1.1s ease-in-out 1}
+.duelist.anticipation .portrait-rings{animation:v3-ring-pulse 1.7s ease-in-out infinite}
+.duelist.perform .portrait-rings{border-color:color-mix(in srgb,var(--tone),white 20%);box-shadow:0 0 38px color-mix(in srgb,var(--tone),transparent 72%)}
+/* Faixa de intensidade. Puramente teatral, não é pontuação nem emoção inferida. */
+.scene-tempo{position:absolute;inset:auto 18px 181px;z-index:9;display:flex;justify-content:space-between;gap:12px;pointer-events:none;color:#f8e9d3;opacity:.92}
+.scene-tempo .tempo-side{display:flex;align-items:center;gap:7px;max-width:48%;padding:6px 9px;background:#0d1022b0;border:1px solid #ffe6c22b;border-radius:3px;font-size:8px;font-weight:900;letter-spacing:1.5px;text-transform:uppercase;backdrop-filter:blur(9px)}
+.scene-tempo .tempo-side b{font-size:11px;color:#f3cb9d}
+.scene-tempo .tempo-bars{display:flex;align-items:center;gap:3px;height:12px}
+.scene-tempo .tempo-bars i{display:block;width:3px;height:4px;background:#6d718e;border-radius:2px;transition:height .25s,background .25s}
+.arena[data-tension="1"] .tempo-bars i:nth-child(-n+2),.arena[data-tension="2"] .tempo-bars i:nth-child(-n+4),.arena[data-tension="3"] .tempo-bars i{height:11px;background:#f5bf8e}
+.scene-beat{position:absolute;inset:0;z-index:25;pointer-events:none;opacity:0;background:radial-gradient(circle at var(--beat-x,50%) 45%,#ffdfbd50,transparent 38%)}
+.arena.beat-pulse .scene-beat{animation:v3-beat-pulse .7s ease-out}
+.scene-action-ribbon{position:absolute;z-index:19;left:50%;top:34%;min-width:250px;max-width:88%;padding:10px 24px;text-align:center;pointer-events:none;color:#fff9eb;background:linear-gradient(110deg,#902a48,#d75a65 42%,#8e2949);border-top:2px solid #f4b8a1;border-bottom:2px solid #f4b8a1;box-shadow:0 14px 45px #100618cc,0 0 0 5px #5b243b55;transform:translate(-50%,-50%) scale(.72) skewX(-8deg);opacity:0}
+.scene-action-ribbon b{display:block;font-size:clamp(24px,4.8vw,57px);font-family:system-ui,sans-serif;font-weight:1000;font-style:italic;letter-spacing:-1px;line-height:.94;text-shadow:2px 3px #4b1932}
+.scene-action-ribbon small{display:block;font-size:9px;letter-spacing:2px;margin-top:6px;color:#ffe9d9;font-weight:900}
+.scene-action-ribbon.show{animation:v3-action-ribbon .95s both}
+.scene-action-ribbon[data-kind=question]{background:linear-gradient(100deg,#34527f,#387cb9,#334a79);border-color:#b5dfff}
+.scene-action-ribbon[data-kind=concession]{background:linear-gradient(100deg,#5f4b3c,#a77753,#5e4637);border-color:#f9deb4}
+.scene-action-ribbon[data-kind=rebuttal]{background:linear-gradient(100deg,#703264,#ac477f,#623054);border-color:#efb1d9}
+.scene-cut-marker{position:absolute;z-index:10;top:50%;left:50%;transform:translate(-50%,-50%);width:360px;height:360px;max-width:70%;border:1px solid #f4d6a700;border-radius:50%;pointer-events:none;opacity:0}
+.arena.beat-pulse .scene-cut-marker{animation:v3-target-ring .7s ease-out}
+.arena.scene-suspense .judge-cutaway{filter:drop-shadow(0 0 23px #f0ac615e)}
+.arena.scene-judged .scene-beat{background:radial-gradient(circle at 50% 45%,#ffd5ac77,transparent 52%)}
+.arena[data-director=soft]{--camera-time:600ms}
+.arena[data-director=soft] .scene-action-ribbon{filter:saturate(.7)}
+.arena[data-director=soft].impact .duelists,.arena[data-director=soft].slam-impact .duelists{animation:cinema-shake-small 300ms both}
+.duelist .portrait img{image-rendering:auto;transition:filter .27s}
+/* UX: separar direção de controles, melhorar feedback do áudio */
+.scene-audio-options{display:flex;align-items:center;gap:6px;padding:4px 5px;border:1px solid #4b465b;border-radius:7px;background:#181a29}
+.scene-audio-options span{font-size:8px;font-weight:900;letter-spacing:1px;color:#d5c4cb}
+.scene-audio-options select{font-size:9px;padding:5px;background:#24273a;color:#f5e1cb;border:0;width:94px;cursor:pointer}
+#music-toggle[aria-pressed=true]{border-color:#c59670;box-shadow:0 0 0 1px #a8754244}
+.play-controls{min-height:70px;height:auto;padding:8px 0}
+.scene-status-line{display:flex;gap:8px;align-items:center;font-size:9px;letter-spacing:1px;color:#b1afc5}
+@keyframes v3-talk-mouth{0%,100%{transform:scaleY(.86)}50%{transform:scaleY(1.52)}}
+@keyframes v3-point-arm{0%{transform:rotate(0) translateX(0)}36%{transform:rotate(-14deg) translateX(6px)}68%{transform:rotate(-9deg) translateX(4px)}100%{transform:rotate(-4deg)}}
+@keyframes v3-slam-arm{0%{transform:translateY(-28px) rotate(-18deg)}46%{transform:translateY(12px) rotate(5deg)}63%{transform:translateY(5px)}100%{transform:translateY(0)}}
+@keyframes v3-open-arm{0%,100%{transform:rotate(0)}45%{transform:rotate(-8deg) translateY(-6px)}70%{transform:rotate(4deg)}}
+@keyframes v3-respect{0%,100%{transform:translateY(0)}48%{transform:translateY(4px) rotate(2deg)}}
+@keyframes v3-ring-pulse{0%,100%{transform:scale(1);opacity:.44}50%{transform:scale(1.09);opacity:1}}
+@keyframes v3-beat-pulse{0%{opacity:0;transform:scale(.88)}22%{opacity:1}100%{opacity:0;transform:scale(1.15)}}
+@keyframes v3-target-ring{0%{opacity:.9;border-color:#fff6dbcc;transform:translate(-50%,-50%) scale(.55)}100%{opacity:0;border-color:#ffe7c900;transform:translate(-50%,-50%) scale(1.4)}}
+@keyframes v3-action-ribbon{0%{opacity:0;transform:translate(-57%,-53%) scale(1.5) skewX(-11deg)}18%{opacity:1;transform:translate(-48%,-50%) scale(.95) skewX(-8deg)}40%,70%{opacity:1;transform:translate(-50%,-50%) scale(1) skewX(-8deg)}100%{opacity:0;transform:translate(-44%,-51%) scale(1.08) skewX(-8deg)}}
+@media(max-width:1100px){.scene-tempo{bottom:178px}.scene-audio-options select{width:82px}}
+@media(max-width:780px){.scene-tempo{bottom:174px}.scene-audio-options{flex:1;justify-content:center}}
+@media(max-width:450px){.scene-tempo{bottom:175px;left:9px;right:9px}.scene-tempo .tempo-side{font-size:7px;padding:4px}.scene-tempo .tempo-side b{font-size:9px}.scene-action-ribbon{min-width:190px;padding:10px 16px}.scene-action-ribbon small{font-size:7px}.scene-audio-options{width:100%;order:4}.scene-audio-options select{width:auto;min-width:110px}}
+@media(prefers-reduced-motion:reduce){.arena .scene-beat,.arena .scene-cut-marker,.arena .scene-action-ribbon,.arena .gesture-arm,.duelist.speaking .default-avatar .mouth,.duelist.anticipation .portrait-rings{animation:none!important}.scene-action-ribbon.show{opacity:1;transform:translate(-50%,-50%) scale(1)}.arena .duelist{transform:none!important}.arena .cinema-architecture{transform:none!important}}
+.arena.cinema-off .scene-action-ribbon,.arena.cinema-off .scene-beat,.arena.cinema-off .scene-cut-marker{display:none}
+
+/* A cartela v3 substitui a cartela antiga, evitando títulos duplicados. */
+#objection{display:none}
+/* A direção suave é de fato suave também para flashes, não só para zoom. */
+.arena[data-director=soft].impact .impact-light,.arena[data-director=soft].impact .impact-lines{animation:none;opacity:0}
+.arena[data-director=soft].beat-pulse .scene-beat{animation-duration:.4s;opacity:.12}
+@media(prefers-reduced-motion:reduce){.arena .impact-lines,.arena .impact-light{display:none!important}.scene-tempo .tempo-bars i{transition:none!important}}

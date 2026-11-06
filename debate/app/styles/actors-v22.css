@@ -1,0 +1,40 @@
+/* Contraponto v22: novas animações RGBA da Arena v7; palco completo preservado. */
+.duelist .portrait.v22-portrait{overflow:visible;isolation:isolate}
+.duelist .portrait.v22-portrait::before{opacity:0;pointer-events:none}
+.duelist .portrait.v22-portrait .portrait-rings{opacity:.3;z-index:0}
+.duelist .portrait.v22-portrait img.pack-avatar[data-motion-set="v22"]{
+ position:relative;z-index:2;display:block;height:117%;max-height:none;max-width:100%;width:auto;
+ object-fit:contain;object-position:center bottom;image-rendering:auto;
+ border:0;border-radius:0;background:none;box-shadow:none;
+ mask-image:none;-webkit-mask-image:none;filter:drop-shadow(0 9px 14px #070918c2);
+ animation:none!important;transform:none!important;
+}
+/* Dante fica voltado para o centro do palco, de frente para Lia. */
+.duelist.right .portrait.v22-portrait img.pack-avatar[data-motion-set="v22"]{
+ transform:scaleX(-1)!important;
+}
+/* O púlpito fica na frente da base do sprite, cobrindo os cortes inferiores sem
+ obstruir mãos que aparecem acima do tampo. */
+.duelist .portrait.v22-portrait::after{
+ content:"";position:absolute;z-index:5;bottom:-1px;left:-5%;width:110%;height:18%;
+ border-top:5px solid #d0ad70;border-inline:2px solid #8c6948;border-radius:9px 9px 2px 2px;
+ background:repeating-linear-gradient(95deg,transparent 0 32px,#e7c88c0a 33px 34px,transparent 35px 56px),
+ linear-gradient(180deg,#5b4439 0%,#3b2c30 23%,#201b25 68%,#12151e 100%);
+ box-shadow:inset 0 3px 0 #f5d99c29,inset 0 -7px 9px #04080d88,0 -11px 24px #08091577;
+ pointer-events:none;
+}
+.duelist.left .portrait.v22-portrait::after{border-top-color:#b8c9ed;box-shadow:inset 0 3px 0 #86affb38,0 -9px 25px #071f3c88}
+.duelist.right .portrait.v22-portrait::after{border-top-color:#d7aa7d;box-shadow:inset 0 3px 0 #c8836435,0 -9px 25px #3011158c}
+/* O zoom antigo de 1,36x cortava dedos no quadro durante objeções. */
+.arena:has(.v22-portrait)[data-camera="a-close"] .duelist.left{transform:translate(12%,7%) scale(1.17) rotate(-1deg)}
+.arena:has(.v22-portrait)[data-camera="b-close"] .duelist.right{transform:translate(-12%,7%) scale(1.17) rotate(1deg)}
+.arena .facecard-ribbon.v22-facecard img[data-motion-set="v22"]{
+ width:100%;height:100%;object-fit:cover;object-position:center 21%;
+ image-rendering:auto;background:transparent;
+}
+.duelist .portrait.v22-portrait img.pack-avatar[hidden]{display:none!important}
+@media(max-width:780px){.duelist .portrait.v22-portrait img.pack-avatar[data-motion-set="v22"]{height:111%}}
+@media(max-width:450px){.duelist .portrait.v22-portrait::after{height:20%}.duelist .portrait.v22-portrait img.pack-avatar[data-motion-set="v22"]{height:105%}}
+@media(prefers-reduced-motion:reduce){.duelist .portrait.v22-portrait img.pack-avatar{animation:none!important;transition:none!important}}
+
+@media(min-width:781px){.arena:has(.v22-portrait) .marquee{transform:translateY(-30px)}}

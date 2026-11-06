@@ -1,0 +1,42 @@
+/* Contraponto v13 — pequenos insertos de Elias em camadas do palco.
+ * O sprite corporal continua integralmente exposto: rosto no alto e impacto na base.
+ * Nada bloqueia a caixa de diálogo nem recebe eventos de mouse. */
+.judge-portrait-stage { isolation:isolate; }
+.judge-portrait-stage img.judge-impact-sprite {
+  position:absolute;z-index:4;bottom:0;right:-3%;width:66%;height:45%;
+  object-fit:contain;image-rendering:pixelated;mix-blend-mode:screen;
+  filter:drop-shadow(0 0 18px rgba(255,213,115,.75));
+  pointer-events:none;animation:judge-flash-enter 240ms ease-out both;
+}
+.judge-portrait-stage img.judge-impact-sprite[hidden], .judge-cutaway img.judge-eyes-sprite[hidden] { display:none!important; }
+.judge-cutaway img.judge-eyes-sprite {
+  position:absolute;z-index:5;top:-8%;left:50%;translate:-50% 0;
+  width:min(74vw,370px);height:clamp(34px,6vw,58px);object-fit:cover;
+  object-position:center;image-rendering:pixelated;pointer-events:none;
+  border:1px solid #ffe0a1aa;border-radius:5px;
+  box-shadow:0 0 0 2px #0a101daa,0 11px 24px #000b;
+  animation:judge-eyes-in 510ms cubic-bezier(.13,.83,.26,1) both;
+}
+@keyframes judge-eyes-in {
+  0%{opacity:0;transform:translateY(-13px) scale(.93)}
+  30%,80%{opacity:1;transform:translateY(0) scale(1)}
+  100%{opacity:0;transform:translateY(-3px) scale(.98)}
+}
+@keyframes judge-flash-enter{
+  0%{opacity:0;transform:scale(.80) translateY(10px)}
+  60%{opacity:1;transform:scale(1.06) translateY(-3px)}
+  100%{opacity:.9;transform:scale(1) translateY(0)}
+}
+.arena[data-camera=judge] .judge-portrait-stage {box-shadow:0 15px 38px #000c,0 0 24px #d6aa4f3f,inset 0 0 30px #0008}
+/* Menos tremulação nas imagens: o movimento vem do corpo do personagem e da câmera,
+   não de um segundo movimento infinito sobre o mesmo PNG animado. */
+.duelist.speaking .portrait img.pack-avatar[data-animation],
+.duelist.listening .portrait img.pack-avatar[data-animation],
+.duelist[data-emotion] .portrait img.pack-avatar[data-animation]{animation:none}
+@media(max-width:450px){
+ .judge-cutaway img.judge-eyes-sprite{width:min(70vw,248px);height:37px;top:-6%}
+ .judge-portrait-stage img.judge-impact-sprite{width:62%;height:40%}
+}
+@media(prefers-reduced-motion:reduce){
+ .judge-cutaway img.judge-eyes-sprite,.judge-portrait-stage img.judge-impact-sprite{animation:none!important}
+}

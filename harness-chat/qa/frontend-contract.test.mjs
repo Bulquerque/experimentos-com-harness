@@ -1,0 +1,118 @@
+import test from 'node:test';
+import assert from 'node:assert/strict';
+import {readFileSync} from 'node:fs';
+import {Script} from 'node:vm';
+import {fileURLToPath} from 'node:url';
+import path from 'node:path';
+const root=path.resolve(path.dirname(fileURLToPath(import.meta.url)),'..');
+const read=rel=>readFileSync(path.join(root,rel),'utf8');
+const html=read('apps/web/fallback/index.html'),js=read('apps/web/fallback/app.js'),css=read('apps/web/fallback/style.css');
+test('interface single-page com chat, histórico, agente, configurações e evidências',()=>{
+ for(const id of ['messages','prompt','composer','new-chat','chat-list','send-button','settings-button','activity-button','drawer-body','files-button','stop-button'])
+  assert.match(html,new RegExp(`id="${id}"`));
+ for(const mode of ['agent','chat'])assert.match(html,new RegExp(`data-mode="${mode}"`));
+ assert.equal((html.match(/<main\b/g)||[]).length,1);
+});
+test('execução pendente sem registro no servidor é encerrada com erro recuperável',async()=>{
+ const match=js.match(/async function completeRun\(id,answer,reconnect=false\)\{[\s\S]*?\n\}/);
+ assert.ok(match,'completeRun deve existir para recuperar estado do servidor');
+ const answer={pending:true,status:'running',content:'',runId:'missing-run'};
+ const state={activeRun:{id:'missing-run',answer}};let persisted=0,rendered=0;
+ const completeRun=new Function('state','request','render','persist',`${match[0]}; return completeRun;`)(state,async()=>{throw Error('HTTP 404');},()=>rendered++,()=>persisted++);
+ await completeRun('missing-run',answer,true);
+ assert.equal(answer.pending,false);
+ assert.equal(answer.status,'failed');
+ assert.match(answer.content,/não foi possível recuperar.*HTTP 404/i);
+ assert.equal(state.activeRun,null);
+ assert.equal(persisted,1);assert.equal(rendered,1);
+ const restore=js.match(/async function restorePending\(\)\{[\s\S]*?\n\}/)?.[0];
+ assert.match(restore,/completeRun\(m\.runId,m,true\)/);
+ assert.doesNotMatch(restore,/attachRun\(/);
+});
+test('interface sem dependências, JavaScript válido e saída do modelo como texto',()=>{
+ assert.doesNotThrow(()=>new Script(js,{filename:'app.js'}));
+ assert.match(js,/document\.createTextNode/);
+ assert.match(js,/localStorage\.setItem/);
+ assert.match(js,/EventSource/);
+ assert.doesNotMatch(js,/\.innerHTML\s*=/);
+ assert.match(html,/\/app\.js/);
+});
+test('modelo não recebe chave no HTML e prévia mantém isolamento',()=>{
+ assert.doesNotMatch(html,/nvapi-[A-Za-z0-9]/);
+ assert.match(js,/setAttribute\('sandbox','allow-scripts'\)/);
+ assert.match(css,/@media\(max-width:660px\)/);
+ assert.match(css,/prefers-reduced-motion/);
+ assert.match(js,/Checagens técnicas aprovadas/);
+ assert.match(js,/Resposta não verificada/);
+});
+test('formatação segura, KaTeX local e toolbar do composer',()=>{
+ for(const format of ['bold','italic','list','code','math','math-block'])assert.match(html,new RegExp(`data-format="${format}"`));
+ assert.match(html,/vendor\/katex\/katex\.min\.css/);
+ assert.match(html,/vendor\/katex\/katex\.min\.js/);
+ assert.match(html,/vendor\/katex\/auto-render\.min\.js/);
+ assert.doesNotMatch(html,/https?:\/\/[^"']*(?:katex|cdn)/i);
+ assert.match(js,/trust:false/);
+ assert.match(js,/ignoredTags:\['script','noscript','style','textarea','pre','code','option'\]/);
+ assert.ok(js.includes(String.raw`\$\$[\s\S]*?\$\$`));
+ assert.match(js,/document\.createTextNode/);
+ assert.match(js,/setRangeText/);
+});
+test('atividade inline recolhível mostra ferramentas e preserva privacidade local',()=>{
+ assert.match(js,/function activityFeed/);
+ assert.match(js,/function activityEntry/);
+ assert.match(js,/tool_start/);
+ assert.match(js,/tool_result/);
+ assert.match(js,/activityDisclosure\.has\(disclosureKey\)\?state\.activityDisclosure\.get\(disclosureKey\):Boolean\(pending\)/);
+ assert.match(js,/activityEntry\(card,pending&&index===cards\.length-1/);
+ assert.match(js,/map\(\(\{events,attachments,...m\}\)=>/);
+ assert.match(js,/Aguardando resposta do modelo neste turno\./);
+ assert.match(js,/O modelo respondeu; preparando a resposta final\./);
+ assert.match(js,/Resposta recebida/i);
+ assert.match(js,/if\(activeTurn\)activeTurn\.done=true/);
+ assert.match(js,/dataset\.activityKey=disclosureKey/);
+ assert.match(js,/summary\.addEventListener\('click',\(\)=>state\.activityDisclosure\.set/);
+ assert.match(js,/disclosure\.addEventListener\('toggle',\(\)=>\{glyph\.textContent=disclosure\.open\?'⌄':'›'/);
+ assert.doesNotMatch(js,/addEventListener\('toggle',\(\)=>state\.activityDisclosure/);
+ assert.match(js,/Copiar resposta inteira/);
+ assert.match(js,/card\.kind==='tool'\?'Argumentos':'Resumo'/);
+ assert.match(js,/Resultado/);
+});
+test('trace inspector atualiza execução, mostra JSON por turno e anexos sem armazenar base64 local',()=>{
+ assert.match(html,/id="attach-button"/);assert.match(html,/id="attachments-input"/);assert.match(js,/async function addAttachments/);
+ assert.match(js,/attachments:attached\.map\(item=>item\.descriptor\)/);assert.match(js,/request\(`\/api\/runs\/\$\{id\}\/trace`\)/);
+ assert.match(js,/Payload JSON exato enviado ao NVIDIA/);assert.match(js,/Chamadas de ferramentas/);assert.match(js,/setInterval\(\(\)=>void refresh\(\)/);
+ assert.match(js,/artifacts/);assert.match(js,/\/api\/runs\/\$\{message\.runId\}\/artifacts/);assert.match(js,/Exportar JSON completo/);
+ const persistLine=js.slice(js.indexOf('function persist()'),js.indexOf('function activeChat()'));
+ assert.match(persistLine,/attachments:attachments\.map\(\(\{name,mimeType,size,sha256\}\)/);
+ assert.doesNotMatch(persistLine,/base64|descriptor\.text/);
+});
+test('skills próprias do Harness podem ser criadas, editadas, selecionadas e reutilizadas por conversa',()=>{
+ for(const id of ['skills-button','create-skill-button','selected-skills','skills-count'])assert.match(html,new RegExp(`id="${id}"`));
+ assert.match(js,/async function loadSkills\(\)/);
+ assert.match(js,/request\('\/api\/skills'\)/);
+ assert.match(js,/function openSkills\(\)/);
+ assert.match(js,/function openSkillEditor\(skill\)/);
+ assert.match(js,/request\(`\/api\/skills\/\$\{encodeURIComponent\(skill\.id\)\}`\)/);
+ assert.match(js,/await post\('\/api\/skills',payload\)/);
+ assert.match(js,/method:'PUT'/);
+ assert.match(js,/Instruções \(Markdown\)/);
+ assert.match(js,/skillIds:\[\.\.\.\(chat\.skillIds\|\|\[\]\)\]/);
+ assert.match(js,/skillIds:Array\.isArray\(c\.skillIds\)/);
+ assert.match(js,/chat\.skillIds=checkbox\.checked/);
+ assert.match(js,/Remover \$\{skill\.name\} desta conversa/);
+ assert.doesNotMatch(js,/skillIds:\[\.\.\.\(chat\.skillIds[\s\S]{0,120}instructions:/);
+});
+test('botão de criar skill fica destacado e / abre menu acessível com criar como ação padrão',()=>{
+ assert.match(html,/id="create-skill-button" class="skills-toolbar-button create-skill-toolbar-button"/);
+ assert.match(css,/\.create-skill-toolbar-button\s*\{/);
+ assert.match(html,/id="skill-slash-menu" class="skill-slash-menu" role="menu"[^>]*hidden/);
+ assert.match(html,/data-skill-action="create" aria-selected="true"[\s\S]*?Criar skill/);
+ assert.match(html,/data-skill-action="select"[\s\S]*?Selecionar skills/);
+ assert.match(html,/aria-haspopup="menu" aria-controls="skill-slash-menu" aria-expanded="false"/);
+ assert.match(js,/function openSkillSlashMenu\(\)/);
+ assert.match(js,/function activateSkillSlashAction\(\)/);
+ assert.match(js,/if\(e\.key==='Escape'\)\{e\.preventDefault\(\);closeSkillSlashMenu\(\);return;\}/);
+ assert.match(js,/e\.key==='ArrowDown'\|\|e\.key==='ArrowUp'/);
+ assert.match(js,/e\.key==='Enter'&&!e\.shiftKey&&!e\.isComposing\)\{e\.preventDefault\(\);activateSkillSlashAction\(\);return;\}/);
+ assert.match(js,/e\.key==='\/'&&e\.currentTarget\.value\.length===0&&e\.currentTarget\.selectionStart===0&&e\.currentTarget\.selectionEnd===0/);
+});

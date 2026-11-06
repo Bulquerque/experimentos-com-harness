@@ -1,0 +1,11 @@
+services:
+  app:
+    user: "0:0"
+  runner:
+    environment:
+      RUNNER_SOCKET_UID: "0"
+      RUNNER_SOCKET_GID: "0"
+  mathlib-setup:
+    user: "0:0"
+    volumes:
+      - ./workspace:/workspace:rw,z

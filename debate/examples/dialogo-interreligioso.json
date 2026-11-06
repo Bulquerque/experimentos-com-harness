@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "topic": "Como diferentes tradições religiosas defendem suas interpretações sobre a verdade?",
+  "rounds": 3,
+  "roundTopics": [
+    "Fontes de autoridade e interpretação dos textos sagrados",
+    "Fé, razão e experiências espirituais",
+    "Convivência pluralista e limites do diálogo"
+  ],
+  "exchanges": 2,
+  "wordLimit": 110,
+  "turnTimeoutSec": 60,
+  "mode": "nim",
+  "judgeModel": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+  "allowWeb": false,
+  "allowRag": true,
+  "allowPastDebates": false,
+  "agents": [
+    {
+      "name": "Estudiosa A",
+      "position": "visão cristã",
+      "viewpoint": "uma interpretação cristã da fé, sem pretender falar por todos os cristãos",
+      "role": "teóloga convidada",
+      "objective": "Defender a consistência interna e os argumentos da própria tradição, reconhecendo diversidade de interpretações.",
+      "instructions": "Dialogar respeitosamente. Distinguir argumentos teológicos de afirmações verificáveis. Não usar generalizações sobre muçulmanos.",
+      "personality": "diplomata",
+      "model": "nvidia/nemotron-3.5-lightning-30b-a3b",
+      "color": "#55c9ee"
+    },
+    {
+      "name": "Estudioso B",
+      "position": "visão muçulmana",
+      "viewpoint": "uma interpretação islâmica da fé, sem pretender falar por todos os muçulmanos",
+      "role": "estudioso de teologia islâmica",
+      "objective": "Defender a consistência interna e os argumentos da própria tradição, reconhecendo diversidade de interpretações.",
+      "instructions": "Dialogar respeitosamente. Distinguir argumentos teológicos de afirmações verificáveis. Não usar generalizações sobre cristãos.",
+      "personality": "socrático",
+      "model": "z-ai/glm-5.3-flash",
+      "color": "#f47d86"
+    }
+  ]
+}

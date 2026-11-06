@@ -1,0 +1,31 @@
+{
+  "name": "contraponto",
+  "version": "2.4.0",
+  "private": true,
+  "type": "module",
+  "description": "Contraponto v24: 128 quadros RGBA normalizados por escala facial, backups integrais de arte, harness NIM/Tribunal preservada.",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "node --watch server/index.js",
+    "test": "node --test tests/*.test.js",
+    "check": "node scripts/check-syntax.js",
+    "test:ui": "python3 scripts/ui_e2e.py",
+    "test:audio": "python scripts/render_audio_preview.py",
+    "test:audio:ui": "python3 scripts/ui_e2e.py",
+    "audit:assets": "node scripts/audit-assets.js",
+    "build:offline": "python3 scripts/build-offline-v18.py",
+    "test:offline": "python3 scripts/test_offline.py",
+    "test:offline:full": "python3 scripts/test_offline_full.py",
+    "preview:offline": "node scripts/serve-offline.js",
+    "test:reader": "python3 scripts/test_reader_v17.py",
+    "test:menu": "python3 scripts/test_menu_v18.py",
+    "test:court-ui": "python3 scripts/test_court_v19.py",
+    "test:court-sessions": "python3 scripts/test_court_sessions_v21.py",
+    "doctor:nim": "node scripts/doctor-nim.js",
+    "test:geometry": "python3 tools/verify_actors_v24.py",
+    "test:geometry:visual": "python3 scripts/test_geometry_visual_v24.py"
+  },
+  "engines": {
+    "node": ">=20.11.0"
+  }
+}

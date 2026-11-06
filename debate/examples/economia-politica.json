@@ -1,0 +1,18 @@
+{
+  "schemaVersion": 1,
+  "topic": "Qual combinação de políticas melhora mais a prosperidade e a igualdade?",
+  "rounds": 3,
+  "roundTopics": ["Tributação e serviços públicos", "Regras do mercado de trabalho", "Inovação, competitividade e redução da pobreza"],
+  "exchanges": 2,
+  "wordLimit": 110,
+  "turnTimeoutSec": 60,
+  "mode": "nim",
+  "judgeModel": "nvidia/nemotron-3.5-super-vl-120b-a12b",
+  "allowWeb": false,
+  "allowRag": true,
+  "allowPastDebates": false,
+  "agents": [
+    {"name": "Debatedor A", "position": "esquerda", "viewpoint": "social-democracia", "role": "economista público", "objective": "Defender políticas de proteção social, com justificativas econômicas e reconhecimento de trade-offs.", "instructions": "Usar argumentos verificáveis, evitar caricaturas do lado oposto.", "personality": "cientista", "model": "nvidia/nemotron-3.5-lightning-30b-a3b", "color": "#55c9ee"},
+    {"name": "Debatedor B", "position": "direita", "viewpoint": "liberalismo econômico", "role": "analista de políticas públicas", "objective": "Defender políticas de incentivo ao investimento e mercados competitivos, reconhecendo trade-offs.", "instructions": "Usar argumentos verificáveis, evitar caricaturas do lado oposto.", "personality": "estrategista", "model": "z-ai/glm-5.3-flash", "color": "#f47d86"}
+  ]
+}

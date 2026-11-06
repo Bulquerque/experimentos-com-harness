@@ -1,0 +1,27 @@
+name: Project checks
+on:
+  push:
+  pull_request:
+jobs:
+  checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: '22.16.0'
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Debate checks
+        working-directory: debate
+        run: npm test && npm run check && npm run audit:assets
+      - name: Install Harness Chat development dependencies
+        working-directory: harness-chat
+        run: npm ci --ignore-scripts
+      - name: Typecheck and build Harness Chat
+        working-directory: harness-chat
+        run: npm run typecheck && npm run build
+      - name: Harness Chat checks
+        working-directory: harness-chat
+        run: ./check.sh

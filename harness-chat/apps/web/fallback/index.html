@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light">
+  <title>Harness — agente de matemática e código</title>
+  <link rel="stylesheet" href="/style.css">
+  <link rel="stylesheet" href="/vendor/katex/katex.min.css">
+</head>
+<body>
+<div class="shell">
+  <aside class="sidebar" id="sidebar" aria-label="Conversas">
+    <div class="brand"><div class="brand-mark">H<span>·</span></div><div><strong>Harness</strong><small>NVIDIA / LEAN / PYTHON</small></div></div>
+    <button id="new-chat" class="new-chat"><span class="plus">＋</span> Nova conversa <span class="shortcut">⌘ K</span></button>
+    <div class="sidebar-label">CONVERSAS</div>
+    <nav id="chat-list" class="chat-list" aria-label="Histórico das conversas"></nav>
+    <div class="sidebar-bottom">
+      <div class="environment"><span class="status-dot" id="health-dot"></span><span id="health-text">Verificando ambiente</span></div>
+      <button class="sidebar-action" id="files-button" type="button"><span>▤</span> Arquivos <span>↗</span></button>
+      <button class="sidebar-action" id="settings-button" type="button"><span>⚙</span> Configurações <span>↗</span></button>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <button id="mobile-menu" aria-label="Abrir conversas" class="icon-button mobile-only">☰</button>
+      <div class="topbar-heading"><strong id="conversation-title">Nova conversa</strong><small>Matemática, código e pesquisa com ferramentas reais</small></div>
+      <div class="topbar-actions">
+        <div class="mode-switch" role="group" aria-label="Modo de execução"><button data-mode="chat" type="button">Chat</button><button class="selected" data-mode="agent" type="button">Agente</button></div>
+        <button id="activity-button" class="top-button" type="button">◷ <span>Atividade</span></button>
+      </div>
+    </header>
+    <div id="conversation-scroll" class="conversation-scroll">
+      <div id="messages" class="messages" aria-live="polite"></div>
+    </div>
+    <div class="composer-wrap">
+      <div id="busy-indicator" class="busy-indicator" role="status" hidden><span class="spinner"></span><span id="busy-text">O agente está trabalhando</span><button id="stop-button" type="button">Interromper</button></div>
+      <form id="composer" class="composer">
+        <label for="prompt" class="sr-only">Mensagem</label>
+        <textarea id="prompt" rows="2" maxlength="5000" placeholder="Peça uma prova em Lean, execute Python ou converse sobre matemática..." autocomplete="off" aria-haspopup="menu" aria-controls="skill-slash-menu" aria-expanded="false"></textarea>
+        <div id="skill-slash-menu" class="skill-slash-menu" role="menu" aria-label="Ações de skills" hidden>
+          <button type="button" role="menuitem" data-skill-action="create" aria-selected="true"><span class="skill-menu-icon">＋</span><span><strong>Criar skill</strong><small>Defina uma instrução reutilizável</small></span><kbd>Enter</kbd></button>
+          <button type="button" role="menuitem" data-skill-action="select"><span class="skill-menu-icon">✦</span><span><strong>Selecionar skills</strong><small>Reutilize skills nesta conversa</small></span><kbd>↓</kbd></button>
+        </div>
+        <div class="format-toolbar" role="toolbar" aria-label="Formatação da mensagem">
+          <button type="button" id="attach-button" aria-label="Anexar imagens ou arquivos" title="Anexar imagens ou arquivos">＋ Arquivos</button>
+          <input id="attachments-input" type="file" multiple accept="image/png,image/jpeg,image/webp,.txt,.log,.md,.markdown,.csv,.json,.js,.mjs,.cjs,.ts,.tsx,.html,.htm,.css,.xml,.py,.java,.c,.h,.cc,.cpp,.hpp,.rs,.go,.sh,.bash,.yaml,.yml" hidden>
+          <button type="button" id="skills-button" class="skills-toolbar-button" aria-label="Skills" title="Selecionar skills">✦ Skills <span id="skills-count">0</span></button>
+          <button type="button" id="create-skill-button" class="skills-toolbar-button create-skill-toolbar-button" aria-label="Criar skill" title="Criar skill">＋ Criar skill</button>
+          <span class="toolbar-divider" aria-hidden="true"></span>
+          <button type="button" data-format="bold" aria-label="Negrito" title="Negrito"><strong>B</strong></button>
+          <button type="button" data-format="italic" aria-label="Itálico" title="Itálico"><em>I</em></button>
+          <button type="button" data-format="list" aria-label="Lista" title="Lista">☷</button>
+          <button type="button" data-format="code" aria-label="Código inline" title="Código inline">‹›</button>
+          <button type="button" data-format="math" aria-label="Fórmula inline" title="Fórmula LaTeX inline">∑</button>
+          <button type="button" data-format="math-block" aria-label="Fórmula em bloco" title="Fórmula LaTeX em bloco">∫</button>
+          <span class="format-hint">Markdown · LaTeX</span>
+        </div>
+        <div id="pending-attachments" class="pending-attachments" hidden aria-live="polite"></div>
+        <div id="selected-skills" class="selected-skills" aria-live="polite" aria-label="Skills selecionadas"></div>
+        <div class="composer-bottom"><span><strong id="mode-caption">Agente ativo</strong> · ferramentas conforme a necessidade</span><button id="send-button" type="submit" aria-label="Enviar mensagem" class="send-button">↑</button></div>
+      </form>
+      <div class="composer-foot">Enter para enviar · Shift + Enter para nova linha · O agente não executa código fora do ambiente isolado.</div>
+    </div>
+  </main>
+  <div id="drawer-overlay" class="drawer-overlay" hidden></div>
+  <aside class="drawer" id="drawer" aria-label="Painel de detalhes" aria-hidden="true">
+    <div class="drawer-top"><div><small id="drawer-eyebrow">HARNESS</small><h2 id="drawer-title">Detalhes</h2></div><button id="drawer-close" type="button" class="icon-button" aria-label="Fechar painel">✕</button></div>
+    <div id="drawer-body" class="drawer-body"></div>
+  </aside>
+</div>
+<script defer src="/vendor/katex/katex.min.js"></script>
+<script defer src="/vendor/katex/auto-render.min.js"></script>
+<script defer src="/app.js"></script>
+</body>
+</html>

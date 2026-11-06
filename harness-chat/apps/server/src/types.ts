@@ -1,0 +1,14 @@
+export type ChatMessage={role:'user'|'assistant';content:string};
+export type AgentMode='chat'|'agent';
+export type RunStatus='running'|'checks_passed'|'unverified'|'failed'|'cancelled';
+export type EventType='run_start'|'thinking'|'tool_start'|'tool_result'|'verification'|'error'|'complete';
+export type Event={id:number;at:string;type:EventType;title:string;detail:string;tool?:string;ok?:boolean;ms?:number;turn?:number;requestId?:string;callId?:string;phase?:string};
+export type TraceAttempt={attemptId:string;startedAt:string;finishedAt?:string;durationMs?:number;httpStatus?:number;retryCategory?:string;requestPayload:Record<string,unknown>;response?:Record<string,unknown>;error?:string};
+export type ModelRequestTrace={requestId:string;turn:number;attempts:TraceAttempt[]};
+export type ToolCallTrace={callId:string;requestId:string;turn:number;tool:string;argumentsRaw:string;arguments?:Record<string,unknown>;startedAt:string;finishedAt:string;durationMs:number;status:'succeeded'|'failed';result:string;resultSentToModel:string;resultBytes:number;sentBytes:number;truncated:boolean};
+export type SkillSnapshot={id:string;name:string;description?:string;version:number;contentHash:string;instructions:string};
+export type ArtifactRef={id:string;path:string;name:string;mimeType:string;size:number;sha256:string};
+import type {Coverage} from './assurance.ts';
+import type {AttachmentInput} from './attachments.ts';
+export type Run={id:string;task:string;model:string;history?:ChatMessage[];mode?:AgentMode;status:RunStatus;startedAt:string;finishedAt?:string;events:Event[];calls:number;usage:{prompt:number;completion:number};answer:string;verification:'none'|'passed'|'failed'|'unavailable';evidence?:Coverage;abort:AbortController;modelRequests:ModelRequestTrace[];toolCalls:ToolCallTrace[];skills:SkillSnapshot[];participants:{id:string;kind:'agent';model:string;mode:AgentMode}[];attachments?:AttachmentInput[];artifacts:ArtifactRef[]};
+export type Fn={name:string;description:string;parameters:Record<string,unknown>};

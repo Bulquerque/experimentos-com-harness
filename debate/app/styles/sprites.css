@@ -1,0 +1,34 @@
+/* v9: sequências PNG reais, mantendo quadros e cores originais. */
+.duelist .portrait img.pack-avatar[data-animation]{
+ max-width:91%;height:94%;object-fit:contain;object-position:center bottom;
+ background:linear-gradient(150deg,#151a2a,#100e1c);
+ border:1px solid color-mix(in srgb,var(--tone),transparent 70%);
+ box-shadow:0 12px 22px #0009,0 0 21px color-mix(in srgb,var(--tone),transparent 80%);
+}
+.duelist .portrait img.pack-avatar[data-animation*=objection],
+.duelist .portrait img.pack-avatar[data-animation*=argumento_forte]{max-width:100%;height:95%}
+/* Reduz duplicidade de movimento CSS durante sequências de quadros ilustrados. */
+.duelist.speaking .portrait img.pack-avatar[data-animation],
+.duelist.listening .portrait img.pack-avatar[data-animation],
+.duelist[data-gesture=point] img.pack-avatar[data-animation],
+.duelist[data-gesture=slam-desk] img.pack-avatar[data-animation]{animation:none}
+.facecard-ribbon{background:linear-gradient(105deg,#030713 0%,color-mix(in srgb,var(--face-tone),#0b1020 80%) 52%,#040510 100%)}
+.facecard-ribbon.facecard-detail img{object-fit:contain;width:100%;height:100%;filter:drop-shadow(0 0 12px #000)}
+.arena[data-camera=a-close] #duelist-a img.pack-avatar[data-animation],
+.arena[data-camera=b-close] #duelist-b img.pack-avatar[data-animation]{filter:saturate(1.16) contrast(1.08)}
+/* Cartelas e partículas da biblioteca v2.1, coordenadas pelo diretor antigo. */
+.arena.impact .impact-lines{background-image:linear-gradient(120deg,#1905113a,#ed344527),url('/assets/fx/speedlines-red.webp');background-size:cover;mix-blend-mode:screen}
+.arena.slam-impact .impact-lines{background-image:linear-gradient(120deg,#07122b33,#2878ff22),url('/assets/fx/speedlines-blue.webp');background-size:cover;mix-blend-mode:screen}
+.sprite-lab{margin-top:10px;border:1px solid #45506b;border-radius:12px;background:linear-gradient(135deg,#152037,#17131e);color:#f2e7e3;overflow:hidden}
+.sprite-lab summary{display:flex;align-items:center;gap:8px;cursor:pointer;padding:13px 16px;color:#e5ca97;font-size:11px;letter-spacing:1px;font-weight:900}
+.sprite-lab summary small{font-size:9px;letter-spacing:0;color:#aab5ca;font-weight:500}.sprite-lab summary span{margin-left:auto;font-size:9px;color:#acbde0}
+.sprite-lab-inner{padding:0 14px 14px}.sprite-lab-controls{display:flex;flex-wrap:wrap;align-items:end;gap:10px;border-top:1px solid #ffffff16;padding-top:12px}
+.sprite-lab-controls label{min-width:135px;display:flex;flex:1;flex-direction:column;gap:4px;color:#aab5ca;font-size:9px;text-transform:uppercase;letter-spacing:.06em}
+.sprite-lab-controls select,.sprite-lab-controls button,.sprite-catalog-link{border-radius:6px;background:#263047;border:1px solid #59667a;color:#f9eddd;padding:9px 10px;font-size:11px;min-height:35px}
+.sprite-lab-controls button{cursor:pointer;font-weight:800}.sprite-catalog-link{text-decoration:none;display:inline-flex;align-items:center;justify-content:center}
+.sprite-lab-display{margin-top:12px;display:flex;align-items:center;gap:16px;border:1px solid #4b5978;border-radius:10px;background:radial-gradient(ellipse at center,#25354f,#0b1020);padding:12px}
+.sprite-lab-image{width:220px;height:178px;flex-shrink:0;display:flex;align-items:center;justify-content:center;overflow:hidden;border-radius:8px;background:#131b2a}
+.sprite-lab-image img{max-width:100%;max-height:100%;object-fit:contain;image-rendering:pixelated}
+.sprite-lab-info{display:flex;flex-direction:column;gap:7px;min-width:0}.sprite-lab-info strong{font-size:15px}.sprite-lab-info span{font-size:11px;color:#80cfef}.sprite-lab-info p{font-size:11px;color:#9eaabc;line-height:1.5;max-width:320px}
+@media(max-width:620px){.sprite-lab summary{flex-wrap:wrap}.sprite-lab-display{flex-direction:column}.sprite-lab-image{width:100%;height:185px}.sprite-lab-info{text-align:center}.sprite-lab-controls>*{flex:1 1 40%}.sprite-lab-controls label{min-width:0}.sprite-lab-info p{margin:0}}
+@media(prefers-reduced-motion:reduce){.duelist .portrait img.pack-avatar[data-animation]{animation:none!important}}

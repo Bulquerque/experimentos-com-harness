@@ -1,0 +1,593 @@
+{
+  "version": "v24-scale-consistency-all-128-frames",
+  "source": "Contraponto_v23_1_Dante_Breakdown_Sem_Cortes_Laterais.zip",
+  "notes": "16 estados preservados e reenquadrados a partir de âncoras faciais canônicas por personagem. Mesma escala por estado em todos os 8 quadros; sprites de palco 512x576, masters integrais 640x800. Fundo RGBA, sem cortes laterais novos; base suavizada sob púlpito. Velocidades preservadas.",
+  "animations": {
+    "lia/idle": [
+      {
+        "frame": "actors-v22/lia/idle/01.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/lia/idle/02.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/lia/idle/03.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/lia/idle/04.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/lia/idle/05.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/lia/idle/06.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/lia/idle/07.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/lia/idle/08.png",
+        "duration_ms": 355
+      }
+    ],
+    "lia/talking": [
+      {
+        "frame": "actors-v22/lia/talking/01.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/lia/talking/02.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/lia/talking/03.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/lia/talking/04.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/lia/talking/05.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/lia/talking/06.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/lia/talking/07.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/lia/talking/08.png",
+        "duration_ms": 170
+      }
+    ],
+    "lia/thinking": [
+      {
+        "frame": "actors-v22/lia/thinking/01.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/thinking/02.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/thinking/03.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/thinking/04.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/thinking/05.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/thinking/06.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/thinking/07.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/thinking/08.png",
+        "duration_ms": 205
+      }
+    ],
+    "lia/confident": [
+      {
+        "frame": "actors-v22/lia/confident/01.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/lia/confident/02.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/lia/confident/03.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/lia/confident/04.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/lia/confident/05.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/lia/confident/06.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/lia/confident/07.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/lia/confident/08.png",
+        "duration_ms": 195
+      }
+    ],
+    "lia/objection": [
+      {
+        "frame": "actors-v22/lia/objection/01.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/lia/objection/02.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/lia/objection/03.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/lia/objection/04.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/lia/objection/05.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/lia/objection/06.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/lia/objection/07.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/lia/objection/08.png",
+        "duration_ms": 135
+      }
+    ],
+    "lia/surprised": [
+      {
+        "frame": "actors-v22/lia/surprised/01.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/lia/surprised/02.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/lia/surprised/03.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/lia/surprised/04.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/lia/surprised/05.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/lia/surprised/06.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/lia/surprised/07.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/lia/surprised/08.png",
+        "duration_ms": 165
+      }
+    ],
+    "lia/frustrated": [
+      {
+        "frame": "actors-v22/lia/frustrated/01.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/lia/frustrated/02.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/lia/frustrated/03.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/lia/frustrated/04.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/lia/frustrated/05.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/lia/frustrated/06.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/lia/frustrated/07.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/lia/frustrated/08.png",
+        "duration_ms": 190
+      }
+    ],
+    "dante/idle": [
+      {
+        "frame": "actors-v22/dante/idle/01.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/dante/idle/02.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/dante/idle/03.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/dante/idle/04.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/dante/idle/05.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/dante/idle/06.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/dante/idle/07.png",
+        "duration_ms": 355
+      },
+      {
+        "frame": "actors-v22/dante/idle/08.png",
+        "duration_ms": 355
+      }
+    ],
+    "dante/talking": [
+      {
+        "frame": "actors-v22/dante/talking/01.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/dante/talking/02.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/dante/talking/03.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/dante/talking/04.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/dante/talking/05.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/dante/talking/06.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/dante/talking/07.png",
+        "duration_ms": 170
+      },
+      {
+        "frame": "actors-v22/dante/talking/08.png",
+        "duration_ms": 170
+      }
+    ],
+    "dante/thinking": [
+      {
+        "frame": "actors-v22/dante/thinking/01.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/dante/thinking/02.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/dante/thinking/03.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/dante/thinking/04.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/dante/thinking/05.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/dante/thinking/06.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/dante/thinking/07.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/dante/thinking/08.png",
+        "duration_ms": 205
+      }
+    ],
+    "dante/confident": [
+      {
+        "frame": "actors-v22/dante/confident/01.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/dante/confident/02.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/dante/confident/03.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/dante/confident/04.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/dante/confident/05.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/dante/confident/06.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/dante/confident/07.png",
+        "duration_ms": 195
+      },
+      {
+        "frame": "actors-v22/dante/confident/08.png",
+        "duration_ms": 195
+      }
+    ],
+    "dante/objection": [
+      {
+        "frame": "actors-v22/dante/objection/01.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/dante/objection/02.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/dante/objection/03.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/dante/objection/04.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/dante/objection/05.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/dante/objection/06.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/dante/objection/07.png",
+        "duration_ms": 135
+      },
+      {
+        "frame": "actors-v22/dante/objection/08.png",
+        "duration_ms": 135
+      }
+    ],
+    "dante/surprised": [
+      {
+        "frame": "actors-v22/dante/surprised/01.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/dante/surprised/02.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/dante/surprised/03.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/dante/surprised/04.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/dante/surprised/05.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/dante/surprised/06.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/dante/surprised/07.png",
+        "duration_ms": 165
+      },
+      {
+        "frame": "actors-v22/dante/surprised/08.png",
+        "duration_ms": 165
+      }
+    ],
+    "dante/frustrated": [
+      {
+        "frame": "actors-v22/dante/frustrated/01.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/frustrated/02.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/frustrated/03.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/frustrated/04.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/frustrated/05.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/frustrated/06.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/frustrated/07.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/frustrated/08.png",
+        "duration_ms": 190
+      }
+    ],
+    "lia/breakdown": [
+      {
+        "frame": "actors-v22/lia/breakdown/01.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/breakdown/02.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/breakdown/03.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/breakdown/04.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/breakdown/05.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/breakdown/06.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/breakdown/07.png",
+        "duration_ms": 205
+      },
+      {
+        "frame": "actors-v22/lia/breakdown/08.png",
+        "duration_ms": 205
+      }
+    ],
+    "dante/breakdown": [
+      {
+        "frame": "actors-v22/dante/breakdown/01.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/breakdown/02.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/breakdown/03.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/breakdown/04.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/breakdown/05.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/breakdown/06.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/breakdown/07.png",
+        "duration_ms": 190
+      },
+      {
+        "frame": "actors-v22/dante/breakdown/08.png",
+        "duration_ms": 190
+      }
+    ]
+  },
+  "states": [
+    "idle",
+    "talking",
+    "thinking",
+    "confident",
+    "objection",
+    "surprised",
+    "frustrated",
+    "breakdown"
+  ],
+  "durations_ms": {
+    "idle": 355,
+    "talking": 170,
+    "thinking": 205,
+    "confident": 195,
+    "objection": 135,
+    "surprised": 165,
+    "frustrated": 190,
+    "breakdown": {
+      "lia": 205,
+      "dante": 185
+    }
+  },
+  "loop_states": [
+    "idle",
+    "talking",
+    "thinking"
+  ],
+  "renderGeometry": {
+    "stageCanvas": [
+      512,
+      576
+    ],
+    "masterCanvas": [
+      640,
+      800
+    ],
+    "facialAnchors": "docs/geometry_v24.json",
+    "fullMasterDirectory": "sources/full_geometry_v24",
+    "originalArchive": "sources/geometry_v23_1_input.zip",
+    "lowerFadeStart": 508
+  }
+}

@@ -1,0 +1,31 @@
+/* Pacote de personagens 8.0. A arte de poses possui fundo pintado opaco:
+   enquadramento em cartas evita recortes falsos e mantém a composição intacta. */
+.duelist .portrait{isolation:isolate;overflow:visible}
+.duelist .portrait:before{content:'';position:absolute;inset:4% 11% 1%;border:1px solid color-mix(in srgb,var(--tone),transparent 50%);border-radius:16px 16px 5px 5px;background:linear-gradient(160deg,#151a31eb,#12101aeb);box-shadow:0 12px 36px #03040aaf,0 0 20px color-mix(in srgb,var(--tone),transparent 80%);transform:skewY(-1deg)}
+.duelist .portrait img.pack-avatar{width:auto;max-width:83%;height:92%;object-fit:contain;align-self:flex-end;image-rendering:pixelated;position:relative;border-radius:9px 9px 3px 3px;box-shadow:0 8px 30px #0009;filter:contrast(1.08) saturate(1.11);mask-image:linear-gradient(to bottom,#000 0 89%,transparent 100%)}
+.duelist .portrait img.pack-avatar[hidden]{display:none!important}
+.duelist.speaking .portrait img.pack-avatar{animation:pack-actor 1.75s ease-in-out infinite alternate}
+.duelist.listening .portrait img.pack-avatar{animation:pack-listener 3.3s ease-in-out infinite alternate}
+.duelist[data-gesture=point] img.pack-avatar,.duelist[data-gesture=slam-desk] img.pack-avatar{animation:pack-impact .42s cubic-bezier(.15,.75,.15,1) both}
+.duelist[data-emotion=surprised] img.pack-avatar{animation:pack-shock .65s ease-out both}
+@keyframes pack-actor{from{transform:translateY(0) scale(1)}to{transform:translateY(-5px) scale(1.018)}}
+@keyframes pack-listener{from{transform:translateY(0)}to{transform:translateY(-3px)}}
+@keyframes pack-impact{0%{transform:translateY(10px) scale(.94)}45%{transform:translateY(-11px) scale(1.07)}100%{transform:translateY(0) scale(1)}}
+@keyframes pack-shock{0%{transform:translateY(0)}30%{transform:translateY(-14px) rotate(-2deg)}100%{transform:translateY(0)}}
+/* A faixa dos olhos é uma cena transitória; o texto não fica dentro da arte. */
+.facecard-overlay{position:absolute;z-index:13;left:0;right:0;top:42%;transform:translateY(-50%);pointer-events:none;visibility:hidden;opacity:0;overflow:hidden;filter:drop-shadow(0 16px 24px #000c)}
+.facecard-overlay.visible{visibility:visible;opacity:1;animation:facecard-enter 1.25s cubic-bezier(.24,.73,.27,1) both}
+.facecard-ribbon{position:relative;width:100%;height:clamp(72px,10vw,132px);overflow:hidden;border-block:2px solid var(--face-tone,#65aafa);background:#10172b;box-shadow:0 0 0 2px #0007,0 0 30px var(--face-tone,#65aafa)}
+.facecard-ribbon img{display:block;width:100%;height:100%;object-fit:cover;object-position:center;image-rendering:pixelated}
+.facecard-ribbon:before{content:'';position:absolute;inset:0;z-index:1;box-shadow:inset 0 0 50px #0009;pointer-events:none}
+.facecard-caption{position:absolute;bottom:9px;right:4%;z-index:2;background:#0a0d1ddf;border:1px solid var(--face-tone,#65aafa);padding:5px 15px;color:#fff;font-size:11px;letter-spacing:.16em;font-weight:900;text-shadow:0 2px 8px #000}
+.facecard-overlay[data-side=b] .facecard-caption{right:auto;left:4%}
+@keyframes facecard-enter{0%{opacity:0;transform:translate(110%,-50%)}12%{opacity:1;transform:translate(-3%,-50%)}24%{transform:translate(0,-50%)}76%{opacity:1;transform:translate(0,-50%)}100%{opacity:0;transform:translate(-70%,-50%)}}
+@media(max-width:780px){.facecard-overlay{top:45%}.facecard-ribbon{height:100px}.facecard-caption{font-size:9px}.duelist .portrait img.pack-avatar{height:90%;max-width:86%}}
+@media(max-width:450px){.facecard-overlay{top:47%}.facecard-ribbon{height:76px}.facecard-caption{font-size:8px;bottom:4px;padding:3px 7px}.duelist .portrait:before{inset:5% 3% 1%}.duelist .portrait img.pack-avatar{max-width:96%;height:90%}}
+@media(prefers-reduced-motion:reduce){.facecard-overlay.visible{animation:none;opacity:1}.duelist .portrait img.pack-avatar{animation:none!important}}
+/* Um único letreiro por vez: o Face Card substitui a cartela de impacto temporariamente. */
+.arena:has(.facecard-overlay.visible) .cinema-announcement,
+.arena:has(.facecard-overlay.visible) .scene-action-ribbon{opacity:0!important;visibility:hidden!important}
+.arena:has(.facecard-overlay.visible) .marquee{opacity:.26}
+.arena:has(.facecard-overlay.visible) .duelists{filter:brightness(.68)}

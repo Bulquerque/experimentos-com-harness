@@ -1,0 +1,291 @@
+{
+  "lia": {
+    "sourceSize": [
+      439,
+      439
+    ],
+    "sourceSHA256": "08727328e98437bc2db22fadcd2619abc37d1aefdf47950c4ecab8f6ca807a88",
+    "border_contacts": [
+      {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": true
+      },
+      {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": true
+      },
+      {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": true
+      },
+      {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": true
+      },
+      {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": true
+      },
+      {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": true
+      },
+      {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": true
+      },
+      {
+        "left": false,
+        "right": false,
+        "top": false,
+        "bottom": true
+      }
+    ],
+    "alphaFrameStats": [
+      {
+        "frame": 1,
+        "transparent_pixels": 201155,
+        "bbox": [
+          72,
+          69,
+          418,
+          495
+        ]
+      },
+      {
+        "frame": 2,
+        "transparent_pixels": 199496,
+        "bbox": [
+          71,
+          69,
+          419,
+          495
+        ]
+      },
+      {
+        "frame": 3,
+        "transparent_pixels": 194694,
+        "bbox": [
+          65,
+          70,
+          428,
+          495
+        ]
+      },
+      {
+        "frame": 4,
+        "transparent_pixels": 187427,
+        "bbox": [
+          55,
+          70,
+          446,
+          495
+        ]
+      },
+      {
+        "frame": 5,
+        "transparent_pixels": 184953,
+        "bbox": [
+          57,
+          71,
+          453,
+          495
+        ]
+      },
+      {
+        "frame": 6,
+        "transparent_pixels": 176738,
+        "bbox": [
+          54,
+          64,
+          453,
+          495
+        ]
+      },
+      {
+        "frame": 7,
+        "transparent_pixels": 173586,
+        "bbox": [
+          49,
+          62,
+          471,
+          495
+        ]
+      },
+      {
+        "frame": 8,
+        "transparent_pixels": 186410,
+        "bbox": [
+          56,
+          65,
+          439,
+          495
+        ]
+      }
+    ]
+  },
+  "dante": {
+    "sourceSize": [
+      309,
+      623
+    ],
+    "sourceSHA256": "91d74102142f559145834e37a488391f89bb34593d4dec4370b68b5e63038c40",
+    "sourceType": "GIF com chroma verde, 8 quadros; versão revisada",
+    "frameCanvas": [
+      512,
+      576
+    ],
+    "sourceCropY": [
+      55,
+      589
+    ],
+    "scaledSize": [
+      310,
+      536
+    ],
+    "placement": [
+      {
+        "frame": "actors-v22/dante/breakdown/08.png",
+        "duration_ms": 190
+      },
+      20
+    ],
+    "alphaFrameStats": [
+      {
+        "frame": 1,
+        "bboxVisible": [
+          118,
+          36,
+          399,
+          545
+        ],
+        "outerContact": false,
+        "sourceRightContact": false,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      {
+        "frame": 2,
+        "bboxVisible": [
+          117,
+          36,
+          397,
+          545
+        ],
+        "outerContact": false,
+        "sourceRightContact": false,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      {
+        "frame": 3,
+        "bboxVisible": [
+          118,
+          37,
+          400,
+          545
+        ],
+        "outerContact": false,
+        "sourceRightContact": false,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      {
+        "frame": 4,
+        "bboxVisible": [
+          103,
+          36,
+          410,
+          545
+        ],
+        "outerContact": false,
+        "sourceRightContact": true,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      {
+        "frame": 5,
+        "bboxVisible": [
+          104,
+          29,
+          409,
+          545
+        ],
+        "outerContact": false,
+        "sourceRightContact": true,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      {
+        "frame": 6,
+        "bboxVisible": [
+          104,
+          29,
+          410,
+          545
+        ],
+        "outerContact": false,
+        "sourceRightContact": true,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      {
+        "frame": 7,
+        "bboxVisible": [
+          108,
+          29,
+          410,
+          544
+        ],
+        "outerContact": false,
+        "sourceRightContact": true,
+        "alphaRange": [
+          0,
+          255
+        ]
+      },
+      {
+        "frame": 8,
+        "bboxVisible": [
+          108,
+          37,
+          410,
+          545
+        ],
+        "outerContact": false,
+        "sourceRightContact": true,
+        "alphaRange": [
+          0,
+          255
+        ]
+      }
+    ],
+    "note": "As 8 imagens de saída possuem margem transparente; pixels já cortados no limite direito do GIF original (frames 4-8) não podem ser reconstruídos por padding. A saída não corta nada adicional."
+  }
+}

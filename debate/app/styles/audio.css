@@ -1,0 +1,32 @@
+/* Contraponto Audio Studio — expansível, não invade a área principal */
+.audio-studio{background:linear-gradient(115deg,#181d2b,#252237);border:1px solid #46495b;border-radius:12px;margin:7px 0 18px;overflow:hidden;color:#d6d6df}
+.audio-studio summary{cursor:pointer;display:flex;align-items:center;justify-content:space-between;gap:12px;list-style:none;padding:13px 15px;user-select:none}
+.audio-studio summary::-webkit-details-marker{display:none}
+.audio-studio summary:hover{background:#ffffff0a}
+.studio-head{display:flex;align-items:center;gap:12px}
+.studio-head>b{color:#111525;background:linear-gradient(120deg,#ffe2ab,#c18c68);border-radius:8px;width:33px;height:33px;display:flex;align-items:center;justify-content:center;font-size:22px}
+.studio-head strong{font-size:11px;letter-spacing:1.4px;display:block;color:#f9e7cb}
+.studio-head small{font-size:8px;color:#a8abba;letter-spacing:1px;display:block;margin-top:4px}
+.studio-expand{font-size:9px;color:#d9bb8e;letter-spacing:1px;font-weight:800;white-space:nowrap}
+.studio-expand span{font-size:15px;display:inline-block;transition:transform .2s}
+.audio-studio[open] .studio-expand span{transform:rotate(180deg)}
+.studio-grid{display:grid;grid-template-columns:1fr 1fr;gap:15px;border-top:1px solid #444458;padding:16px}
+.studio-section{padding:12px 13px 14px;border:1px solid #404257;border-radius:9px;background:#1216257d;min-width:0}
+.studio-subhead{font-size:9px;letter-spacing:1.7px;color:#f0c894;font-weight:900;display:flex;justify-content:space-between;margin-bottom:15px}
+.studio-subhead span{color:#798296}
+.studio-slider{display:grid;grid-template-columns:1fr auto;column-gap:12px;align-items:center;font-size:10px;letter-spacing:1px;font-weight:800;color:#c5c8d5;margin-bottom:12px}
+.studio-slider>span{color:#f1d9b4;font-variant-numeric:tabular-nums}
+.studio-slider input{grid-column:1/-1;accent-color:#d5a877;cursor:pointer;width:100%;margin:9px 0 2px;max-width:none}
+.studio-checks{display:flex;flex-direction:column;gap:12px;margin-top:12px}
+.studio-checks label{font-size:11px;line-height:1.35;color:#bfc5d4;display:flex;align-items:center;gap:9px;cursor:pointer}
+.studio-checks input[type="checkbox"]{accent-color:#dbaf7c;width:14px;height:14px;min-width:14px;margin:0;flex:0 0 14px}
+.studio-file{font-size:9px;font-weight:900;letter-spacing:1px;color:#c5c8d5;display:block}
+.studio-file select{display:block;margin-top:9px;width:100%;background:#24283a;color:#e9e7ef;border-radius:8px;border:1px solid #56576c;padding:10px;font:inherit;cursor:pointer}
+.studio-import{display:block;position:relative;margin:10px 0;border:1px dashed #777789;background:#29293b;color:#f0d4b0;padding:12px 9px;border-radius:8px;font-size:10px;letter-spacing:1px;font-weight:800;cursor:pointer;text-align:center}
+.studio-import:hover,.studio-import:focus-within{border-color:#e6c29a;background:#363348}
+.studio-import input{position:absolute;width:1px;height:1px;opacity:0;overflow:hidden;pointer-events:none}
+.studio-actions{display:flex;gap:8px}.studio-actions button{flex:1;background:#34364a;color:#f5e4d4;border:1px solid #696779;border-radius:7px;padding:9px 7px;font-size:9px;font-weight:800;letter-spacing:.3px;cursor:pointer}
+.studio-actions button:hover{border-color:#d7b684;background:#444050}
+.cue-status{color:#aeb1bf;font-size:10px;line-height:1.5;display:block;min-height:28px;margin-top:12px}
+@media(max-width:650px){.studio-grid{grid-template-columns:1fr;padding:10px;gap:8px}.audio-studio summary{padding:11px 12px}.studio-head small{font-size:7px}.studio-expand{font-size:8px}.studio-section{padding:12px}}
+@media(prefers-reduced-motion:reduce){.audio-studio *{transition:none!important}}
