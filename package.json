@@ -1,0 +1,12 @@
+{
+  "name": "experimentos-com-harness",
+  "version": "1.0.0",
+  "private": false,
+  "type": "module",
+  "description": "Experimentos com Harness para debates em rodadas e agentes de IA.",
+  "engines": { "node": ">=20" },
+  "scripts": {
+    "demo": "node examples/run-demo.js",
+    "test": "node --test tests/*.test.js"
+  }
+}
