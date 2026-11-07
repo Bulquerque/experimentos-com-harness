@@ -83,7 +83,7 @@ const server=http.createServer(async(req,res)=>{
   const route=u.pathname;
   if(req.method==='POST'&&!sameOrigin(req)){send(res,403,{error:'Origem não autorizada'});return;}
   if(req.method==='GET'&&route==='/api/health'){
-   send(res,200,{ok:true,runner:await probeRunner(),keyConfigured:!!process.env.NVIDIA_API_KEY,model:process.env.NVIDIA_MODEL||'z-ai/glm-5.3-flash',workspace:'./workspace',sandbox:process.env.RUNNER_SOCKET?'container Docker sem rede (socket Unix)':process.env.RUNNER_URL?'executor HTTP configurado':'Docker CLI local obrigatório',preview:true,lean:{engine:'Lean 4 via Docker Compose',configured:!!(process.env.RUNNER_SOCKET||process.env.RUNNER_URL),mathlib:'instalação opcional'},modelEndpoint:BASE_URL});return;
+   send(res,200,{ok:true,runner:await probeRunner(),keyConfigured:!!process.env.NVIDIA_API_KEY,model:process.env.NVIDIA_MODEL||'nvidia/nemotron-3.5-bolt-e4b',workspace:'./workspace',sandbox:process.env.RUNNER_SOCKET?'container Docker sem rede (socket Unix)':process.env.RUNNER_URL?'executor HTTP configurado':'Docker CLI local obrigatório',preview:true,lean:{engine:'Lean 4 via Docker Compose',configured:!!(process.env.RUNNER_SOCKET||process.env.RUNNER_URL),mathlib:'instalação opcional'},modelEndpoint:BASE_URL});return;
   }
   if(req.method==='GET'&&route==='/api/doctor'){
    const runner=await probeRunner();
@@ -104,7 +104,7 @@ const server=http.createServer(async(req,res)=>{
   if(req.method==='POST'&&route==='/api/nvidia/probe'){
    const v=await body(req);
    const key=typeof v.key==='string'&&v.key.trim()?v.key.trim():process.env.NVIDIA_API_KEY;
-   const model=typeof v.model==='string'&&v.model.trim()?v.model.trim():process.env.NVIDIA_MODEL||'z-ai/glm-5.3-flash';
+   const model=typeof v.model==='string'&&v.model.trim()?v.model.trim():process.env.NVIDIA_MODEL||'nvidia/nemotron-3.5-bolt-e4b';
    if(!key){bad(res,'Configure NVIDIA_API_KEY ou insira uma chave temporária');return;}
    if(typeof model!=='string'||model.length>140||!/^[-\w./]+$/.test(model)){bad(res,'ID de modelo inválido');return;}
    const started=performance.now();
@@ -161,7 +161,7 @@ const server=http.createServer(async(req,res)=>{
   if(req.method==='GET'&&route==='/api/runs'){send(res,200,{runs:[...runs.values()].reverse().map(exposed)});return;}
   if(req.method==='POST'&&route==='/api/runs'){
    const v=await body(req,ATTACHMENT_LIMITS.maxRequestBytes);const task=typeof v.task==='string'?v.task.trim():'';
-   const model=typeof v.model==='string'?v.model.trim():(process.env.NVIDIA_MODEL||'z-ai/glm-5.3-flash');
+   const model=typeof v.model==='string'?v.model.trim():(process.env.NVIDIA_MODEL||'nvidia/nemotron-3.5-bolt-e4b');
    const key=typeof v.key==='string'&&v.key.trim()?v.key.trim():process.env.NVIDIA_API_KEY;
    if(!task||task.length>5000){bad(res,'Tarefa precisa conter 1 a 5000 caracteres');return;}
    if(!model||model.length>140||!/^[-\w./]+$/.test(model)){bad(res,'Modelo inválido');return;}

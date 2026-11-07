@@ -103,9 +103,10 @@ test('skills próprias do Harness podem ser criadas, editadas, selecionadas e re
  assert.doesNotMatch(js,/skillIds:\[\.\.\.\(chat\.skillIds[\s\S]{0,120}instructions:/);
 });
 
-test('modelo inicial segue o padrão do servidor e migra o default legado para GLM 5.3',()=>{
-  assert.match(js,/const MODEL = 'z-ai\/glm-5\.3-flash'/);
+test('modelo inicial segue o padrão NVIDIA Bolt e migra os defaults antigos lentos',()=>{
+  assert.match(js,/const MODEL = 'nvidia\/nemotron-3\.5-bolt-e4b'/);
   assert.match(js,/const LEGACY_DEFAULT_MODEL = 'nvidia\/nemotron-3-super-120b-a12b'/);
+  assert.match(js,/const SLOW_DEFAULT_MODEL = 'z-ai\/glm-5\.3-flash'/);
   assert.match(js,/if\(!state\.modelIsSaved&&typeof d\.model==='string'&&d\.model\.trim\(\)\)state\.model=d\.model\.trim\(\)/);
   assert.match(js,/\.\.\.\(state\.modelIsSaved\?\{model:state\.model\}:\{\}\)/);
 });

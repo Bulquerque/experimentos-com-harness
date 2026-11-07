@@ -2,7 +2,7 @@
 
 1. No Linux/macOS com Docker, inicie Docker Engine. No Fedora, Podman rootless também é suportado pelo `start.sh` (requer `podman-compose`).
 2. Execute **`./start.ps1`** (Windows PowerShell) ou **`./start.sh`** (Linux/macOS). O Harness Chat fica isolado em **http://127.0.0.1:8787**; o Contraponto continua em **http://127.0.0.1:3000**.
-3. Abra **http://127.0.0.1:8787**. O modelo padrão nesta instalação é `z-ai/glm-5.3-flash` (GLM 5.3 Flash).
+3. Abra **http://127.0.0.1:8787**. O modelo padrão nesta instalação é `nvidia/nemotron-3.5-bolt-e4b` (Nemotron 3.5 Bolt E4B).
 4. Clique em **Configurações**. Digite sua chave NVIDIA temporária ou salve `NVIDIA_API_KEY` no arquivo `.env`, depois teste a conexão.
 5. Escolha **Agente** e diga: “Leia `numerical/newton.py`, execute os testes e explique o método”.
 6. Para Lean: “Crie uma prova em `proofs/` e verifique com `lean_core`”.

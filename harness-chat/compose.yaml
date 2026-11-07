@@ -8,7 +8,7 @@ services:
       HOST: 0.0.0.0
       PORT: 8787
       NVIDIA_API_KEY: ${NVIDIA_API_KEY:-}
-      NVIDIA_MODEL: ${NVIDIA_MODEL:-z-ai/glm-5.3-flash}
+      NVIDIA_MODEL: ${NVIDIA_MODEL:-nvidia/nemotron-3.5-bolt-e4b}
       NVIDIA_BASE_URL: ${NVIDIA_BASE_URL:-https://integrate.api.nvidia.com/v1}
       RUNNER_SOCKET: /run/harness/runner.sock
       RUNNER_TOKEN: ${RUNNER_TOKEN:?Execute start.ps1 ou start.sh para gerar o token interno}

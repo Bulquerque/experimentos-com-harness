@@ -9,8 +9,9 @@ const create = (tag, className, text) => {
   return node;
 };
 const STORE = 'harness-chat-v1';
-const MODEL = 'z-ai/glm-5.3-flash';
+const MODEL = 'nvidia/nemotron-3.5-bolt-e4b';
 const LEGACY_DEFAULT_MODEL = 'nvidia/nemotron-3-super-120b-a12b';
+const SLOW_DEFAULT_MODEL = 'z-ai/glm-5.3-flash';
 const newId = () => crypto.randomUUID();
 const restoreState = () => {
   try {
@@ -25,11 +26,11 @@ const restoreState = () => {
       }))
     }));
     const savedModel=typeof raw.model==='string'?raw.model.trim():'';
-    const modelIsSaved=!!savedModel&&savedModel!==LEGACY_DEFAULT_MODEL;
+    const modelIsSaved=!!savedModel&&savedModel!==LEGACY_DEFAULT_MODEL&&savedModel!==SLOW_DEFAULT_MODEL;
     return {chats,activeId:raw.activeId,model:modelIsSaved?savedModel:MODEL,modelIsSaved,mode:raw.mode==='chat'?'chat':'agent'};
   }catch{return {chats:[],activeId:null,model:MODEL,mode:'agent'};}
 };
-const state = {...restoreState(),key:'',activeRun:null,stream:null,openPanel:'',health:null,events:[],focusedRun:null,traceTimer:null,skills:[],skillsLoaded:false,pendingAttachments:[]};
+const state = {...restoreState(),key:'',activeRun:null,stream:null,openPanel:'',health:null,events:[],focusedRun:null,traceTimer:null,skills:[],skillsLoaded:false,pendingAttachments:[],activityDisclosure:new Map()};
 function persist(){
   try {localStorage.setItem(STORE,JSON.stringify({chats:state.chats.slice(0,10).map(c=>({...c,messages:c.messages.map(({events,attachments,...m})=>({...m,...(attachments?.length?{attachments:attachments.map(({name,mimeType,size,sha256})=>({name,mimeType,size,sha256}))}:{})}))})),activeId:state.activeId,...(state.modelIsSaved?{model:state.model}:{}),mode:state.mode}));}
   catch { /* Storage can be disabled; chat still works in this page. */ }
